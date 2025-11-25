@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Play Visualization - Game 2023090700, Play 101</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>How much time does a Quarterback really have to make a decision? Analyzing the effect of a defense on a QB’s decision making time.</h1>
+        <div class="info">
+            <p><strong>Game ID:</strong> 2023090700 | <strong>Play ID:</strong> 101 | <strong>Direction:</strong> <span id="play-direction">-</span></p>
+        </div>
+        
+        <div class="controls">
+            <button id="randomize-btn" style="background: #9C27B0; color: white;">Randomize Play</button>
+            <button id="play-pause-btn">Play</button>
+            <button id="reset-btn">Reset</button>
+            <input type="range" id="frame-slider" min="1" max="26" value="1" step="1">
+            <span id="frame-display">Frame: 1 / 26</span>
+            <label>
+                <input type="checkbox" id="show-trails" checked> Show Trails
+            </label>
+            <label>
+                <input type="checkbox" id="show-names" checked> Show Names
+            </label>
+            <label>
+                <input type="checkbox" id="show-ball-trajectory" checked> Show Ball Trajectory
+            </label>
+            <label>
+                <input type="checkbox" id="show-output-players" checked> Show Post-Throw Players
+            </label>
+        </div>
+        
+        <div id="scoreboard" class="scoreboard"></div>
+        
+        <div class="main-content">
+            <div class="visualization-container">
+                <div class="top-info-bar">
+                    <div id="time-to-throw" class="time-to-throw">Time to Throw: 0.0s</div>
+                    <div id="coverage-annotation" class="coverage-annotation"></div>
+                </div>
+                <div id="visualization"></div>
+                <div id="play-description" class="play-description"></div>
+            </div>
+            <div id="supplementary-panel" class="supplementary-panel"></div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-color defense"></span>
+                <span>Defense</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color offense"></span>
+                <span>Offense</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="visualization.js"></script>
+</body>
+</html>
+
