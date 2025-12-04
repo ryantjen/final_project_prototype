@@ -1686,8 +1686,46 @@ function drawClosingWindows() {
 
 // Initialize arrow key navigation for slideshow effect
 function initScrollSnapping() {
-    const sections = document.querySelectorAll('.story-section');
+    const sections = Array.from(document.querySelectorAll('.story-section'));
     let isNavigating = false;
+    
+    // Helper function to find the current section based on scroll position
+    function getCurrentSectionIndex() {
+        const currentScroll = window.scrollY + window.innerHeight / 2; // Use middle of viewport as reference
+        let currentIndex = 0;
+        let minDistance = Infinity;
+        
+        sections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            const sectionTop = rect.top + window.scrollY;
+            const sectionBottom = sectionTop + rect.height;
+            const sectionCenter = sectionTop + rect.height / 2;
+            
+            // Check if we're within this section
+            if (currentScroll >= sectionTop && currentScroll <= sectionBottom) {
+                const distance = Math.abs(currentScroll - sectionCenter);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    currentIndex = index;
+                }
+            }
+        });
+        
+        // Fallback: find closest section if we're between sections
+        if (minDistance === Infinity) {
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                const sectionTop = rect.top + window.scrollY;
+                const distance = Math.abs(currentScroll - sectionTop);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    currentIndex = index;
+                }
+            });
+        }
+        
+        return currentIndex;
+    }
     
     // Handle arrow key presses
     window.addEventListener('keydown', (e) => {
@@ -1699,9 +1737,7 @@ function initScrollSnapping() {
         
         if (isNavigating) return;
         
-        const currentScroll = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const currentSectionIndex = Math.round(currentScroll / windowHeight);
+        const currentSectionIndex = getCurrentSectionIndex();
         
         let targetSectionIndex;
         if (e.key === 'ArrowDown') {
