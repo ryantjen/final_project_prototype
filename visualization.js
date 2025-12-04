@@ -1,18 +1,18 @@
-// Global variables
-let playData = null;
-let currentFrame = 1;
-let isPlaying = false;
-let animationInterval = null;
-let svg = null;
-let xScale = null;
-let yScale = null;
-let showTrails = true;
-let showNames = true;
-let showBallTrajectory = true;
-let showOutputPlayers = true;
+// Global variables (prefixed with viz to avoid conflicts with qb_simulate.js)
+let vizPlayData = null;
+let vizCurrentFrame = 1;
+let vizIsPlaying = false;
+let vizAnimationInterval = null;
+let vizSvg = null;
+let vizXScale = null;
+let vizYScale = null;
+let vizShowTrails = true;
+let vizShowNames = true;
+let vizShowBallTrajectory = true;
+let vizShowOutputPlayers = true;
 
-// NFL Team Colors
-const teamColors = {
+// NFL Team Colors (prefixed to avoid conflict with qb_simulate.js)
+const vizTeamColors = {
     'ARI': '#97233F', // Cardinals - Red
     'ATL': '#A71930', // Falcons - Red
     'BAL': '#241773', // Ravens - Purple
@@ -48,13 +48,29 @@ const teamColors = {
 };
 
 // Function to initialize visualization with data
-function initializePlayVisualization(data) {
-    playData = data;
+function vizInitializePlayVisualization(data) {
+    console.log('[Sandbox] Initializing play visualization');
+    
+    // Check if Section 11 elements exist
+    const section11 = document.getElementById('interactive');
+    if (!section11) {
+        console.error('[Sandbox] Section 11 (interactive) not found');
+        return;
+    }
+    
+    const vizElement = section11.querySelector('#visualization');
+    if (!vizElement) {
+        console.error('[Sandbox] #visualization element not found in Section 11');
+        return;
+    }
+    
+    console.log('[Sandbox] Play data received:', data.game_id, data.play_id);
+    vizPlayData = data;
     
     // Calculate total frames: input frames + output frames
     let maxOutputFrame = 0;
-    if (playData.output_players) {
-        Object.values(playData.output_players).forEach(player => {
+    if (vizPlayData.output_players) {
+        Object.values(vizPlayData.output_players).forEach(player => {
             if (player.frames && player.frames.length > 0) {
                 const playerMaxFrame = Math.max(...player.frames.map(f => f.frame_id));
                 maxOutputFrame = Math.max(maxOutputFrame, playerMaxFrame);
@@ -62,72 +78,178 @@ function initializePlayVisualization(data) {
         });
     }
     // Total frames = input frames (max_frame) + output frames
-    playData.total_frames = playData.max_frame + maxOutputFrame;
+    vizPlayData.total_frames = vizPlayData.max_frame + maxOutputFrame;
+    console.log('[Sandbox] Total frames:', vizPlayData.total_frames);
     
-    // Update slider max
-    const slider = document.getElementById('frame-slider');
-    slider.max = playData.total_frames;
+    // Update slider max - scope to Section 11
+    const slider = section11.querySelector('#frame-slider');
+    if (slider) {
+        slider.max = vizPlayData.total_frames;
+        console.log('[Sandbox] Slider max updated to', vizPlayData.total_frames);
+    } else {
+        console.warn('[Sandbox] #frame-slider not found in Section 11');
+    }
     
     // Reset to frame 1
-    currentFrame = 1;
-    isPlaying = false;
-    clearInterval(animationInterval);
-    document.getElementById('play-pause-btn').textContent = 'Play';
+    vizCurrentFrame = 1;
+    vizIsPlaying = false;
+    clearInterval(vizAnimationInterval);
+    const playPauseBtn = section11.querySelector('#play-pause-btn');
+    if (playPauseBtn) {
+        playPauseBtn.textContent = 'Play';
+    }
     
     // Clear and reinitialize visualization
-    d3.select('#visualization').selectAll('*').remove();
+    d3.select(vizElement).selectAll('*').remove();
+    console.log('[Sandbox] Visualization cleared');
     
-    initializeVisualization();
-    updateFrameDisplay();
-    drawField();
-    drawFieldAnnotations();
-    populateScoreboard();
-    populateSupplementaryPanel();
-    updatePlayDescription();
-    updateTimeToThrow();
-    drawCoverageAnnotation();
-    updateVisualization();
+    console.log('[Sandbox] Starting visualization initialization');
+    vizInitializeVisualization();
+    vizUpdateFrameDisplay();
+    vizDrawField();
+    vizDrawFieldAnnotations();
+    vizPopulateScoreboard();
+    vizPopulateSupplementaryPanel();
+    vizUpdatePlayDescription();
+    vizUpdateTimeToThrow();
+    vizDrawCoverageAnnotation();
+    vizUpdateVisualization();
+    console.log('[Sandbox] Visualization complete');
     
-    // Set play direction
-    document.getElementById('play-direction').textContent = data.play_direction;
+    // Set play direction - scope to Section 11
+    const playDirectionEl = section11.querySelector('#play-direction');
+    if (playDirectionEl) {
+        playDirectionEl.textContent = data.play_direction;
+    }
     
-    // Update game/play info
-    document.querySelector('.info p').innerHTML = 
-        `<strong>Game ID:</strong> ${data.game_id} | <strong>Play ID:</strong> ${data.play_id} | <strong>Direction:</strong> <span id="play-direction">${data.play_direction}</span>`;
+    // Update game/play info - scope to Section 11
+    const infoEl = section11.querySelector('.info p');
+    if (infoEl) {
+        infoEl.innerHTML = 
+            `<strong>Game ID:</strong> ${data.game_id} | <strong>Play ID:</strong> ${data.play_id} | <strong>Direction:</strong> <span id="play-direction">${data.play_direction}</span>`;
+    }
 }
 
 // Load the data - try to load from manifest first, otherwise use default play_data.json
-async function loadInitialPlay() {
-    try {
-        // Try to load from manifest and pick a random play
-        const manifestResponse = await fetch('plays_manifest.json');
-        if (manifestResponse.ok) {
-            const playsManifest = await manifestResponse.json();
-            if (playsManifest.length > 0) {
-                // Randomly select a play from manifest
-                const randomPlay = playsManifest[Math.floor(Math.random() * playsManifest.length)];
-                const data = await d3.json(randomPlay.filename);
-                initializePlayVisualization(data);
-                return;
-            }
-        }
-    } catch (error) {
-        console.log('Manifest not available, using default play_data.json');
+async function loadSandboxPlay() {
+    console.log('[Sandbox] ===== loadSandboxPlay() CALLED =====');
+    console.log('[Sandbox] Starting to load initial play');
+    
+    // Check if Section 11 exists
+    if (!shouldInitializeViz()) {
+        console.log('[Sandbox] Section 11 not found, skipping initialization');
+        return;
     }
     
-    // Fallback to default play_data.json
-    d3.json('play_data.json').then(data => {
-        initializePlayVisualization(data);
-    });
+    try {
+        // Try to load from manifest and pick a random play
+        console.log('[Sandbox] Fetching plays_manifest.json');
+        const manifestResponse = await fetch('plays_manifest.json');
+        if (!manifestResponse.ok) {
+            throw new Error(`HTTP error! status: ${manifestResponse.status}`);
+        }
+        
+        const playsManifest = await manifestResponse.json();
+        console.log('[Sandbox] Loaded manifest with', playsManifest.length, 'plays');
+        
+        if (!playsManifest || playsManifest.length === 0) {
+            throw new Error('Manifest is empty or invalid');
+        }
+        
+        // Randomly select a play from manifest
+        const randomPlay = playsManifest[Math.floor(Math.random() * playsManifest.length)];
+        console.log('[Sandbox] Selected play:', randomPlay.filename);
+        
+        const data = await d3.json(randomPlay.filename);
+        if (!data) {
+            throw new Error('Failed to load play data');
+        }
+        
+        console.log('[Sandbox] Play data loaded successfully');
+        vizInitializePlayVisualization(data);
+        return;
+    } catch (error) {
+        console.error('[Sandbox] Error loading from manifest:', error);
+        console.log('[Sandbox] Attempting fallback to play_data.json');
+        
+        // Fallback to default play_data.json
+        try {
+            const data = await d3.json('play_data.json');
+            if (data) {
+                console.log('[Sandbox] Fallback play_data.json loaded');
+                vizInitializePlayVisualization(data);
+            } else {
+                console.error('[Sandbox] Failed to load fallback play_data.json');
+            }
+        } catch (fallbackError) {
+            console.error('[Sandbox] Error loading fallback:', fallbackError);
+        }
+    }
 }
 
-// Load initial play
-loadInitialPlay();
+// Only initialize if Section 11 (interactive sandbox) exists
+// Section 5 uses qb_simulate.js with qb- prefixed IDs
+function shouldInitializeViz() {
+    const section11 = document.getElementById('interactive');
+    if (!section11) {
+        console.log('[Sandbox] Section 11 (interactive) not found');
+        return false;
+    }
+    const vizElement = section11.querySelector('#visualization');
+    if (!vizElement) {
+        console.log('[Sandbox] #visualization not found in Section 11');
+        return false;
+    }
+    console.log('[Sandbox] Section 11 found, initialization allowed');
+    return true;
+}
 
-function initializeVisualization() {
-    const width = 900;
-    const height = 550;
-    const margin = { top: 100, right: 20, bottom: 120, left: 20 };
+// Load initial play only if Section 11 exists and DOM is ready
+function initSandbox() {
+    if (document.readyState === 'loading') {
+        console.log('[Sandbox] DOM not ready, waiting for DOMContentLoaded');
+        document.addEventListener('DOMContentLoaded', initSandbox);
+        return;
+    }
+    
+    if (shouldInitializeViz()) {
+        console.log('[Sandbox] Starting initialization');
+        console.log('[Sandbox] loadSandboxPlay type:', typeof loadSandboxPlay);
+        console.log('[Sandbox] loadSandboxPlay function:', loadSandboxPlay);
+        
+        if (typeof loadSandboxPlay !== 'function') {
+            console.error('[Sandbox] ERROR: loadSandboxPlay is not a function!', loadSandboxPlay);
+            return;
+        }
+        
+        console.log('[Sandbox] About to call loadSandboxPlay()');
+        try {
+            const result = loadSandboxPlay();
+            console.log('[Sandbox] loadSandboxPlay() returned:', result);
+            if (result && typeof result.then === 'function') {
+                console.log('[Sandbox] loadSandboxPlay() returned a Promise, attaching catch handler');
+                result.catch(error => {
+                    console.error('[Sandbox] Async error in loadSandboxPlay():', error);
+                    console.error('[Sandbox] Error stack:', error.stack);
+                });
+            } else {
+                console.log('[Sandbox] loadSandboxPlay() did not return a Promise');
+            }
+        } catch (error) {
+            console.error('[Sandbox] Synchronous error calling loadSandboxPlay():', error);
+            console.error('[Sandbox] Error stack:', error.stack);
+        }
+    } else {
+        console.log('[Sandbox] Initialization skipped - Section 11 not available');
+    }
+}
+
+initSandbox();
+
+function vizInitializeVisualization() {
+    const width = 1080; // 900 * 1.2
+    const height = 660; // 550 * 1.2
+    const margin = { top: 120, right: 24, bottom: 144, left: 24 }; // all * 1.2
     
     // NFL field dimensions: 0-120 yards (x-axis), 0-53.3 yards (y-axis)
     const fieldXMin = 0;
@@ -146,40 +268,62 @@ function initializeVisualization() {
     const fieldBottom = fieldTop + fieldHeight;
     
     // Create scales using proper field dimensions
-    xScale = d3.scaleLinear()
+    vizXScale = d3.scaleLinear()
         .domain([fieldXMin, fieldXMax])
         .range([margin.left, width - margin.right]);
     
-    yScale = d3.scaleLinear()
+    vizYScale = d3.scaleLinear()
         .domain([fieldYMin, fieldYMax])
         .range([fieldBottom, fieldTop]);
     
-    // Create SVG
-    svg = d3.select('#visualization')
+    // Create SVG - scope to Section 11
+    const section11 = document.getElementById('interactive');
+    if (!section11) {
+        console.error('[Sandbox] Section 11 not found in initializeVisualization');
+        return;
+    }
+    const vizElement = section11.querySelector('#visualization');
+    if (!vizElement) {
+        console.error('[Sandbox] #visualization not found in Section 11');
+        return;
+    }
+    
+    vizSvg = d3.select(vizElement)
         .append('svg')
         .attr('width', width)
         .attr('height', height);
     
+    console.log('[Sandbox] SVG created');
+    
     // Create groups for different elements
-    svg.append('g').attr('class', 'field');
-    svg.append('g').attr('class', 'field-annotations');
-    svg.append('g').attr('class', 'trails');
-    svg.append('g').attr('class', 'ball-trajectory');
-    svg.append('g').attr('class', 'ball');
-    svg.append('g').attr('class', 'players');
-    svg.append('g').attr('class', 'output-players');
-    svg.append('g').attr('class', 'labels');
-    svg.append('g').attr('class', 'coverage-arrows');
+    vizSvg.append('g').attr('class', 'field');
+    vizSvg.append('g').attr('class', 'field-annotations');
+    vizSvg.append('g').attr('class', 'trails');
+    vizSvg.append('g').attr('class', 'ball-trajectory');
+    vizSvg.append('g').attr('class', 'ball');
+    vizSvg.append('g').attr('class', 'players');
+    vizSvg.append('g').attr('class', 'output-players');
+    vizSvg.append('g').attr('class', 'labels');
+    vizSvg.append('g').attr('class', 'coverage-arrows');
 }
 
-function drawField() {
-    const fieldGroup = svg.select('.field');
+function vizDrawField() {
+    const fieldGroup = vizSvg.select('.field');
     
     // Field dimensions
     const xMin = 0;
     const xMax = 120;
     const yMin = 0;
     const yMax = 53.3;
+    
+    // Green grass background
+    fieldGroup.append('rect')
+        .attr('x', vizXScale(xMin))
+        .attr('y', vizYScale(yMax))
+        .attr('width', vizXScale(xMax) - vizXScale(xMin))
+        .attr('height', vizYScale(yMin) - vizYScale(yMax))
+        .attr('fill', '#90EE90')
+        .attr('class', 'field-background');
     
     // Draw end zones (0-10 and 110-120 yards) with team colors
     // Determine which team is on which side based on play direction and yardline
@@ -188,39 +332,39 @@ function drawField() {
     let leftTeamColor = '#0066CC'; // Default blue
     let rightTeamColor = '#DC143C'; // Default red
     
-    if (playData.supplementary) {
-        const supp = playData.supplementary;
+    if (vizPlayData.supplementary) {
+        const supp = vizPlayData.supplementary;
         // Determine which team is on left (0-10) and right (110-120)
         // Typically, visitor team is on left, home team is on right
         if (supp.visitor_team_abbr) {
             leftTeam = supp.visitor_team_abbr;
-            leftTeamColor = teamColors[supp.visitor_team_abbr] || '#0066CC';
+            leftTeamColor = vizTeamColors[supp.visitor_team_abbr] || '#0066CC';
         }
         if (supp.home_team_abbr) {
             rightTeam = supp.home_team_abbr;
-            rightTeamColor = teamColors[supp.home_team_abbr] || '#DC143C';
+            rightTeamColor = vizTeamColors[supp.home_team_abbr] || '#DC143C';
         }
     }
     
     // End zone 1 (0-10 yards) - Left team
     const leftEndzone = fieldGroup.append('rect')
-        .attr('x', xScale(0))
-        .attr('y', yScale(yMax))
-        .attr('width', xScale(10) - xScale(0))
-        .attr('height', yScale(yMin) - yScale(yMax))
+        .attr('x', vizXScale(0))
+        .attr('y', vizYScale(yMax))
+        .attr('width', vizXScale(10) - vizXScale(0))
+        .attr('height', vizYScale(yMin) - vizYScale(yMax))
         .attr('fill', leftTeamColor)
         .attr('opacity', 0.3)
         .attr('class', 'endzone-left');
     
     // Add team name label in left endzone
     if (leftTeam) {
-        const leftEndzoneCenterX = xScale(5);
-        const leftEndzoneCenterY = (yScale(yMin) + yScale(yMax)) / 2;
+        const leftEndzoneCenterX = vizXScale(5);
+        const leftEndzoneCenterY = (vizYScale(yMin) + vizYScale(yMax)) / 2;
         fieldGroup.append('text')
             .attr('x', leftEndzoneCenterX)
             .attr('y', leftEndzoneCenterY)
             .attr('class', 'endzone-label')
-            .style('font-size', '24px')
+            .style('font-size', '28.8px') // 24 * 1.2
             .style('font-weight', 'bold')
             .style('fill', 'white')
             .style('text-anchor', 'middle')
@@ -231,23 +375,23 @@ function drawField() {
     
     // End zone 2 (110-120 yards) - Right team
     const rightEndzone = fieldGroup.append('rect')
-        .attr('x', xScale(110))
-        .attr('y', yScale(yMax))
-        .attr('width', xScale(120) - xScale(110))
-        .attr('height', yScale(yMin) - yScale(yMax))
+        .attr('x', vizXScale(110))
+        .attr('y', vizYScale(yMax))
+        .attr('width', vizXScale(120) - vizXScale(110))
+        .attr('height', vizYScale(yMin) - vizYScale(yMax))
         .attr('fill', rightTeamColor)
         .attr('opacity', 0.3)
         .attr('class', 'endzone-right');
     
     // Add team name label in right endzone
     if (rightTeam) {
-        const rightEndzoneCenterX = xScale(115);
-        const rightEndzoneCenterY = (yScale(yMin) + yScale(yMax)) / 2;
+        const rightEndzoneCenterX = vizXScale(115);
+        const rightEndzoneCenterY = (vizYScale(yMin) + vizYScale(yMax)) / 2;
         fieldGroup.append('text')
             .attr('x', rightEndzoneCenterX)
             .attr('y', rightEndzoneCenterY)
             .attr('class', 'endzone-label')
-            .style('font-size', '24px')
+            .style('font-size', '28.8px') // 24 * 1.2
             .style('font-weight', 'bold')
             .style('fill', 'white')
             .style('text-anchor', 'middle')
@@ -263,10 +407,10 @@ function drawField() {
         
         fieldGroup.append('line')
             .attr('class', 'field-line')
-            .attr('x1', xScale(i))
-            .attr('y1', yScale(yMin))
-            .attr('x2', xScale(i))
-            .attr('y2', yScale(yMax))
+            .attr('x1', vizXScale(i))
+            .attr('y1', vizYScale(yMin))
+            .attr('x2', vizXScale(i))
+            .attr('y2', vizYScale(yMax))
             .attr('stroke-width', isGoalLine ? 3 : (isEndZone ? 2 : 1))
             .attr('opacity', isEndZone ? 0.6 : 0.8);
     }
@@ -274,10 +418,10 @@ function drawField() {
     // Draw out-of-bounds lines (sidelines at y=0 and y=53.3)
     fieldGroup.append('line')
         .attr('class', 'out-of-bounds-line')
-        .attr('x1', xScale(xMin))
-        .attr('y1', yScale(yMin))
-        .attr('x2', xScale(xMax))
-        .attr('y2', yScale(yMin))
+        .attr('x1', vizXScale(xMin))
+        .attr('y1', vizYScale(yMin))
+        .attr('x2', vizXScale(xMax))
+        .attr('y2', vizYScale(yMin))
         .attr('stroke', '#FF0000')
         .attr('stroke-width', 3)
         .attr('stroke-dasharray', '10,5')
@@ -285,10 +429,10 @@ function drawField() {
     
     fieldGroup.append('line')
         .attr('class', 'out-of-bounds-line')
-        .attr('x1', xScale(xMin))
-        .attr('y1', yScale(yMax))
-        .attr('x2', xScale(xMax))
-        .attr('y2', yScale(yMax))
+        .attr('x1', vizXScale(xMin))
+        .attr('y1', vizYScale(yMax))
+        .attr('x2', vizXScale(xMax))
+        .attr('y2', vizYScale(yMax))
         .attr('stroke', '#FF0000')
         .attr('stroke-width', 3)
         .attr('stroke-dasharray', '10,5')
@@ -297,38 +441,38 @@ function drawField() {
     // Draw field boundaries (left and right)
     fieldGroup.append('line')
         .attr('class', 'field-boundary')
-        .attr('x1', xScale(xMin))
-        .attr('y1', yScale(yMin))
-        .attr('x2', xScale(xMin))
-        .attr('y2', yScale(yMax))
+        .attr('x1', vizXScale(xMin))
+        .attr('y1', vizYScale(yMin))
+        .attr('x2', vizXScale(xMin))
+        .attr('y2', vizYScale(yMax))
         .attr('stroke', '#FFFFFF')
         .attr('stroke-width', 4)
         .attr('opacity', 1);
     
     fieldGroup.append('line')
         .attr('class', 'field-boundary')
-        .attr('x1', xScale(xMax))
-        .attr('y1', yScale(yMin))
-        .attr('x2', xScale(xMax))
-        .attr('y2', yScale(yMax))
+        .attr('x1', vizXScale(xMax))
+        .attr('y1', vizYScale(yMin))
+        .attr('x2', vizXScale(xMax))
+        .attr('y2', vizYScale(yMax))
         .attr('stroke', '#FFFFFF')
         .attr('stroke-width', 4)
         .attr('opacity', 1);
     
     // Draw first down marker
-    if (playData.supplementary && playData.supplementary.yardline_number !== null && playData.supplementary.yards_to_go !== null) {
-        const yardlineNumber = playData.supplementary.yardline_number;
-        const yardsToGo = playData.supplementary.yards_to_go;
-        const yardlineSide = playData.supplementary.yardline_side;
+    if (vizPlayData.supplementary && vizPlayData.supplementary.yardline_number !== null && vizPlayData.supplementary.yards_to_go !== null) {
+        const yardlineNumber = vizPlayData.supplementary.yardline_number;
+        const yardsToGo = vizPlayData.supplementary.yards_to_go;
+        const yardlineSide = vizPlayData.supplementary.yardline_side;
         
         // Convert relative yardline to absolute coordinates (0-120)
         // Left endzone is 0-10, right endzone is 110-120
         // If yardline_side matches visitor team or is on left side, use: absolute = 10 + yardline_number
         // If yardline_side matches home team or is on right side, use: absolute = 110 - yardline_number
         let absoluteYardline;
-        if (playData.absolute_yardline !== null && playData.absolute_yardline !== undefined) {
+        if (vizPlayData.absolute_yardline !== null && vizPlayData.absolute_yardline !== undefined) {
             // Use absolute_yardline if available (most reliable)
-            absoluteYardline = playData.absolute_yardline;
+            absoluteYardline = vizPlayData.absolute_yardline;
         } else {
             // Fallback: determine based on yardline_side
             // Typically, if yardline_number < 50, it's from left side (0-10 endzone)
@@ -344,7 +488,7 @@ function drawField() {
         
         // Calculate first down position based on play direction
         let firstDownYardline;
-        if (playData.play_direction === 'right') {
+        if (vizPlayData.play_direction === 'right') {
             firstDownYardline = absoluteYardline + yardsToGo;
         } else {
             firstDownYardline = absoluteYardline - yardsToGo;
@@ -352,15 +496,15 @@ function drawField() {
         
         // Ensure first down is within field bounds
         if (firstDownYardline >= 0 && firstDownYardline <= 120) {
-            const firstDownX = xScale(firstDownYardline);
+            const firstDownX = vizXScale(firstDownYardline);
             
             // Draw first down marker line
             fieldGroup.append('line')
                 .attr('class', 'first-down-marker')
                 .attr('x1', firstDownX)
-                .attr('y1', yScale(yMin))
+                .attr('y1', vizYScale(yMin))
                 .attr('x2', firstDownX)
-                .attr('y2', yScale(yMax))
+                .attr('y2', vizYScale(yMax))
                 .attr('stroke', '#FFD700')
                 .attr('stroke-width', 4)
                 .attr('opacity', 0.9)
@@ -369,9 +513,9 @@ function drawField() {
             // Add first down label
             fieldGroup.append('text')
                 .attr('x', firstDownX)
-                .attr('y', yScale(yMax) + 15)
+                .attr('y', vizYScale(yMax) + 15)
                 .attr('class', 'field-number')
-                .style('font-size', '12px')
+                .style('font-size', '14.4px') // 12 * 1.2
                 .style('fill', '#FFD700')
                 .style('font-weight', 'bold')
                 .text('1st');
@@ -379,19 +523,19 @@ function drawField() {
     }
     
     // Draw field annotations
-    drawFieldAnnotations();
+    vizDrawFieldAnnotations();
 }
 
-function drawFieldAnnotations() {
-    if (!playData.supplementary) return;
+function vizDrawFieldAnnotations() {
+    if (!vizPlayData.supplementary) return;
     
-    const supp = playData.supplementary;
-    const annotationsGroup = svg.select('.field-annotations');
+    const supp = vizPlayData.supplementary;
+    const annotationsGroup = vizSvg.select('.field-annotations');
     
     // Get field dimensions (must match initializeVisualization)
-    const width = 900;
-    const height = 650;
-    const margin = { top: 60, right: 20, bottom: 120, left: 20 };
+    const width = 1080; // 900 * 1.2
+    const height = 780; // 650 * 1.2
+    const margin = { top: 72, right: 24, bottom: 144, left: 24 }; // all * 1.2
     const yMin = 0;
     const yMax = 53.3;
     
@@ -407,8 +551,8 @@ function drawFieldAnnotations() {
     if (supp.yardline_side && supp.yardline_number !== null) {
         // Convert relative yardline to absolute coordinates (0-120)
         let absoluteYardline;
-        if (playData.absolute_yardline !== null && playData.absolute_yardline !== undefined) {
-            absoluteYardline = playData.absolute_yardline;
+        if (vizPlayData.absolute_yardline !== null && vizPlayData.absolute_yardline !== undefined) {
+            absoluteYardline = vizPlayData.absolute_yardline;
         } else {
             // Fallback: convert based on yardline_side
             const yardlineNumber = supp.yardline_number;
@@ -421,16 +565,16 @@ function drawFieldAnnotations() {
             }
         }
         
-        const yardlineX = xScale(absoluteYardline);
+        const yardlineX = vizXScale(absoluteYardline);
         
         // Draw line of scrimmage line
-        const fieldGroup = svg.select('.field');
+        const fieldGroup = vizSvg.select('.field');
         fieldGroup.append('line')
             .attr('class', 'line-of-scrimmage')
             .attr('x1', yardlineX)
-            .attr('y1', yScale(yMin))
+            .attr('y1', vizYScale(yMin))
             .attr('x2', yardlineX)
-            .attr('y2', yScale(yMax))
+            .attr('y2', vizYScale(yMax))
             .attr('stroke', '#00FF00')
             .attr('stroke-width', 3)
             .attr('opacity', 0.8)
@@ -444,7 +588,7 @@ function drawFieldAnnotations() {
         // Create temporary text element to measure width and height
         const tempText = annotationsGroup.append('text')
             .attr('class', 'temp-measure')
-            .style('font-size', '16px')
+            .style('font-size', '19.2px') // 16 * 1.2
             .style('font-weight', 'bold')
             .style('visibility', 'hidden')
             .text(yardlineText);
@@ -474,7 +618,7 @@ function drawFieldAnnotations() {
             .attr('x', yardlineX)
             .attr('y', textY)
             .attr('class', 'field-number')
-            .style('font-size', '16px')
+            .style('font-size', '19.2px') // 16 * 1.2
             .style('font-weight', 'bold')
             .style('fill', '#0d0a1f')
             .style('text-anchor', 'middle')
@@ -486,12 +630,12 @@ function drawFieldAnnotations() {
     const topY = fieldTop - 50;
     if (supp.visitor_team_abbr) {
         const visitorText = supp.visitor_team_abbr;
-        const visitorColor = teamColors[supp.visitor_team_abbr] || '#2a2a2a';
+        const visitorColor = vizTeamColors[supp.visitor_team_abbr] || '#2a2a2a';
         
         // Create temporary text element to measure width and height
         const tempText = annotationsGroup.append('text')
             .attr('class', 'temp-measure')
-            .style('font-size', '18px')
+            .style('font-size', '21.6px') // 18 * 1.2
             .style('font-weight', 'bold')
             .style('visibility', 'hidden')
             .text(visitorText);
@@ -520,7 +664,7 @@ function drawFieldAnnotations() {
             .attr('x', margin.left + 10)
             .attr('y', textY)
             .attr('class', 'field-annotation')
-            .style('font-size', '18px')
+            .style('font-size', '21.6px') // 18 * 1.2
             .style('font-weight', 'bold')
             .style('fill', 'white')
             .text(visitorText);
@@ -528,12 +672,12 @@ function drawFieldAnnotations() {
     
     if (supp.home_team_abbr) {
         const homeText = supp.home_team_abbr;
-        const homeColor = teamColors[supp.home_team_abbr] || '#2a2a2a';
+        const homeColor = vizTeamColors[supp.home_team_abbr] || '#2a2a2a';
         
         // Create temporary text element to measure width and height
         const tempText = annotationsGroup.append('text')
             .attr('class', 'temp-measure')
-            .style('font-size', '18px')
+            .style('font-size', '21.6px') // 18 * 1.2
             .style('font-weight', 'bold')
             .style('visibility', 'hidden')
             .text(homeText);
@@ -563,7 +707,7 @@ function drawFieldAnnotations() {
             .attr('x', width - margin.right - 10)
             .attr('y', textY)
             .attr('class', 'field-annotation')
-            .style('font-size', '18px')
+            .style('font-size', '21.6px') // 18 * 1.2
             .style('font-weight', 'bold')
             .style('fill', 'white')
             .style('text-anchor', 'end')
@@ -574,8 +718,8 @@ function drawFieldAnnotations() {
     if (supp.down !== null && supp.yards_to_go !== null && supp.yardline_side && supp.yardline_number !== null) {
         // Calculate yardline position to align with
         let absoluteYardline;
-        if (playData.absolute_yardline !== null && playData.absolute_yardline !== undefined) {
-            absoluteYardline = playData.absolute_yardline;
+        if (vizPlayData.absolute_yardline !== null && vizPlayData.absolute_yardline !== undefined) {
+            absoluteYardline = vizPlayData.absolute_yardline;
         } else {
             const yardlineNumber = supp.yardline_number;
             if (yardlineNumber < 50) {
@@ -584,7 +728,7 @@ function drawFieldAnnotations() {
                 absoluteYardline = 110 - yardlineNumber;
             }
         }
-        const alignX = xScale(absoluteYardline);
+        const alignX = vizXScale(absoluteYardline);
         
         // Convert down number to ordinal (1st, 2nd, 3rd, 4th)
         const getOrdinal = (n) => {
@@ -598,7 +742,7 @@ function drawFieldAnnotations() {
         // Create temporary text element to measure width
         const tempText = annotationsGroup.append('text')
             .attr('class', 'temp-measure')
-            .style('font-size', '18px')
+            .style('font-size', '21.6px') // 18 * 1.2
             .style('font-weight', 'bold')
             .style('visibility', 'hidden')
             .text(downDistanceText);
@@ -629,7 +773,7 @@ function drawFieldAnnotations() {
             .attr('x', alignX)
             .attr('y', textY)
             .attr('class', 'field-annotation')
-            .style('font-size', '18px')
+            .style('font-size', '21.6px') // 18 * 1.2
             .style('font-weight', 'bold')
             .style('fill', '#0d0a1f')
             .style('text-anchor', 'middle')
@@ -638,10 +782,10 @@ function drawFieldAnnotations() {
 
 }
 
-function populateScoreboard() {
-    if (!playData.supplementary) return;
+function vizPopulateScoreboard() {
+    if (!vizPlayData.supplementary) return;
     
-    const supp = playData.supplementary;
+    const supp = vizPlayData.supplementary;
     const scoreboard = d3.select('#scoreboard');
     
     scoreboard.html(''); // Clear existing content
@@ -657,7 +801,7 @@ function populateScoreboard() {
     const leftSection = scoreboard.append('div').attr('class', 'scoreboard-left');
     if (supp.visitor_team_abbr) {
         const visitorScore = supp.pre_snap_visitor_score !== null ? supp.pre_snap_visitor_score : 0;
-        const visitorColor = teamColors[supp.visitor_team_abbr] || '#2a2a2a';
+        const visitorColor = vizTeamColors[supp.visitor_team_abbr] || '#2a2a2a';
         // Apply team color as background
         leftSection.style('background', visitorColor);
         leftSection.append('div').attr('class', 'scoreboard-team-name').text(supp.visitor_team_abbr);
@@ -687,7 +831,7 @@ function populateScoreboard() {
     const rightSection = scoreboard.append('div').attr('class', 'scoreboard-right');
     if (supp.home_team_abbr) {
         const homeScore = supp.pre_snap_home_score !== null ? supp.pre_snap_home_score : 0;
-        const homeColor = teamColors[supp.home_team_abbr] || '#2a2a2a';
+        const homeColor = vizTeamColors[supp.home_team_abbr] || '#2a2a2a';
         // Apply team color as background
         rightSection.style('background', homeColor);
         rightSection.append('div').attr('class', 'scoreboard-score').text(homeScore);
@@ -695,10 +839,10 @@ function populateScoreboard() {
     }
 }
 
-function populateSupplementaryPanel() {
-    if (!playData.supplementary) return;
+function vizPopulateSupplementaryPanel() {
+    if (!vizPlayData.supplementary) return;
     
-    const supp = playData.supplementary;
+    const supp = vizPlayData.supplementary;
     const panel = d3.select('#supplementary-panel');
     
     panel.html(''); // Clear existing content
@@ -788,20 +932,20 @@ function populateSupplementaryPanel() {
     }
 }
 
-function updatePlayDescription() {
-    if (!playData.supplementary || !playData.supplementary.play_description) return;
+function vizUpdatePlayDescription() {
+    if (!vizPlayData.supplementary || !vizPlayData.supplementary.play_description) return;
     
     const descDiv = d3.select('#play-description');
-    descDiv.html(`<strong>Play Description:</strong> ${playData.supplementary.play_description}`);
+    descDiv.html(`<strong>Play Description:</strong> ${vizPlayData.supplementary.play_description}`);
 }
 
 // Calculate ball position along parabolic trajectory
-function calculateBallPosition(frame) {
-    if (frame < playData.throw_frame) {
+function vizCalculateBallPosition(frame) {
+    if (frame < vizPlayData.throw_frame) {
         // Ball hasn't been thrown yet
         return {
-            x: playData.ball_throw_x,
-            y: playData.ball_throw_y,
+            x: vizPlayData.ball_throw_x,
+            y: vizPlayData.ball_throw_y,
             visible: false
         };
     }
@@ -810,14 +954,14 @@ function calculateBallPosition(frame) {
     // Since input data is "before throw" and output is "after throw",
     // the throw happens at the last input frame (throw_frame = max_frame)
     // The ball trajectory should complete at the very last frame to match when player catches
-    const throwFrame = playData.throw_frame;
-    const landingFrame = playData.total_frames || playData.max_frame; // Finish at last frame
+    const throwFrame = vizPlayData.throw_frame;
+    const landingFrame = vizPlayData.total_frames || vizPlayData.max_frame; // Finish at last frame
     
     if (frame >= landingFrame) {
         // Ball has landed
         return {
-            x: playData.ball_land_x,
-            y: playData.ball_land_y,
+            x: vizPlayData.ball_land_x,
+            y: vizPlayData.ball_land_y,
             visible: true
         };
     }
@@ -828,10 +972,10 @@ function calculateBallPosition(frame) {
     const progress = Math.min(Math.max(currentFlightFrame / flightFrames, 0), 1);
     
     // Straight line trajectory from throw point to landing point
-    const startX = playData.ball_throw_x;
-    const startY = playData.ball_throw_y;
-    const endX = playData.ball_land_x;
-    const endY = playData.ball_land_y;
+    const startX = vizPlayData.ball_throw_x;
+    const startY = vizPlayData.ball_throw_y;
+    const endX = vizPlayData.ball_land_x;
+    const endY = vizPlayData.ball_land_y;
     
     // Simple linear interpolation (straight line)
     const x = startX + (endX - startX) * progress;
@@ -844,29 +988,29 @@ function calculateBallPosition(frame) {
     };
 }
 
-function updateTimeToThrow() {
-    if (!playData) return;
+function vizUpdateTimeToThrow() {
+    if (!vizPlayData) return;
     
     // Calculate time to throw (assuming 10 frames per second, so each frame is 0.1 seconds)
     const framesPerSecond = 10;
     const timePerFrame = 1 / framesPerSecond;
     
     // Time stops at throw_frame (when switching from input to output)
-    const effectiveFrame = Math.min(currentFrame, playData.throw_frame);
+    const effectiveFrame = Math.min(vizCurrentFrame, vizPlayData.throw_frame);
     const timeToThrow = (effectiveFrame - 1) * timePerFrame; // -1 because frame starts at 1
     
     const timeDisplay = d3.select('#time-to-throw');
     timeDisplay.text(`Time to Throw: ${timeToThrow.toFixed(1)}s`);
 }
 
-function drawCoverageAnnotation() {
-    if (!playData || !playData.supplementary) {
+function vizDrawCoverageAnnotation() {
+    if (!vizPlayData || !vizPlayData.supplementary) {
         const coverageDisplay = d3.select('#coverage-annotation');
         coverageDisplay.text('');
         return;
     }
     
-    const supp = playData.supplementary;
+    const supp = vizPlayData.supplementary;
     let coverageType = supp.team_coverage_type || supp.team_coverage_man_zone || 'Unknown';
     
     // Format coverage text: COVER_X_ZONE -> Cover X Zone
@@ -875,18 +1019,26 @@ function drawCoverageAnnotation() {
         .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
         .join(' ');
     
-    // Always update coverage text display (stays visible throughout)
-    const coverageDisplay = d3.select('#coverage-annotation');
-    coverageDisplay.text(`Coverage: ${coverageType}`);
+    // Always update coverage text display (stays visible throughout) - scope to Section 11
+    const section11 = document.getElementById('interactive');
+    if (section11) {
+        const coverageEl = section11.querySelector('#coverage-annotation');
+        if (coverageEl) {
+            const coverageDisplay = d3.select(coverageEl);
+            coverageDisplay.text(`Coverage: ${coverageType}`);
+        }
+    }
     
     // Only draw arrows on frame 1
-    const coverageGroup = svg.select('.coverage-arrows');
-    if (currentFrame === 1) {
+    const coverageGroup = vizSvg.select('.coverage-arrows');
+    if (vizCurrentFrame === 1) {
         coverageGroup.selectAll('*').remove();
         
         // Get the actual position of the coverage annotation element
-        const coverageElement = document.getElementById('coverage-annotation');
-        const svgElement = document.getElementById('visualization');
+        const section11 = document.getElementById('interactive');
+        if (!section11) return;
+        const coverageElement = section11.querySelector('#coverage-annotation');
+        const svgElement = section11.querySelector('#visualization');
         
         if (coverageElement && svgElement) {
             const coverageRect = coverageElement.getBoundingClientRect();
@@ -898,15 +1050,15 @@ function drawCoverageAnnotation() {
             const annotationY = (coverageRect.bottom) - svgRect.top;
             
             // Draw arrows to each defensive player only
-            Object.entries(playData.players).forEach(([nflId, player]) => {
+            Object.entries(vizPlayData.players).forEach(([nflId, player]) => {
                 // Only show arrows for defensive players
                 if (player.side !== 'Defense') return;
                 
                 const frame1 = player.frames.find(f => f.frame_id === 1);
                 if (!frame1) return;
                 
-                const playerX = xScale(frame1.x);
-                const playerY = yScale(frame1.y);
+                const playerX = vizXScale(frame1.x);
+                const playerY = vizYScale(frame1.y);
                 
                 // Calculate arrow path
                 const dx = playerX - annotationX;
@@ -932,13 +1084,13 @@ function drawCoverageAnnotation() {
         }
         
         // Create red arrow marker if it doesn't exist
-        const defs = svg.select('defs');
+        const defs = vizSvg.select('defs');
         if (defs.empty()) {
-            svg.append('defs');
+            vizSvg.append('defs');
         }
         
-        if (svg.select('defs').select('#arrowhead-red').empty()) {
-            svg.select('defs').append('marker')
+        if (vizSvg.select('defs').select('#arrowhead-red').empty()) {
+            vizSvg.select('defs').append('marker')
                 .attr('id', 'arrowhead-red')
                 .attr('markerWidth', 10)
                 .attr('markerHeight', 10)
@@ -955,15 +1107,15 @@ function drawCoverageAnnotation() {
     }
 }
 
-function updateVisualization() {
-    if (!playData || !svg) return;
+function vizUpdateVisualization() {
+    if (!vizPlayData || !vizSvg) return;
     
-    const playersGroup = svg.select('.players');
-    const outputPlayersGroup = svg.select('.output-players');
-    const trailsGroup = svg.select('.trails');
-    const ballTrajectoryGroup = svg.select('.ball-trajectory');
-    const ballGroup = svg.select('.ball');
-    const labelsGroup = svg.select('.labels');
+    const playersGroup = vizSvg.select('.players');
+    const outputPlayersGroup = vizSvg.select('.output-players');
+    const trailsGroup = vizSvg.select('.trails');
+    const ballTrajectoryGroup = vizSvg.select('.ball-trajectory');
+    const ballGroup = vizSvg.select('.ball');
+    const labelsGroup = vizSvg.select('.labels');
     
     // Clear previous frame
     playersGroup.selectAll('*').remove();
@@ -972,25 +1124,25 @@ function updateVisualization() {
     ballGroup.selectAll('*').remove();
     
     // Draw coverage annotation (only on frame 1)
-    drawCoverageAnnotation();
+    vizDrawCoverageAnnotation();
     
-    if (!showTrails) {
+    if (!vizShowTrails) {
         trailsGroup.selectAll('*').remove();
         ballTrajectoryGroup.selectAll('*').remove();
     }
     
     // Draw trails if enabled
-    if (showTrails) {
+    if (vizShowTrails) {
         trailsGroup.selectAll('*').remove();
         
-        Object.entries(playData.players).forEach(([nflId, player]) => {
-            const frames = player.frames.filter(f => f.frame_id <= currentFrame);
+        Object.entries(vizPlayData.players).forEach(([nflId, player]) => {
+            const frames = player.frames.filter(f => f.frame_id <= vizCurrentFrame);
             
             if (frames.length < 2) return;
             
             const line = d3.line()
-                .x(d => xScale(d.x))
-                .y(d => yScale(d.y))
+                .x(d => vizXScale(d.x))
+                .y(d => vizYScale(d.y))
                 .curve(d3.curveLinear);
             
             const color = player.side === 'Defense' ? '#FF6B6B' : '#4ECDC4';
@@ -1005,19 +1157,19 @@ function updateVisualization() {
         });
         
         // Draw trails for output players (after throw)
-        if (playData.output_players && currentFrame > playData.throw_frame) {
-            Object.entries(playData.output_players).forEach(([nflId, outputPlayer]) => {
+        if (vizPlayData.output_players && vizCurrentFrame > vizPlayData.throw_frame) {
+            Object.entries(vizPlayData.output_players).forEach(([nflId, outputPlayer]) => {
                 // Map visualization frames to output frames
                 const startOutputFrame = 1;
-                const endOutputFrame = Math.min(currentFrame - playData.throw_frame, Math.max(...outputPlayer.frames.map(f => f.frame_id)));
+                const endOutputFrame = Math.min(vizCurrentFrame - vizPlayData.throw_frame, Math.max(...outputPlayer.frames.map(f => f.frame_id)));
                 
                 const outputFrames = outputPlayer.frames.filter(f => f.frame_id >= startOutputFrame && f.frame_id <= endOutputFrame);
                 
                 if (outputFrames.length < 2) return;
                 
                 const line = d3.line()
-                    .x(d => xScale(d.x))
-                    .y(d => yScale(d.y))
+                    .x(d => vizXScale(d.x))
+                    .y(d => vizYScale(d.y))
                     .curve(d3.curveLinear);
                 
                 // Use orange color for output player trails
@@ -1033,14 +1185,14 @@ function updateVisualization() {
         }
         
         // Draw ball trajectory
-        if (showBallTrajectory && currentFrame >= playData.throw_frame) {
+        if (vizShowBallTrajectory && vizCurrentFrame >= vizPlayData.throw_frame) {
             ballTrajectoryGroup.selectAll('*').remove();
             
             const trajectoryPoints = [];
             // Calculate trajectory up to current frame, including beyond max_frame if needed
-            const maxTrajectoryFrame = Math.min(currentFrame, playData.throw_frame + 10); // Allow up to 10 frames for trajectory
-            for (let f = playData.throw_frame; f <= maxTrajectoryFrame; f++) {
-                const ballPos = calculateBallPosition(f);
+            const maxTrajectoryFrame = Math.min(vizCurrentFrame, vizPlayData.throw_frame + 10); // Allow up to 10 frames for trajectory
+            for (let f = vizPlayData.throw_frame; f <= maxTrajectoryFrame; f++) {
+                const ballPos = vizCalculateBallPosition(f);
                 if (ballPos.visible) {
                     trajectoryPoints.push({ x: ballPos.x, y: ballPos.y });
                 }
@@ -1048,8 +1200,8 @@ function updateVisualization() {
             
             if (trajectoryPoints.length >= 2) {
                 const line = d3.line()
-                    .x(d => xScale(d.x))
-                    .y(d => yScale(d.y))
+                    .x(d => vizXScale(d.x))
+                    .y(d => vizYScale(d.y))
                     .curve(d3.curveLinear); // Straight line trajectory
                 
                 ballTrajectoryGroup.append('path')
@@ -1067,10 +1219,10 @@ function updateVisualization() {
     }
     
     // Draw ball at current position
-    const ballPos = calculateBallPosition(currentFrame);
-    if (ballPos.visible || currentFrame >= playData.throw_frame) {
-        const ballX = xScale(ballPos.x);
-        const ballY = yScale(ballPos.y);
+    const ballPos = vizCalculateBallPosition(vizCurrentFrame);
+    if (ballPos.visible || vizCurrentFrame >= vizPlayData.throw_frame) {
+        const ballX = vizXScale(ballPos.x);
+        const ballY = vizYScale(ballPos.y);
         
         // Draw ball (brown color)
         ballGroup.append('circle')
@@ -1093,9 +1245,9 @@ function updateVisualization() {
             .attr('opacity', 0.3);
         
         // Draw completion/incompletion indicator only at the last frame
-        const lastFrame = playData.total_frames || playData.max_frame;
-        if (currentFrame === lastFrame && playData.supplementary && playData.supplementary.pass_result) {
-            const passResult = playData.supplementary.pass_result.toUpperCase();
+        const lastFrame = vizPlayData.total_frames || vizPlayData.max_frame;
+        if (vizCurrentFrame === lastFrame && vizPlayData.supplementary && vizPlayData.supplementary.pass_result) {
+            const passResult = vizPlayData.supplementary.pass_result.toUpperCase();
             const isCompletion = passResult === 'C' || passResult === 'COMP' || passResult === 'COMPLETE' || 
                                  passResult.includes('COMPLETE') || passResult === 'COMPLETION';
             const isIncompletion = passResult === 'I' || passResult === 'INC' || passResult === 'INCOMPLETE' || 
@@ -1158,15 +1310,15 @@ function updateVisualization() {
     }
     
     // Draw players at current frame
-    Object.entries(playData.players).forEach(([nflId, player]) => {
-        let frame = player.frames.find(f => f.frame_id === currentFrame);
+    Object.entries(vizPlayData.players).forEach(([nflId, player]) => {
+        let frame = player.frames.find(f => f.frame_id === vizCurrentFrame);
         let isOutputPlayer = false;
         
         // If player not in current input frame and we're past throw_frame,
         // check if they're in output data
-        if (!frame && currentFrame > playData.throw_frame && playData.output_players && playData.output_players[nflId]) {
-            const outputPlayer = playData.output_players[nflId];
-            const outputFrame = currentFrame - playData.throw_frame;
+        if (!frame && vizCurrentFrame > vizPlayData.throw_frame && vizPlayData.output_players && vizPlayData.output_players[nflId]) {
+            const outputPlayer = vizPlayData.output_players[nflId];
+            const outputFrame = vizCurrentFrame - vizPlayData.throw_frame;
             const outputFrameData = outputPlayer.frames.find(f => f.frame_id === outputFrame);
             
             if (outputFrameData) {
@@ -1196,7 +1348,7 @@ function updateVisualization() {
         }
         
         // If still no frame and after throw_frame, freeze at last input position
-        if (!frame && currentFrame > playData.throw_frame) {
+        if (!frame && vizCurrentFrame > vizPlayData.throw_frame) {
             const lastFrame = player.frames[player.frames.length - 1];
             if (lastFrame) {
                 frame = lastFrame; // Use last input frame position (freeze)
@@ -1208,8 +1360,8 @@ function updateVisualization() {
         }
         
         const color = player.side === 'Defense' ? '#FF6B6B' : '#4ECDC4';
-        const x = xScale(frame.x);
-        const y = yScale(frame.y);
+        const x = vizXScale(frame.x);
+        const y = vizYScale(frame.y);
         
         // Draw player circle
         const playerCircle = playersGroup.append('circle')
@@ -1244,7 +1396,7 @@ function updateVisualization() {
         }
         
         // Draw player name if enabled
-        if (showNames) {
+        if (vizShowNames) {
             labelsGroup.append('text')
                 .attr('x', x)
                 .attr('y', y - 15)
@@ -1256,14 +1408,14 @@ function updateVisualization() {
     
     // Draw output players that are NOT in input data (only in output)
     // Players in both input and output are already handled above and continue moving
-    if (showOutputPlayers && playData.output_players && currentFrame > playData.throw_frame) {
+    if (vizShowOutputPlayers && vizPlayData.output_players && vizCurrentFrame > vizPlayData.throw_frame) {
         // Map visualization frame to output frame
-        const outputFrame = currentFrame - playData.throw_frame;
+        const outputFrame = vizCurrentFrame - vizPlayData.throw_frame;
         
         // Calculate max output frame
         let maxOutputFrame = 0;
-        if (playData.output_players) {
-            Object.values(playData.output_players).forEach(player => {
+        if (vizPlayData.output_players) {
+            Object.values(vizPlayData.output_players).forEach(player => {
                 if (player.frames && player.frames.length > 0) {
                     const playerMaxFrame = Math.max(...player.frames.map(f => f.frame_id));
                     maxOutputFrame = Math.max(maxOutputFrame, playerMaxFrame);
@@ -1273,17 +1425,17 @@ function updateVisualization() {
         
         // Only show if outputFrame is within valid range (1 to max output frame)
         if (outputFrame >= 1 && outputFrame <= maxOutputFrame) {
-            Object.entries(playData.output_players).forEach(([nflId, outputPlayer]) => {
+            Object.entries(vizPlayData.output_players).forEach(([nflId, outputPlayer]) => {
                 // Skip players that are in input data (they're already drawn above)
-                if (playData.players[nflId]) {
+                if (vizPlayData.players[nflId]) {
                     return;
                 }
                 
                 const frame = outputPlayer.frames.find(f => f.frame_id === outputFrame);
                 if (!frame) return;
                 
-                const x = xScale(frame.x);
-                const y = yScale(frame.y);
+                const x = vizXScale(frame.x);
+                const y = vizYScale(frame.y);
                 
                 // Draw output player circle (orange) - only for players not in input
                 const outputPlayerCircle = outputPlayersGroup.append('circle')
@@ -1300,7 +1452,7 @@ function updateVisualization() {
                     .text(`Post-Throw Position\nFrame: ${outputFrame}`);
                 
                 // Draw player name if enabled
-                if (showNames) {
+                if (vizShowNames) {
                     labelsGroup.append('text')
                         .attr('x', x)
                         .attr('y', y - 15)
@@ -1314,116 +1466,201 @@ function updateVisualization() {
     }
 }
 
-function updateFrameDisplay() {
-    const maxFrame = playData.total_frames || playData.max_frame;
-    document.getElementById('frame-display').textContent = 
-        `Frame: ${currentFrame} / ${maxFrame}`;
-    document.getElementById('frame-slider').value = currentFrame;
-    updateTimeToThrow();
+function vizUpdateFrameDisplay() {
+    const section11 = document.getElementById('interactive');
+    if (!section11) return;
+    
+    const maxFrame = vizPlayData.total_frames || vizPlayData.max_frame;
+    const frameDisplay = section11.querySelector('#frame-display');
+    if (frameDisplay) {
+        frameDisplay.textContent = `Frame: ${vizCurrentFrame} / ${maxFrame}`;
+    }
+    const frameSlider = section11.querySelector('#frame-slider');
+    if (frameSlider) {
+        frameSlider.value = vizCurrentFrame;
+    }
+    vizUpdateTimeToThrow();
 }
 
-function playAnimation() {
-    if (isPlaying) {
-        clearInterval(animationInterval);
-        isPlaying = false;
-        document.getElementById('play-pause-btn').textContent = 'Play';
+function vizPlayAnimation() {
+    const section11 = document.getElementById('interactive');
+    if (!section11) return;
+    
+    const playPauseBtn = section11.querySelector('#play-pause-btn');
+    if (!playPauseBtn) return;
+    
+    if (vizIsPlaying) {
+        clearInterval(vizAnimationInterval);
+        vizIsPlaying = false;
+        playPauseBtn.textContent = 'Play';
     } else {
-        isPlaying = true;
-        document.getElementById('play-pause-btn').textContent = 'Pause';
+        vizIsPlaying = true;
+        playPauseBtn.textContent = 'Pause';
         
-        animationInterval = setInterval(() => {
-            const maxFrame = playData.total_frames || playData.max_frame;
-            if (currentFrame >= maxFrame) {
+        vizAnimationInterval = setInterval(() => {
+            const maxFrame = vizPlayData.total_frames || vizPlayData.max_frame;
+            if (vizCurrentFrame >= maxFrame) {
                 // Stop at last frame instead of looping
-                clearInterval(animationInterval);
-                isPlaying = false;
-                document.getElementById('play-pause-btn').textContent = 'Play';
+                clearInterval(vizAnimationInterval);
+                vizIsPlaying = false;
+                playPauseBtn.textContent = 'Play';
                 // Ensure last frame is displayed
-                updateFrameDisplay();
-                drawCoverageAnnotation();
-                updateVisualization();
+                vizUpdateFrameDisplay();
+                vizDrawCoverageAnnotation();
+                vizUpdateVisualization();
             } else {
-                currentFrame++;
-                updateFrameDisplay();
-                drawCoverageAnnotation();
-                updateVisualization();
+                vizCurrentFrame++;
+                vizUpdateFrameDisplay();
+                vizDrawCoverageAnnotation();
+                vizUpdateVisualization();
             }
         }, 200); // 200ms per frame
     }
 }
 
-function resetAnimation() {
-    currentFrame = 1;
-    isPlaying = false;
-    clearInterval(animationInterval);
-    document.getElementById('play-pause-btn').textContent = 'Play';
-    updateFrameDisplay();
-    updateVisualization();
+function vizResetAnimation() {
+    const section11 = document.getElementById('interactive');
+    if (!section11) return;
+    
+    vizCurrentFrame = 1;
+    vizIsPlaying = false;
+    clearInterval(vizAnimationInterval);
+    const playPauseBtn = section11.querySelector('#play-pause-btn');
+    if (playPauseBtn) playPauseBtn.textContent = 'Play';
+    vizUpdateFrameDisplay();
+    vizUpdateVisualization();
 }
 
-// Event listeners
+// Event listeners - scoped to Section 11 only
 // Function to randomize play
-async function randomizePlay() {
+async function vizRandomizePlay() {
+    const section11 = document.getElementById('interactive');
+    if (!section11) {
+        console.warn('[Sandbox] Cannot randomize - Section 11 not found');
+        return;
+    }
+    
     try {
+        console.log('[Sandbox] Randomizing play');
         // Load available plays from manifest
         const response = await fetch('plays_manifest.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const playsManifest = await response.json();
+        console.log('[Sandbox] Loaded manifest with', playsManifest.length, 'plays');
         
-        if (playsManifest.length === 0) {
+        if (!playsManifest || playsManifest.length === 0) {
             alert('No available plays found');
             return;
         }
         
         // Randomly select a play
         const randomPlay = playsManifest[Math.floor(Math.random() * playsManifest.length)];
+        console.log('[Sandbox] Selected play:', randomPlay.filename);
         
-        // Update button to show loading
-        const btn = document.getElementById('randomize-btn');
+        // Update button to show loading - scope to Section 11
+        const btn = section11.querySelector('#randomize-btn');
+        if (!btn) {
+            console.error('[Sandbox] #randomize-btn not found');
+            return;
+        }
         const originalText = btn.textContent;
         btn.textContent = 'Loading...';
         btn.disabled = true;
         
         // Load the selected play's JSON file
         const data = await d3.json(randomPlay.filename);
-        initializePlayVisualization(data);
+        if (!data) {
+            throw new Error('Failed to load play data');
+        }
+        console.log('[Sandbox] Play data loaded, initializing visualization');
+        vizInitializePlayVisualization(data);
         
         btn.textContent = originalText;
         btn.disabled = false;
     } catch (error) {
-        console.error('Error randomizing play:', error);
+        console.error('[Sandbox] Error randomizing play:', error);
         alert('Error loading random play. Please try again.');
-        document.getElementById('randomize-btn').textContent = 'Randomize Play';
-        document.getElementById('randomize-btn').disabled = false;
+        const section11 = document.getElementById('interactive');
+        if (section11) {
+            const btn = section11.querySelector('#randomize-btn');
+            if (btn) {
+                btn.textContent = 'Randomize Play';
+                btn.disabled = false;
+            }
+        }
     }
 }
 
-document.getElementById('randomize-btn').addEventListener('click', randomizePlay);
-document.getElementById('play-pause-btn').addEventListener('click', playAnimation);
-document.getElementById('reset-btn').addEventListener('click', resetAnimation);
+// Attach event listeners only if Section 11 exists
+function attachSandboxEventListeners() {
+    const section11 = document.getElementById('interactive');
+    if (!section11) {
+        console.log('[Sandbox] Section 11 not found, skipping event listeners');
+        return;
+    }
+    
+    const randomizeBtn = section11.querySelector('#randomize-btn');
+    const playPauseBtn = section11.querySelector('#play-pause-btn');
+    const resetBtn = section11.querySelector('#reset-btn');
+    const frameSlider = section11.querySelector('#frame-slider');
+    const showTrailsCheck = section11.querySelector('#show-trails');
+    const showNamesCheck = section11.querySelector('#show-names');
+    const showBallTrajectoryCheck = section11.querySelector('#show-ball-trajectory');
+    const showOutputPlayersCheck = section11.querySelector('#show-output-players');
+    
+    if (randomizeBtn) {
+        randomizeBtn.addEventListener('click', vizRandomizePlay);
+        console.log('[Sandbox] Randomize button listener attached');
+    }
+    if (playPauseBtn) {
+        playPauseBtn.addEventListener('click', vizPlayAnimation);
+        console.log('[Sandbox] Play/Pause button listener attached');
+    }
+    if (resetBtn) {
+        resetBtn.addEventListener('click', vizResetAnimation);
+        console.log('[Sandbox] Reset button listener attached');
+    }
+    if (frameSlider) {
+        frameSlider.addEventListener('input', (e) => {
+            vizCurrentFrame = parseInt(e.target.value);
+            vizUpdateFrameDisplay();
+            vizUpdateVisualization();
+        });
+        console.log('[Sandbox] Frame slider listener attached');
+    }
+    if (showTrailsCheck) {
+        showTrailsCheck.addEventListener('change', (e) => {
+            vizShowTrails = e.target.checked;
+            vizUpdateVisualization();
+        });
+    }
+    if (showNamesCheck) {
+        showNamesCheck.addEventListener('change', (e) => {
+            vizShowNames = e.target.checked;
+            vizUpdateVisualization();
+        });
+    }
+    if (showBallTrajectoryCheck) {
+        showBallTrajectoryCheck.addEventListener('change', (e) => {
+            vizShowBallTrajectory = e.target.checked;
+            vizUpdateVisualization();
+        });
+    }
+    if (showOutputPlayersCheck) {
+        showOutputPlayersCheck.addEventListener('change', (e) => {
+            vizShowOutputPlayers = e.target.checked;
+            vizUpdateVisualization();
+        });
+    }
+    console.log('[Sandbox] All event listeners attached');
+}
 
-document.getElementById('frame-slider').addEventListener('input', (e) => {
-    currentFrame = parseInt(e.target.value);
-    updateFrameDisplay();
-    updateVisualization();
-});
-
-document.getElementById('show-trails').addEventListener('change', (e) => {
-    showTrails = e.target.checked;
-    updateVisualization();
-});
-
-document.getElementById('show-names').addEventListener('change', (e) => {
-    showNames = e.target.checked;
-    updateVisualization();
-});
-
-document.getElementById('show-ball-trajectory').addEventListener('change', (e) => {
-    showBallTrajectory = e.target.checked;
-    updateVisualization();
-});
-
-document.getElementById('show-output-players').addEventListener('change', (e) => {
-    showOutputPlayers = e.target.checked;
-    updateVisualization();
-});
+// Attach event listeners when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attachSandboxEventListeners);
+} else {
+    attachSandboxEventListeners();
+}
 

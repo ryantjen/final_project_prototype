@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside the Mind of an NFL Quarterback</title>
+    <link rel="stylesheet" href="scroll-styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Progress Bar -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Section 1: HOOK -->
+    <section class="story-section hook-section" id="hook">
+        <div class="section-content">
+            <h1 class="hook-question">How hard is it really to play quarterback in the NFL?</h1>
+            
+            <div class="split-screen">
+                <div class="couch-view">
+                    <div class="view-label">From our couch, we usually say:</div>
+                    <div class="view-label">"This QB sucks. He can't make a throw."</div>
+                </div>
+                
+                <div class="reality-view">
+                    <div class="view-label">The reality:</div>
+                    <div class="view-label">The job of a QB is one of the most difficult in all of sports.</div>
+                </div>
+            </div>
+            <div class="football-animation-container">
+                <svg id="football-animation-svg" width="100%" height="100"></svg>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 2: Broadcast Comparison -->
+    <section class="story-section broadcast-section" id="broadcast">
+        <div class="section-content">
+            <h1 class="section-title">What The Broadcast Doesn't Show</h1>
+            
+            <div class="broadcast-comparison">
+                <div class="broadcast-image-container">
+                    <img src="nfl_broadcast_example.webp" alt="NFL Broadcast View" class="broadcast-image">
+                    <div class="annotations-container" id="broadcast-annotations"></div>
+                </div>
+                
+                <div class="broadcast-text">
+                    <div class="comparison-point" data-animate="fadeInLeft">
+                        <h3>❌ Missing: Full Field View</h3>
+                        <p>The broadcast angle only shows the quarterback—not the full field, not the timing of route breaks.</p>
+                    </div>
+                    
+                    <div class="comparison-point" data-animate="fadeInLeft">
+                        <h3>❌ Missing: Real-Time Separation</h3>
+                        <p>We can never truly see how open each receiver was unless the broadcast specifically shows it.</p>
+                    </div>
+                    
+                    <div class="comparison-point" data-animate="fadeInLeft">
+                        <h3>❌ Missing: Defensive Scheme</h3>
+                        <p>We can't see the defensive coverage schemes and how they change over the course of the play.</p>
+                    </div>
+                    
+                    <div class="comparison-point highlight" data-animate="fadeInLeft">
+                        <h3><strong>The Broadcast is Chaotic</strong></h3>
+                        <p>What we think we see on TV is nothing like the decision environment a quarterback actually faces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 3: Our Solution -->
+    <section class="story-section solution-section" id="solution">
+        <div class="section-content">
+            <h1 class="section-title">Seeing What the Quarterback Sees</h1>
+            
+            <div class="solution-content">
+                <div class="solution-text">
+                    <h2>Our Solution</h2>
+                    <p class="lead-solution">
+                        Our visualization solves this gap. It lets viewers experience the play from a true birds-eye perspective 
+                        and understand what the quarterback is seeing in real time—something traditional charts simply cannot show.
+                    </p>
+                    
+                    <div class="solution-features">
+                        <div class="feature-item" data-animate="fadeInUp">
+                            <div class="feature-icon">👁️</div>
+                            <h3>Birds-Eye Perspective</h3>
+                            <p>See the entire field, not just the quarterback</p>
+                        </div>
+                        
+                        <div class="feature-item" data-animate="fadeInUp">
+                            <div class="feature-icon">⏱️</div>
+                            <h3>Real-Time Understanding</h3>
+                            <p>Frame-by-frame tracking of every player</p>
+                        </div>
+                        
+                        <div class="feature-item" data-animate="fadeInUp">
+                            <div class="feature-icon">📊</div>
+                            <h3>Beyond Static Charts</h3>
+                            <p>Experience the process, not just outcomes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-preview" data-animate="fadeInRight">
+                    <div class="preview-field">
+                        <svg id="solution-preview-svg" width="500" height="300"></svg>
+                    </div>
+                    <div class="preview-legend">
+                        <div class="legend-item">
+                            <span class="legend-color offense"></span>
+                            <span>Offensive Player</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color defense"></span>
+                            <span>Defensive Player</span>
+                        </div>
+                    </div>
+                    <p class="preview-label">Preview: Interactive Field View</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Section 4: Tutorial - Frame Tracking -->
+    <section class="story-section tutorial-section" id="tutorial-tracking">
+        <div class="section-content">
+            <h1 class="section-title">Every Movement, Every Frame</h1>
+            <p class="tutorial-intro">As the play unfolds, every receiver and every defender is tracked.</p>
+            
+            <div class="tutorial-demo">
+                <div class="frame-tracking-demo">
+                    <svg id="tracking-svg" width="800" height="450"></svg>
+                    <div class="annotations-overlay" id="tracking-annotations"></div>
+                </div>
+                
+                <div class="tutorial-explanation" data-animate="fadeInUp">
+                    <h3>Real-Time Separation</h3>
+                    <p>The spacing between each pair updates frame-by-frame, showing who is open at each moment. 
+                    This is the critical information a quarterback processes in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Tutorial - Decision Comparison -->
+    <section class="story-section tutorial-section" id="tutorial-decision">
+        <div class="section-content">
+            <h1 class="section-title">Actual vs. Optimal</h1>
+            <p class="tutorial-intro">Is there a way to objectively measure the quality of a quarterback's decision?</p>
+            
+            <div class="tutorial-demo">
+                <div class="decision-demo">
+                    <svg id="decision-svg" width="800" height="450"></svg>
+                    <div class="annotations-overlay" id="decision-annotations"></div>
+                </div>
+                
+                <div class="tutorial-explanation" data-animate="fadeInUp">
+                    <h3>Decision Quality</h3>
+                    <p>We developed a catch probability model - based on the receiver's speed, separation from defender, and the proximity of other defenders
+                         - to have a continious measure of how likely each reciever is to catch the ball at different windows of time. Using this model, we can then compare the actual decision of the quarterback to the objectively optimal decision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Section 6: Quarterback Challenge -->
+    <section class="story-section tutorial-section" id="tutorial-randomize">
+        <div class="section-content">
+            <div class="qb-container">
+                <div class="qb-header">
+                    <h1>🏈 Quarterback Mode</h1>
+                    <p class="subtitle">Red Zone Challenge: Pick the best receiver before the throw!</p>
+                </div>
+                
+                <!-- Top section with stats and scoreboard -->
+                <div class="top-section">
+                    <div class="qb-stats">
+                        <div class="stat-item">
+                            <div class="stat-label">Correct</div>
+                            <div class="stat-value" id="qb-correct-count">0</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Attempts</div>
+                            <div class="stat-value" id="qb-total-count">0</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Accuracy</div>
+                            <div class="stat-value" id="qb-accuracy-pct">--%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="qb-scoreboard" id="qb-scoreboard">
+                        <div class="team-score" id="qb-visitor-section">
+                            <span class="team-name" id="qb-visitor-name">--</span>
+                            <span class="score" id="qb-visitor-score">0</span>
+                        </div>
+                        <div class="game-situation">
+                            <div class="down-distance" id="qb-down-distance">-- & --</div>
+                            <div class="quarter-clock" id="qb-quarter-clock">Q- 0:00</div>
+                            <div class="yardline-info" id="qb-yardline-info">Ball on --</div>
+                            <div class="hidden-info">
+                                <span id="qb-game-id">-</span>
+                                <span id="qb-play-id">-</span>
+                                <span id="qb-play-direction">-</span>
+                            </div>
+                        </div>
+                        <div class="team-score" id="qb-home-section">
+                            <span class="score" id="qb-home-score">0</span>
+                            <span class="team-name" id="qb-home-name">--</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main layout: field + side panel -->
+                <div class="main-layout">
+                    <div class="field-section">
+                        <div class="field-wrapper">
+                            <!-- Coverage info - prominent -->
+                            <div class="coverage-bar">
+                                <div class="coverage-label">Defensive Coverage</div>
+                                <div class="coverage-type" id="qb-coverage-annotation">Loading...</div>
+                            </div>
+                            
+                            <div id="qb-visualization"></div>
+                            
+                            <!-- Coverage description -->
+                            <div class="coverage-description" id="qb-coverage-description">
+                                <h4>Coverage Explanation</h4>
+                                <p id="qb-coverage-explanation">Watch the defense to identify their coverage scheme.</p>
+                            </div>
+                            
+                            <div class="legend">
+                                <div class="legend-item">
+                                    <span class="legend-color defense"></span>
+                                    <span>Defense</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color offense"></span>
+                                    <span>Offense</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span style="font-size: 16px;">🏈</span>
+                                    <span>Quarterback</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #f39c12; border: 2px dashed #333;"></span>
+                                    <span>Selected</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="side-panel">
+                        <!-- Controls -->
+                        <div class="control-box">
+                            <h3>🎮 Controls</h3>
+                            <div class="control-buttons">
+                                <button id="qb-randomize-btn">Next Play</button>
+                                <button id="qb-play-pause-btn">Play</button>
+                                <button id="qb-reset-btn">Reset</button>
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" id="qb-frame-slider" min="1" max="26" value="1" step="1">
+                                <div class="frame-display" id="qb-frame-display">Frame: 1 / 26</div>
+                            </div>
+                            <div class="toggle-options">
+                                <label>
+                                    <input type="checkbox" id="qb-show-trails" checked> Show Trails
+                                </label>
+                                <label>
+                                    <input type="checkbox" id="qb-show-names" checked> Show Names
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Instructions -->
+                        <div class="instruction-box" id="qb-instruction-text">
+                            <p>🎬 Press <strong>Play</strong> to start!</p>
+                            <p style="font-size: 0.85em; margin-top: 5px; color: #666;">Watch the routes develop, then pick your target.</p>
+                        </div>
+                        
+                        <!-- Receiver Selection -->
+                        <div class="receiver-box" id="qb-receiver-selection">
+                            <h3>🎯 Pick Your Target</h3>
+                            <div class="receiver-buttons" id="qb-receiver-buttons">
+                                <!-- Receiver buttons added dynamically -->
+                            </div>
+                            <button id="qb-confirm-throw-btn" disabled>Throw It! 🏈</button>
+                        </div>
+                        
+                        <!-- Result Panel -->
+                        <div class="result-box" id="qb-result-panel">
+                            <div class="result-title" id="qb-result-title"></div>
+                            <div class="result-message" id="qb-result-message"></div>
+                            <div class="actual-target">Target: <span id="qb-actual-target"></span></div>
+                            <div class="play-outcome" id="qb-play-outcome"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- How to play -->
+                <div class="how-to-play">
+                    <h2>How to Play</h2>
+                    <ol>
+                        <li><strong>Press Play</strong> - Watch the receivers run their routes and the defense react.</li>
+                        <li><strong>Make Your Read</strong> - When it pauses, pick who you would throw to!</li>
+                        <li><strong>Throw It!</strong> - See if you made the same read as the NFL quarterback.</li>
+                    </ol>
+                    <p style="margin-top: 15px;"><strong>Tips:</strong> Watch the coverage, look for separation, and trust your eyes!</p>
+                </div>
+            </div>
+            
+            <!-- Hidden time-to-throw element for JS compatibility -->
+            <div id="qb-time-to-throw" style="display:none;"></div>
+        </div>
+    </section>
+    
+    
+    <!-- Section 8: Tutorial - Coverage -->
+    <section class="story-section tutorial-section" id="tutorial-coverage">
+        <div class="section-content">
+            <h1 class="section-title">Understanding Defensive Structure</h1>
+            <p class="tutorial-intro">We annotate the defensive coverage on each play, so users can see how the structure changes where openings occur.</p>
+            
+            <div class="tutorial-demo">
+                <div class="coverage-demo">
+                    <svg id="coverage-svg" width="800" height="450"></svg>
+                    <div class="coverage-label" id="coverage-label">Cover 3</div>
+                </div>
+                
+                <div class="tutorial-explanation" data-animate="fadeInUp">
+                    <h3>How Coverage Shapes Openings</h3>
+                    <p>Different coverages (Cover 2, Cover 3, Man, etc.) create entirely different decision landscapes. 
+                    Understanding the defensive structure helps explain why certain throws are available and how long a quarterback realistically has to throw.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 9: Tutorial - Interactivity -->
+    <section class="story-section tutorial-section" id="tutorial-interactive">
+        <div class="section-content">
+            <h1 class="section-title">Explore at Your Own Pace</h1>
+            <p class="tutorial-intro">Everything is interactive: users can replay plays, randomize plays, inspect individual players, and study the timing of separation across all receivers.</p>
+            
+            <div class="tutorial-demo">
+                <div class="controls-demo">
+                    <div class="demo-controls-panel">
+                        <button class="demo-control-btn">Randomize Play</button>
+                        <button class="demo-control-btn">Play</button>
+                        <button class="demo-control-btn">Reset</button>
+                        <input type="range" class="demo-slider" min="1" max="26" value="1">
+                        <span class="demo-label">Frame: 1 / 26</span>
+                        <label class="demo-checkbox">
+                            <input type="checkbox" checked> Show Trails
+                        </label>
+                        <label class="demo-checkbox">
+                            <input type="checkbox" checked> Show Names
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="tutorial-explanation" data-animate="fadeInUp">
+                    <h3>User Control</h3>
+                    <p>Take control of the visualization. Replay plays to study specific moments, randomize to explore different scenarios, 
+                    and use the frame slider to analyze critical decision points frame-by-frame.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 10: TAKEAWAY -->
+    <section class="story-section takeaway-section" id="takeaway">
+        <div class="section-content">
+            <h1 class="section-title">The Truth About Quarterbacking</h1>
+            
+            <div class="takeaway-content">
+                <div class="takeaway-insights">
+                    <div class="insight-item" data-animate="fadeInLeft" id="insight-1">
+                        <div class="insight-icon">🎯</div>
+                        <h2>Passing windows are tiny</h2>
+                    </div>
+                    
+                    <div class="insight-item" data-animate="fadeInLeft" id="insight-2">
+                        <div class="insight-icon">⚡</div>
+                        <h2>They open and close in fractions of a second</h2>
+                    </div>
+                    
+                    <div class="insight-item" data-animate="fadeInLeft" id="insight-3">
+                        <div class="insight-icon">🔄</div>
+                        <h2>Different coverages create entirely different decision landscapes</h2>
+                    </div>
+                </div>
+                
+                <div class="closing-windows-demo" data-animate="fadeInRight">
+                    <svg id="closing-windows-svg" width="800" height="450"></svg>
+                </div>
+            </div>
+            
+            <div class="core-message" data-animate="fadeInUp">
+                <p class="core-text">The core insight: <strong>Quarterbacking is extraordinarily difficult.</strong></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 11: Interactive Sandbox -->
+    <section class="story-section interactive-section" id="interactive">
+        <div class="section-content">
+            <h1 class="section-title">Interactive Play Analysis</h1>
+            <p class="slide-description">Explore frame-by-frame how a quarterback makes decisions under pressure</p>
+            <p class="sandbox-intro">This is your sandbox. Explore freely, randomize plays, and experience what a quarterback sees in real-time.</p>
+            
+            <div class="container">
+                <div class="info">
+                    <p><strong>Game ID:</strong> 2023090700 | <strong>Play ID:</strong> 101 | <strong>Direction:</strong> <span id="play-direction">-</span></p>
+                </div>
+                
+                <div class="controls">
+                    <button id="randomize-btn" style="background: #9C27B0; color: white;">Randomize Play</button>
+                    <button id="play-pause-btn">Play</button>
+                    <button id="reset-btn">Reset</button>
+                    <input type="range" id="frame-slider" min="1" max="26" value="1" step="1">
+                    <span id="frame-display">Frame: 1 / 26</span>
+                    <label>
+                        <input type="checkbox" id="show-trails" checked> Show Trails
+                    </label>
+                    <label>
+                        <input type="checkbox" id="show-names" checked> Show Names
+                    </label>
+                    <label>
+                        <input type="checkbox" id="show-ball-trajectory" checked> Show Ball Trajectory
+                    </label>
+                    <label>
+                        <input type="checkbox" id="show-output-players" checked> Show Post-Throw Players
+                    </label>
+                </div>
+                
+                <div id="scoreboard" class="scoreboard"></div>
+                
+                <div class="main-content">
+                    <div class="visualization-container">
+                        <div class="top-info-bar">
+                            <div id="time-to-throw" class="time-to-throw">Time to Throw: 0.0s</div>
+                            <div id="coverage-annotation" class="coverage-annotation"></div>
+                        </div>
+                        <div id="visualization"></div>
+                        <div id="play-description" class="play-description"></div>
+                    </div>
+                    <div id="supplementary-panel" class="supplementary-panel"></div>
+                </div>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="legend-color defense"></span>
+                        <span>Defense</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color offense"></span>
+                        <span>Offense</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Navigation Instructions -->
+    <div class="navigation-instructions">
+        <div class="nav-key-hint">
+            <span class="key-icon">↑</span>
+            <span class="key-label">up arrow</span>
+            <span class="key-separator">|</span>
+            <span class="key-icon">↓</span>
+            <span class="key-label">down arrow</span>
+        </div>
+        <p class="nav-instruction-text">use arrow keys to navigate</p>
+    </div>
+    
+    <script src="visualization.js"></script>
+    <script src="scroll-animations.js"></script>
+    <script src="qb_simulate.js"></script>
+</body>
+</html>
+

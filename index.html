@@ -3,73 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFL Play Visualization - Game 2023090700, Play 101</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>How Hard Is It Really?</title>
+    <link rel="stylesheet" href="story-styles.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>How much time does a Quarterback really have to make a decision? Analyzing the effect of a defense on a QB’s decision making time.</h1>
-        <div class="info">
-            <p><strong>Game ID:</strong> 2023090700 | <strong>Play ID:</strong> 101 | <strong>Direction:</strong> <span id="play-direction">-</span></p>
-        </div>
-        
-        <div class="controls">
-            <button id="randomize-btn" style="background: #9C27B0; color: white;">Randomize Play</button>
-            <button id="play-pause-btn">Play</button>
-            <button id="reset-btn">Reset</button>
-            <input type="range" id="frame-slider" min="1" max="26" value="1" step="1">
-            <span id="frame-display">Frame: 1 / 26</span>
-            <label>
-                <input type="checkbox" id="show-trails" checked> Show Trails
-            </label>
-            <label>
-                <input type="checkbox" id="show-names" checked> Show Names
-            </label>
-            <label>
-                <input type="checkbox" id="show-ball-trajectory" checked> Show Ball Trajectory
-            </label>
-            <label>
-                <input type="checkbox" id="show-output-players" checked> Show Post-Throw Players
-            </label>
-        </div>
-        
-        <div id="scoreboard" class="scoreboard"></div>
-        
-        <div class="main-content">
-            <div class="visualization-container">
-                <div class="top-info-bar">
-                    <div id="time-to-throw" class="time-to-throw">Time to Throw: 0.0s</div>
-                    <div id="coverage-annotation" class="coverage-annotation"></div>
-                </div>
-                <div id="visualization"></div>
-                <div id="play-description" class="play-description"></div>
-            </div>
-            <div id="supplementary-panel" class="supplementary-panel"></div>
-        </div>
-        
-        <div class="legend">
-            <div class="legend-item">
-                <span class="legend-color defense"></span>
-                <span>Defense</span>
-            </div>
-            <div class="legend-item">
-                <span class="legend-color offense"></span>
-                <span>Offense</span>
-            </div>
-        </div>
-        
-        <div class="writeup">
-            <h2>Writeup</h2>
-            <h3>What have you done so far?</h3>
-            <p>Each member of the team has been focused on contributing towards a different aspect of the final project that we plan to create. Some of us are working on the primary interactive visualization that includes a frame-by-frame overlay of player and ball position on a real football field. Other members of the team have been working on a machine learning model to predict the intended target on each play, which we plan on integrating into our frame-by-frame interactive visualization. Also, other members of the team have been working on other interactive visualizations that allow a deeper dive into specific defensive schemes, offensive plays, and results.</p>
+    <div class="slide-container hook-slide" id="slide-1">
+        <div class="hook-content">
+            <h1 class="hook-question">How hard is it really to play quarterback in the NFL?</h1>
             
-            <h3>What will be the most challenging of your project to design and why?</h3>
-            <p>There will be a couple challenging aspects to implement in our project design, but one of the most impactful aspects that we want to highlight is being able to focus on a small subset of the dataset that we have. We have access to a dataset with thousands of different plays that all have different parameters and results and it is important to be able to narrow our focus to a particular aspect of these plays or a particular subset of the overall dataset in order to create an interesting narrative that really allows our audience to learn something interesting. We have already come up with a few ideas for how we can narrow our focus on specific aspects of passing plays in football, as well as filtering for specific subsets of play parameters (time left in the game, resulting in a pick/touchdown/incompletion). In addition to this, we really want to be able to create a machine learning model that will predict the intended target on each play frame-by-frame, but it will be particularly difficult to get the frame-by-frame granularity for this model.</p>
+            <div class="split-screen">
+                <div class="couch-view">
+                    <div class="view-label">From our couch</div>
+                    <div class="view-quote">"He missed the open receiver."</div>
+                </div>
+                
+                <div class="reality-view">
+                    <div class="view-label">The reality</div>
+                    <div class="view-quote">A decision environment we can't see</div>
+                </div>
+            </div>
         </div>
     </div>
     
-    <script src="visualization.js"></script>
+    <div class="story-navigation">
+        <button class="nav-btn prev-btn" onclick="navigateToSlide(0)" disabled>← Previous</button>
+        <div class="slide-indicator">
+            <span class="current-slide">1</span> / <span class="total-slides">12</span>
+        </div>
+        <button class="nav-btn next-btn" onclick="navigateToSlide(1)">Next →</button>
+    </div>
+    
+    <script src="story-navigation.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            initializeNavigation();
+            // Animate split screen
+            d3.selectAll('.couch-view, .reality-view')
+                .style('opacity', 0)
+                .style('transform', 'translateY(30px)')
+                .transition()
+                .delay(800)
+                .duration(1000)
+                .ease(d3.easeCubicOut)
+                .style('opacity', 1)
+                .style('transform', 'translateY(0)');
+        });
+    </script>
 </body>
 </html>
-
