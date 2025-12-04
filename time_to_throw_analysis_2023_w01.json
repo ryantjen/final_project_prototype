@@ -1,0 +1,300 @@
+{
+  "overall_avg_time_to_throw": 2.73,
+  "overall_optimal_avg": 2.66,
+  "overall_non_optimal_avg": 2.78,
+  "total_plays": 819,
+  "optimal_plays": 381,
+  "non_optimal_plays": 438,
+  "frames_per_second": 10,
+  "time_per_frame": 0.1,
+  "quarterbacks": [
+    {
+      "name": "Dak Prescott",
+      "avg_time_to_throw": 2.36,
+      "total_plays": 19,
+      "optimal_avg": 2.33,
+      "non_optimal_avg": 2.38,
+      "optimal_count": 8,
+      "non_optimal_count": 11
+    },
+    {
+      "name": "Baker Mayfield",
+      "avg_time_to_throw": 2.39,
+      "total_plays": 25,
+      "optimal_avg": 2.29,
+      "non_optimal_avg": 2.58,
+      "optimal_count": 16,
+      "non_optimal_count": 9
+    },
+    {
+      "name": "Joe Burrow",
+      "avg_time_to_throw": 2.52,
+      "total_plays": 22,
+      "optimal_avg": 2.04,
+      "non_optimal_avg": 2.85,
+      "optimal_count": 9,
+      "non_optimal_count": 13
+    },
+    {
+      "name": "Josh Allen",
+      "avg_time_to_throw": 2.53,
+      "total_plays": 32,
+      "optimal_avg": 2.93,
+      "non_optimal_avg": 2.23,
+      "optimal_count": 14,
+      "non_optimal_count": 18
+    },
+    {
+      "name": "Tua Tagovailoa",
+      "avg_time_to_throw": 2.54,
+      "total_plays": 37,
+      "optimal_avg": 2.59,
+      "non_optimal_avg": 2.44,
+      "optimal_count": 25,
+      "non_optimal_count": 12
+    },
+    {
+      "name": "C.J. Stroud",
+      "avg_time_to_throw": 2.56,
+      "total_plays": 31,
+      "optimal_avg": 2.44,
+      "non_optimal_avg": 2.69,
+      "optimal_count": 16,
+      "non_optimal_count": 15
+    },
+    {
+      "name": "Trevor Lawrence",
+      "avg_time_to_throw": 2.58,
+      "total_plays": 25,
+      "optimal_avg": 2.66,
+      "non_optimal_avg": 2.46,
+      "optimal_count": 15,
+      "non_optimal_count": 10
+    },
+    {
+      "name": "Derek Carr",
+      "avg_time_to_throw": 2.6,
+      "total_plays": 20,
+      "optimal_avg": 2.64,
+      "non_optimal_avg": 2.54,
+      "optimal_count": 13,
+      "non_optimal_count": 7
+    },
+    {
+      "name": "Desmond Ridder",
+      "avg_time_to_throw": 2.61,
+      "total_plays": 10,
+      "optimal_avg": 2.25,
+      "non_optimal_avg": 3.15,
+      "optimal_count": 6,
+      "non_optimal_count": 4
+    },
+    {
+      "name": "Anthony Richardson",
+      "avg_time_to_throw": 2.62,
+      "total_plays": 29,
+      "optimal_avg": 2.58,
+      "non_optimal_avg": 2.66,
+      "optimal_count": 13,
+      "non_optimal_count": 16
+    },
+    {
+      "name": "Mac Jones",
+      "avg_time_to_throw": 2.64,
+      "total_plays": 38,
+      "optimal_avg": 2.63,
+      "non_optimal_avg": 2.64,
+      "optimal_count": 17,
+      "non_optimal_count": 21
+    },
+    {
+      "name": "Matthew Stafford",
+      "avg_time_to_throw": 2.65,
+      "total_plays": 33,
+      "optimal_avg": 2.87,
+      "non_optimal_avg": 2.47,
+      "optimal_count": 15,
+      "non_optimal_count": 18
+    },
+    {
+      "name": "Zach Wilson",
+      "avg_time_to_throw": 2.68,
+      "total_plays": 13,
+      "optimal_avg": 2.47,
+      "non_optimal_avg": 2.92,
+      "optimal_count": 7,
+      "non_optimal_count": 6
+    },
+    {
+      "name": "Joshua Dobbs",
+      "avg_time_to_throw": 2.7,
+      "total_plays": 20,
+      "optimal_avg": 2.8,
+      "non_optimal_avg": 2.62,
+      "optimal_count": 8,
+      "non_optimal_count": 12
+    },
+    {
+      "name": "Brock Purdy",
+      "avg_time_to_throw": 2.7,
+      "total_plays": 23,
+      "optimal_avg": 2.85,
+      "non_optimal_avg": 2.53,
+      "optimal_count": 12,
+      "non_optimal_count": 11
+    },
+    {
+      "name": "Kirk Cousins",
+      "avg_time_to_throw": 2.72,
+      "total_plays": 39,
+      "optimal_avg": 2.64,
+      "non_optimal_avg": 2.8,
+      "optimal_count": 19,
+      "non_optimal_count": 20
+    },
+    {
+      "name": "Jordan Love",
+      "avg_time_to_throw": 2.74,
+      "total_plays": 23,
+      "optimal_avg": 2.83,
+      "non_optimal_avg": 2.65,
+      "optimal_count": 12,
+      "non_optimal_count": 11
+    },
+    {
+      "name": "Jimmy Garoppolo",
+      "avg_time_to_throw": 2.78,
+      "total_plays": 23,
+      "optimal_avg": 2.27,
+      "non_optimal_avg": 3.17,
+      "optimal_count": 10,
+      "non_optimal_count": 13
+    },
+    {
+      "name": "Jared Goff",
+      "avg_time_to_throw": 2.78,
+      "total_plays": 25,
+      "optimal_avg": 3.05,
+      "non_optimal_avg": 2.56,
+      "optimal_count": 11,
+      "non_optimal_count": 14
+    },
+    {
+      "name": "Geno Smith",
+      "avg_time_to_throw": 2.78,
+      "total_plays": 17,
+      "optimal_avg": 2.3,
+      "non_optimal_avg": 3.21,
+      "optimal_count": 8,
+      "non_optimal_count": 9
+    },
+    {
+      "name": "Daniel Jones",
+      "avg_time_to_throw": 2.79,
+      "total_plays": 22,
+      "optimal_avg": 2.93,
+      "non_optimal_avg": 2.71,
+      "optimal_count": 8,
+      "non_optimal_count": 14
+    },
+    {
+      "name": "Jalen Hurts",
+      "avg_time_to_throw": 2.8,
+      "total_plays": 26,
+      "optimal_avg": 2.66,
+      "non_optimal_avg": 2.91,
+      "optimal_count": 12,
+      "non_optimal_count": 14
+    },
+    {
+      "name": "Sam Howell",
+      "avg_time_to_throw": 2.81,
+      "total_plays": 23,
+      "optimal_avg": 2.8,
+      "non_optimal_avg": 2.83,
+      "optimal_count": 13,
+      "non_optimal_count": 10
+    },
+    {
+      "name": "Justin Herbert",
+      "avg_time_to_throw": 2.81,
+      "total_plays": 23,
+      "optimal_avg": 2.28,
+      "non_optimal_avg": 3.16,
+      "optimal_count": 9,
+      "non_optimal_count": 14
+    },
+    {
+      "name": "Lamar Jackson",
+      "avg_time_to_throw": 2.82,
+      "total_plays": 13,
+      "optimal_avg": 2.57,
+      "non_optimal_avg": 3.03,
+      "optimal_count": 6,
+      "non_optimal_count": 7
+    },
+    {
+      "name": "Kenny Pickett",
+      "avg_time_to_throw": 2.82,
+      "total_plays": 37,
+      "optimal_avg": 2.9,
+      "non_optimal_avg": 2.76,
+      "optimal_count": 17,
+      "non_optimal_count": 20
+    },
+    {
+      "name": "Deshaun Watson",
+      "avg_time_to_throw": 2.85,
+      "total_plays": 22,
+      "optimal_avg": 2.63,
+      "non_optimal_avg": 3.0,
+      "optimal_count": 9,
+      "non_optimal_count": 13
+    },
+    {
+      "name": "Ryan Tannehill",
+      "avg_time_to_throw": 2.87,
+      "total_plays": 27,
+      "optimal_avg": 2.89,
+      "non_optimal_avg": 2.86,
+      "optimal_count": 10,
+      "non_optimal_count": 17
+    },
+    {
+      "name": "Russell Wilson",
+      "avg_time_to_throw": 2.89,
+      "total_plays": 27,
+      "optimal_avg": 2.92,
+      "non_optimal_avg": 2.86,
+      "optimal_count": 10,
+      "non_optimal_count": 17
+    },
+    {
+      "name": "Justin Fields",
+      "avg_time_to_throw": 2.93,
+      "total_plays": 29,
+      "optimal_avg": 2.69,
+      "non_optimal_avg": 3.03,
+      "optimal_count": 8,
+      "non_optimal_count": 21
+    },
+    {
+      "name": "Bryce Young",
+      "avg_time_to_throw": 2.98,
+      "total_plays": 27,
+      "optimal_avg": 3.1,
+      "non_optimal_avg": 2.92,
+      "optimal_count": 9,
+      "non_optimal_count": 18
+    },
+    {
+      "name": "Patrick Mahomes",
+      "avg_time_to_throw": 3.12,
+      "total_plays": 33,
+      "optimal_avg": 2.86,
+      "non_optimal_avg": 3.32,
+      "optimal_count": 14,
+      "non_optimal_count": 19
+    }
+  ]
+}

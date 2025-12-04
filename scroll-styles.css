@@ -358,7 +358,7 @@ body {
     border-top: 8px solid #333;
 }
 
-.frame-tracking-demo, .decision-demo, .hover-demo, .coverage-demo, .closing-windows-demo {
+.frame-tracking-demo, .decision-demo, .hover-demo, .coverage-demo, .closing-windows-demo, .model-demo-container {
     position: relative;
     margin: 36px auto;
     border-radius: 12px;
@@ -366,6 +366,80 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     background: white;
     max-width: 800px;
+}
+
+.model-demo-container {
+    padding: 20px;
+}
+
+#model-demo-visualization {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.model-demo-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.model-demo-controls button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.model-demo-controls button:hover {
+    background: #5568d3;
+}
+
+.model-demo-controls input[type="range"] {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.model-demo-controls .frame-display {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.model-demo-stat-selector {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.model-demo-stat-selector > label:first-child {
+    font-weight: 600;
+    color: #333;
+    margin-right: 5px;
+}
+
+.model-demo-stat-selector label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.model-demo-stat-selector input[type="radio"] {
+    cursor: pointer;
 }
 
 .annotations-overlay {
@@ -1026,6 +1100,26 @@ body {
     text-align: center;
 }
 
+.stopwatch-display {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #FF6B6B;
+    margin: 16px 0;
+    padding: 12px;
+    background: #fff5f5;
+    border-radius: 8px;
+    border: 2px solid #FF6B6B;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+/* Stopwatch in controls panel */
+.control-box .stopwatch-display {
+    margin: 12px 0;
+    font-size: 1.8em;
+}
+
 .receiver-buttons {
     display: flex;
     flex-direction: column;
@@ -1201,6 +1295,430 @@ body {
 
 .how-to-play ol, .how-to-play ul {
     padding-left: 20px;
+}
+
+/* QB Optimal Decision Analysis Styles */
+.qb-analysis-container {
+    margin-top: 48px;
+}
+
+.qb-analysis-stats {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.overall-stat {
+    margin-bottom: 16px;
+}
+
+.stat-number {
+    font-size: 4.8em;
+    font-weight: bold;
+    color: #4ECDC4;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 1.44em;
+    color: #666;
+    font-weight: 500;
+}
+
+.stat-breakdown {
+    font-size: 1.2em;
+    color: #888;
+    margin-top: 12px;
+}
+
+.qb-analysis-viz {
+    margin: 48px 0;
+    padding: 24px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    min-height: 400px;
+}
+
+.qb-analysis-viz svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.qb-analysis-viz .qb-bar {
+    transition: opacity 0.3s ease;
+}
+
+.qb-analysis-viz .qb-bar:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.qb-analysis-viz .top3-highlight {
+    pointer-events: none;
+}
+
+.qb-analysis-explanation {
+    margin-top: 48px;
+    padding: 24px;
+    background: rgba(78, 205, 196, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid #4ECDC4;
+}
+
+.qb-analysis-explanation h3 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 16px;
+}
+
+.qb-analysis-explanation p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Time to Throw Analysis Styles */
+.time-to-throw-container {
+    margin-top: 48px;
+}
+
+.time-to-throw-comparison {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.time-stat-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    padding: 32px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 3px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.time-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.time-stat-card.overall-time {
+    border-color: #4ECDC4;
+}
+
+.time-stat-card.non-optimal-time {
+    border-color: #FF6B6B;
+}
+
+.time-stat-card.optimal-time {
+    border-color: #FFD700;
+}
+
+.time-stat-card.non-optimal-time .time-stat-value {
+    color: #FF6B6B;
+}
+
+.time-stat-label {
+    font-size: 1.2em;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.time-stat-value {
+    font-size: 4.8em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.time-stat-card.overall-time .time-stat-value {
+    color: #4ECDC4;
+}
+
+.time-stat-card.optimal-time .time-stat-value {
+    color: #FFD700;
+}
+
+.time-stat-subtitle {
+    font-size: 1.1em;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.time-stat-count {
+    font-size: 0.95em;
+    color: #aaa;
+    font-style: italic;
+}
+
+.time-to-throw-viz {
+    margin: 48px 0;
+    padding: 24px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-to-throw-viz svg {
+    display: block;
+}
+
+.time-to-throw-viz .time-bar {
+    transition: opacity 0.3s ease;
+}
+
+.time-to-throw-viz .time-bar:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.time-to-throw-explanation {
+    margin-top: 48px;
+    padding: 24px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid #FFD700;
+}
+
+.time-to-throw-explanation h3 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 16px;
+}
+
+.time-to-throw-explanation p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* NFL Comparison Section Styles */
+.nfl-comparison-container {
+    margin-top: 48px;
+}
+
+.nfl-comparison-stats {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.comparison-stat-card {
+    flex: 1;
+    min-width: 500px;
+    max-width: 650px;
+    padding: 32px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid #4ECDC4;
+}
+
+.comparison-stat-header {
+    text-align: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.comparison-stat-header h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.stat-description {
+    font-size: 1em;
+    color: #666;
+    font-style: italic;
+}
+
+.comparison-values-large {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.comparison-value {
+    text-align: center;
+    flex: 1;
+}
+
+.value-label {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.value-number {
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.user-comparison .value-number {
+    color: #4ECDC4;
+}
+
+.nfl-comparison .value-number {
+    color: #FFD700;
+}
+
+.comparison-vs {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #999;
+    padding: 0 16px;
+}
+
+.comparison-diff-large {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    color: #666;
+}
+
+.comparison-diff-large.better {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+}
+
+.comparison-diff-large.worse {
+    background: rgba(255, 107, 107, 0.1);
+    color: #FF6B6B;
+    border: 2px solid #FF6B6B;
+}
+
+.comparison-diff-large.equal {
+    background: rgba(255, 215, 0, 0.1);
+    color: #FFD700;
+    border: 2px solid #FFD700;
+}
+
+.nfl-comparison-message {
+    text-align: center;
+    padding: 32px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px dashed #ddd;
+    color: #666;
+    font-size: 1.2em;
+}
+
+/* Context & Transition Section */
+.context-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 32px;
+}
+
+.context-title {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.context-text {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 32px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.context-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.context-list li {
+    font-size: 1.15em;
+    color: #444;
+    padding: 16px 24px;
+    margin-bottom: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    line-height: 1.6;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.context-list li:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.context-list li strong {
+    color: #2c3e50;
+}
+
+.context-conclusion {
+    font-size: 1.25em;
+    color: #333;
+    margin: 48px 0;
+    text-align: center;
+    line-height: 1.8;
+    font-style: italic;
+    padding: 24px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+}
+
+.sandbox-transition {
+    margin-top: 64px;
+    padding: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.transition-title {
+    font-size: 2.2em;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.transition-text {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* Hidden elements */

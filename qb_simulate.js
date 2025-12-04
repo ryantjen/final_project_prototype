@@ -16,6 +16,15 @@ let hasSubmittedAnswer = false;
 let isPausedForSelection = false;
 let correctCount = 0;
 let totalCount = 0;
+let selectionStartTime = null;
+let decisionTimes = [];
+let stopwatchInterval = null;
+
+// NFL Week 1 averages (from analysis)
+const NFL_AVERAGES = {
+    optimalDecisionPercentage: 46.98, // Overall optimal decision percentage
+    avgTimeToThrow: 2.66 // Average time to throw for optimal decisions (since plays are filtered to optimal)
+};
 
 // NFL Team Colors
 const teamColors = {
@@ -120,6 +129,21 @@ function initializePlayVisualization(data) {
     selectedReceiver = null;
     hasSubmittedAnswer = false;
     isPausedForSelection = false;
+    selectionStartTime = null;
+    
+    // Stop and reset stopwatch
+    if (stopwatchInterval) {
+        clearInterval(stopwatchInterval);
+        stopwatchInterval = null;
+    }
+    const stopwatchEl = document.getElementById('qb-stopwatch');
+    if (stopwatchEl) {
+        stopwatchEl.style.display = 'none';
+        stopwatchEl.textContent = '0.0s';
+    }
+    
+    // Reset decision times for this play (but keep overall stats)
+    // Note: decisionTimes array persists across plays for overall average
     
     // Find the correct receiver
     correctReceiver = findTargetedReceiver(data);
@@ -676,6 +700,17 @@ function drawCoverageAnnotation() {
     }
 }
 
+// Update stopwatch display
+function updateStopwatch() {
+    if (selectionStartTime === null) {
+        document.getElementById('qb-stopwatch').textContent = '0.0s';
+        return;
+    }
+    
+    const elapsed = (Date.now() - selectionStartTime) / 1000; // Convert to seconds
+    document.getElementById('qb-stopwatch').textContent = `${elapsed.toFixed(1)}s`;
+}
+
 // Show receiver selection panel
 function showReceiverSelection() {
     const receivers = getEligibleReceivers(playData);
@@ -692,28 +727,25 @@ function showReceiverSelection() {
     });
     
     document.getElementById('qb-receiver-selection').classList.add('active');
-    document.getElementById('qb-confirm-throw-btn').disabled = true;
     document.getElementById('qb-instruction-text').classList.add('hidden');
+    
+    // Note: Timer was already started when Play button was clicked
+    // Just ensure stopwatch is updating
+    if (stopwatchInterval) {
+        clearInterval(stopwatchInterval);
+    }
+    stopwatchInterval = setInterval(updateStopwatch, 100);
 }
 
-// Handle receiver selection
+// Handle receiver selection - immediately confirm throw
 function selectReceiver(nflId, buttonElement) {
     if (hasSubmittedAnswer) return;
     
-    // Remove selected class from all buttons
-    document.querySelectorAll('.receiver-btn').forEach(btn => {
-        btn.classList.remove('selected');
-    });
-    
-    // Add selected class to clicked button
-    buttonElement.classList.add('selected');
+    // Set selected receiver
     selectedReceiver = nflId;
     
-    // Enable confirm button
-    document.getElementById('qb-confirm-throw-btn').disabled = false;
-    
-    // Highlight selected receiver on field
-    highlightSelectedReceiver(nflId);
+    // Immediately confirm the throw (no need for separate button)
+    confirmThrow();
 }
 
 // Highlight selected receiver on the field
@@ -745,6 +777,81 @@ function highlightSelectedReceiver(nflId) {
         .style('animation', 'pulse 1s infinite');
 }
 
+// Update NFL comparison section (make it globally accessible)
+window.updateNFLComparison = function updateNFLComparison() {
+    const comparisonSection = document.getElementById('nfl-comparison-stats');
+    const messageEl = document.getElementById('nfl-comparison-message');
+    
+    if (!comparisonSection) return;
+    
+    if (totalCount === 0) {
+        // Show message if no attempts yet
+        if (messageEl) messageEl.style.display = 'block';
+        return;
+    }
+    
+    // Hide message if we have data
+    if (messageEl) messageEl.style.display = 'none';
+    
+    // Calculate user stats
+    const userAccuracy = (correctCount / totalCount) * 100;
+    const userAvgTime = decisionTimes.length > 0 
+        ? decisionTimes.reduce((a, b) => a + b, 0) / decisionTimes.length 
+        : null;
+    
+    // Update accuracy comparison
+    const userAccuracyEl = document.getElementById('user-accuracy');
+    const nflAccuracyEl = document.getElementById('nfl-accuracy');
+    if (userAccuracyEl) userAccuracyEl.textContent = `${userAccuracy.toFixed(1)}%`;
+    if (nflAccuracyEl) nflAccuracyEl.textContent = `${NFL_AVERAGES.optimalDecisionPercentage}%`;
+    
+    const accuracyDiff = userAccuracy - NFL_AVERAGES.optimalDecisionPercentage;
+    const accuracyDiffEl = document.getElementById('accuracy-diff');
+    if (accuracyDiffEl) {
+        if (accuracyDiff > 0) {
+            accuracyDiffEl.textContent = `+${accuracyDiff.toFixed(1)}% better than NFL average`;
+            accuracyDiffEl.className = 'comparison-diff-large better';
+        } else if (accuracyDiff < 0) {
+            accuracyDiffEl.textContent = `${Math.abs(accuracyDiff).toFixed(1)}% below NFL average`;
+            accuracyDiffEl.className = 'comparison-diff-large worse';
+        } else {
+            accuracyDiffEl.textContent = 'Matching NFL average!';
+            accuracyDiffEl.className = 'comparison-diff-large equal';
+        }
+    }
+    
+    // Update time comparison
+    const userTimeEl = document.getElementById('user-time');
+    const nflTimeEl = document.getElementById('nfl-time');
+    const timeDiffEl = document.getElementById('time-diff');
+    
+    if (userAvgTime !== null) {
+        if (userTimeEl) userTimeEl.textContent = `${userAvgTime.toFixed(1)}s`;
+        if (nflTimeEl) nflTimeEl.textContent = `${NFL_AVERAGES.avgTimeToThrow}s`;
+        
+        if (timeDiffEl) {
+            const timeDiff = userAvgTime - NFL_AVERAGES.avgTimeToThrow;
+            if (timeDiff < 0) {
+                timeDiffEl.textContent = `${Math.abs(timeDiff).toFixed(1)}s faster than NFL average`;
+                timeDiffEl.className = 'comparison-diff-large better';
+            } else if (timeDiff > 0) {
+                timeDiffEl.textContent = `${timeDiff.toFixed(1)}s slower than NFL average`;
+                timeDiffEl.className = 'comparison-diff-large worse';
+            } else {
+                timeDiffEl.textContent = 'Matching NFL average!';
+                timeDiffEl.className = 'comparison-diff-large equal';
+            }
+        }
+    } else {
+        if (userTimeEl) userTimeEl.textContent = '--s';
+        if (nflTimeEl) nflTimeEl.textContent = `${NFL_AVERAGES.avgTimeToThrow}s`;
+        if (timeDiffEl) {
+            timeDiffEl.textContent = 'Make at least one decision to compare';
+            timeDiffEl.className = 'comparison-diff-large';
+        }
+    }
+}
+
 // Confirm throw and show result
 function confirmThrow() {
     if (!selectedReceiver || hasSubmittedAnswer) return;
@@ -752,6 +859,22 @@ function confirmThrow() {
     hasSubmittedAnswer = true;
     isPausedForSelection = false;
     totalCount++;
+    
+    // Stop stopwatch interval
+    if (stopwatchInterval) {
+        clearInterval(stopwatchInterval);
+        stopwatchInterval = null;
+    }
+    
+    // Calculate and store decision time
+    if (selectionStartTime !== null) {
+        const decisionTime = (Date.now() - selectionStartTime) / 1000; // Convert to seconds
+        decisionTimes.push(decisionTime);
+        selectionStartTime = null;
+    }
+    
+    // Reset stopwatch display
+    document.getElementById('qb-stopwatch').textContent = '0.0s';
     
     const isCorrect = selectedReceiver === correctReceiver?.nflId;
     if (isCorrect) {
@@ -763,6 +886,17 @@ function confirmThrow() {
     document.getElementById('qb-total-count').textContent = totalCount;
     document.getElementById('qb-accuracy-pct').textContent = 
         `${Math.round((correctCount / totalCount) * 100)}%`;
+    
+    // Update average time
+    if (decisionTimes.length > 0) {
+        const avgTime = decisionTimes.reduce((a, b) => a + b, 0) / decisionTimes.length;
+        document.getElementById('qb-avg-time').textContent = `${avgTime.toFixed(1)}s`;
+    }
+    
+    // Update NFL comparison (show after at least 1 attempt)
+    if (totalCount >= 1) {
+        updateNFLComparison();
+    }
     
     // Show result panel
     const resultPanel = document.getElementById('qb-result-panel');
@@ -799,8 +933,6 @@ function confirmThrow() {
     document.querySelectorAll('.receiver-btn').forEach(btn => {
         btn.disabled = true;
     });
-    const confirmBtn = document.getElementById('qb-confirm-throw-btn');
-    if (confirmBtn) confirmBtn.disabled = true;
     
     // Continue playing the animation to show the actual throw
     setTimeout(() => {
@@ -1086,6 +1218,24 @@ function playAnimation() {
         isPlaying = true;
         document.getElementById('qb-play-pause-btn').textContent = 'Pause';
         
+        // Start timing when user clicks Play
+        if (!hasSubmittedAnswer && selectionStartTime === null) {
+            selectionStartTime = Date.now();
+            
+            // Show and reset stopwatch display
+            const stopwatchEl = document.getElementById('qb-stopwatch');
+            if (stopwatchEl) {
+                stopwatchEl.style.display = 'block';
+                stopwatchEl.textContent = '0.0s';
+            }
+            
+            // Start live stopwatch updates (every 100ms for smooth display)
+            if (stopwatchInterval) {
+                clearInterval(stopwatchInterval);
+            }
+            stopwatchInterval = setInterval(updateStopwatch, 100);
+        }
+        
         animationInterval = setInterval(() => {
             const maxFrame = playData.total_frames || playData.max_frame;
             
@@ -1118,6 +1268,24 @@ function resetAnimation() {
     isPausedForSelection = false;
     clearInterval(animationInterval);
     document.getElementById('play-pause-btn').textContent = 'Play';
+    
+    // Stop and reset stopwatch
+    if (stopwatchInterval) {
+        clearInterval(stopwatchInterval);
+        stopwatchInterval = null;
+    }
+    
+    // Reset selection timer if user resets before confirming
+    if (!hasSubmittedAnswer && selectionStartTime !== null) {
+        selectionStartTime = null;
+    }
+    
+    // Reset stopwatch display
+    const stopwatchEl = document.getElementById('qb-stopwatch');
+    if (stopwatchEl) {
+        stopwatchEl.style.display = 'none';
+        stopwatchEl.textContent = '0.0s';
+    }
     
     // Don't reset answer state - keep it if already submitted
     if (!hasSubmittedAnswer) {
@@ -1169,7 +1337,6 @@ async function randomizePlay() {
 document.getElementById('qb-randomize-btn').addEventListener('click', randomizePlay);
 document.getElementById('qb-play-pause-btn').addEventListener('click', playAnimation);
 document.getElementById('qb-reset-btn').addEventListener('click', resetAnimation);
-document.getElementById('qb-confirm-throw-btn').addEventListener('click', confirmThrow);
 
 document.getElementById('qb-frame-slider').addEventListener('input', (e) => {
     currentFrame = parseInt(e.target.value);

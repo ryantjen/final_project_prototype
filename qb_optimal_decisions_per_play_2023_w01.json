@@ -1,0 +1,4059 @@
+{
+  "plays": [
+    {
+      "game_id": 2023090700,
+      "play_id": 101,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 194,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 219,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 361,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 436,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 461,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 530,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 621,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 713,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 736,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 877,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 902,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1001,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1069,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1154,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1201,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1300,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1422,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1494,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1563,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1588,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1618,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1679,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1711,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1741,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1812,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1837,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1869,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 1940,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2118,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2141,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2186,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2261,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2306,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2364,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2435,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2487,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2510,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2613,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2638,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2825,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2906,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2936,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 2959,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3032,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3089,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3114,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3185,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3233,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3324,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3461,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3486,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3566,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3674,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3912,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3971,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 3994,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023090700,
+      "play_id": 4041,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 185,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 661,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 842,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 877,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 927,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1046,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1193,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1240,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1300,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1325,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1382,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1429,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1599,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1697,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1720,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1743,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1837,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1925,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 1972,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 2101,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 2207,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 2342,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 2389,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 2580,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 2793,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 2823,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 3026,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 3078,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 3260,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 3369,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 3421,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 3486,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 3533,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 3886,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 3916,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 4107,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091000,
+      "play_id": 4155,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 166,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 284,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 407,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 532,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 559,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 893,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1042,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1065,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1232,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1368,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1438,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1470,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1517,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1549,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1574,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1797,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1948,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 1980,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 2033,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 2151,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 2351,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 2432,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 2469,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 2523,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 2759,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 3086,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 3111,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 3257,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 3302,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 3383,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 3514,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 3879,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 3902,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4018,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4191,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4216,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4239,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4322,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4392,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4564,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4589,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4614,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4639,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091001,
+      "play_id": 4662,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 110,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 319,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 444,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 599,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 767,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 819,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 873,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 975,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 1048,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 1071,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 1209,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 1260,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 1412,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 1464,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 1540,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 1832,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 1944,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 1974,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2039,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2095,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2127,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2179,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2211,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2441,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2517,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2620,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2693,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2847,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2872,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 2942,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3138,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3170,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3253,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3314,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3337,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3409,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3505,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3571,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3594,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3617,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3716,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3787,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3812,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 3835,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 4036,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091002,
+      "play_id": 4124,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 81,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 143,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 166,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 191,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 263,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 358,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 410,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 529,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 662,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 687,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 761,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 933,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 1171,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 1503,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 1649,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 1706,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 1782,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 1805,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 1841,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 1929,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 1954,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2062,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2087,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2204,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2227,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2286,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2369,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2519,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2571,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2608,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2638,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2798,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2902,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 2979,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3002,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3202,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3335,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3409,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3645,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3750,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3797,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3820,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3845,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3975,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 3998,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4047,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4153,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4201,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4258,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4283,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4308,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4333,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4363,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4416,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4494,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091003,
+      "play_id": 4551,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 124,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 196,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 219,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 315,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 365,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 413,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 438,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 542,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 592,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 695,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 766,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 821,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 983,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1190,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1300,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1326,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1540,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1594,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1641,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1676,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1701,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1746,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1839,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1933,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 1958,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2077,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2102,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2154,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2177,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2234,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2257,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2287,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2312,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2344,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2369,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2505,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2607,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2701,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2724,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2749,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2827,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2850,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2936,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 2961,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3030,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3105,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3177,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3244,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3365,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3429,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3584,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3616,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3641,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3690,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3849,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3874,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 3922,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 4015,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 4040,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 4122,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091004,
+      "play_id": 4249,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 159,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 228,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 301,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 331,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 383,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 721,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 768,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 793,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 849,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 991,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 1016,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 1065,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 1217,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 1289,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 1394,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 1721,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 1766,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 2166,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 2251,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 2283,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 2366,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 2440,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 2518,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 2670,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 2720,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 2834,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 2964,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3042,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3067,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3128,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3208,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3358,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3383,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3413,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3436,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3483,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3578,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3603,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3698,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3774,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3850,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3875,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 3984,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 4036,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 4124,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 4147,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091005,
+      "play_id": 4270,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 55,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 144,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 213,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 282,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 431,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 492,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 550,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 575,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 598,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 775,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 822,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 899,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 960,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 1027,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 1096,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 1143,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 1207,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 1421,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 1446,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 1717,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 1828,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 1974,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 1999,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2156,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2188,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2274,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2299,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2324,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2380,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2415,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2470,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2529,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2657,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2736,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2861,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 2930,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3078,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3137,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3234,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3295,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3422,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3447,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3472,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3596,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3680,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3722,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3754,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3779,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3804,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3829,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 3881,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 4079,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 4163,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 4186,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 4211,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 4270,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 4315,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 4340,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 4395,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091006,
+      "play_id": 4420,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 77,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 124,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 147,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 197,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 220,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 332,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 357,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 580,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 699,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 842,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 935,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1167,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1214,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1371,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1399,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1424,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1620,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1679,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1764,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1794,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1848,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 1988,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2013,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2036,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2135,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2160,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2183,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2208,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2238,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2359,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2421,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2447,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2472,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2495,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2672,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 2719,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 3145,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 3542,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 3890,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 4101,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 4182,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 4234,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091007,
+      "play_id": 4271,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 125,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 273,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 396,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 496,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 572,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 619,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 735,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 840,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 888,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1105,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1130,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1155,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1200,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1292,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1356,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1551,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1576,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1601,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1626,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1818,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1929,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1952,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 1981,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 2007,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 2390,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 2475,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 2520,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 2697,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 2749,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 2865,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 2921,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3010,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3178,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3208,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3254,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3354,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3377,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3495,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3745,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3826,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3851,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3923,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3975,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 3998,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 4021,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 4051,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 4083,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 4452,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 4491,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 4514,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091008,
+      "play_id": 4539,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 103,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 306,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 417,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 442,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 511,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 570,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 681,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 750,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 797,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 861,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 953,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 987,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1017,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1097,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1212,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1507,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1561,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1621,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1680,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1710,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1735,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1772,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1802,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1827,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1886,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 1946,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 2102,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 2430,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 2499,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 2546,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 2609,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 2634,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 2826,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 2849,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 2907,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 2932,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3009,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3108,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3140,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3170,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3242,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3361,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3386,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3418,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3454,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3501,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3587,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3610,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091009,
+      "play_id": 3754,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 121,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 261,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 328,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 607,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 630,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 706,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 767,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 997,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1040,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1072,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1249,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1337,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1438,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1513,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1558,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1607,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1714,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1761,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1810,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1835,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1858,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1888,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 1940,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2002,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2027,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2103,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2151,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2176,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2206,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2236,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2261,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2284,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2372,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2930,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 2982,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3029,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3064,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3128,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3198,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3274,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3309,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3494,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3640,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3701,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3803,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3826,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 3890,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4076,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4099,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4207,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4321,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4426,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4473,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4498,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4528,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4558,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4615,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091010,
+      "play_id": 4699,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 55,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 140,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 209,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 515,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 614,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 637,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 766,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 849,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 952,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 980,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1034,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1101,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1224,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1418,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1443,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1661,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1686,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1734,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1759,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1792,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1839,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1964,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 1989,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2093,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2125,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2196,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2221,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2363,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2388,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2449,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2508,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2555,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2580,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2643,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2809,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2834,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 2857,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3006,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3108,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3140,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3187,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3217,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3262,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3285,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3355,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3425,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3455,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3491,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3541,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3683,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3772,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3797,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3915,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 3976,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 4046,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 4071,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 4096,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 4270,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 4317,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 4427,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 4457,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 4485,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 4557,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091011,
+      "play_id": 4666,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 55,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 102,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 176,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 327,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 439,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 582,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 605,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 652,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 677,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 783,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 925,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 950,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1090,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1165,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1212,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1392,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1455,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1641,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1666,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1713,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1831,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1956,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 1979,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2002,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2034,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2215,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2240,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2263,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2310,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2335,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2476,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2499,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2543,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2602,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2656,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2725,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2791,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 2956,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3068,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3093,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3140,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3197,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3298,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3382,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3412,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3516,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3541,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3618,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3663,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091012,
+      "play_id": 3729,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 422,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 485,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 539,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 616,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 639,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 801,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1015,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1072,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1117,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1142,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1233,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1337,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1588,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1635,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1687,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1737,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1813,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1870,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 1943,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 2144,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 2213,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 2292,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 2515,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 2572,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 2738,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 2802,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 2872,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 2897,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 2932,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3001,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3024,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3047,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3101,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3210,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3257,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3357,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3538,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3686,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3711,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3845,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3870,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091013,
+      "play_id": 3974,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 58,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 152,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 299,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 331,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 482,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 534,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 559,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 629,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 779,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 804,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 962,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 993,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1186,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1216,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1239,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1356,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1499,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1551,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1589,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1664,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1701,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1775,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 1973,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2281,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2306,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2358,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2383,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2428,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2488,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2513,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2536,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2655,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2844,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2916,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 2941,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 3015,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 3098,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 3167,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 3214,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 3593,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 3618,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 3684,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 3716,
+      "is_optimal": false
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 3942,
+      "is_optimal": true
+    },
+    {
+      "game_id": 2023091100,
+      "play_id": 3987,
+      "is_optimal": true
+    }
+  ]
+}

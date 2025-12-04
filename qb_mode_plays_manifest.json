@@ -1,248 +1,5 @@
 [
   {
-    "game_id": 2023090700,
-    "play_id": 1741,
-    "filename": "qb_plays/play_2023090700_1741.json",
-    "yardline": "DET 4",
-    "possession_team": "KC",
-    "defensive_team": "DET",
-    "targeted_receiver_name_abbr": "B.Bell"
-  },
-  {
-    "game_id": 2023091001,
-    "play_id": 2523,
-    "filename": "qb_plays/play_2023091001_2523.json",
-    "yardline": "HOU 7",
-    "possession_team": "BAL",
-    "defensive_team": "HOU",
-    "targeted_receiver_name_abbr": "J.Dobbins"
-  },
-  {
-    "game_id": 2023091010,
-    "play_id": 4558,
-    "filename": "qb_plays/play_2023091010_4558.json",
-    "yardline": "LAC 4",
-    "possession_team": "MIA",
-    "defensive_team": "LAC",
-    "targeted_receiver_name_abbr": "T.Hill"
-  },
-  {
-    "game_id": 2023091008,
-    "play_id": 4051,
-    "filename": "qb_plays/play_2023091008_4051.json",
-    "yardline": "GB 18",
-    "possession_team": "CHI",
-    "defensive_team": "GB",
-    "targeted_receiver_name_abbr": "R.Johnson"
-  },
-  {
-    "game_id": 2023091003,
-    "play_id": 4333,
-    "filename": "qb_plays/play_2023091003_4333.json",
-    "yardline": "JAX 20",
-    "possession_team": "IND",
-    "defensive_team": "JAX",
-    "targeted_receiver_name_abbr": "K.Granson"
-  },
-  {
-    "game_id": 2023091012,
-    "play_id": 783,
-    "filename": "qb_plays/play_2023091012_783.json",
-    "yardline": "SEA 17",
-    "possession_team": "LA",
-    "defensive_team": "SEA",
-    "targeted_receiver_name_abbr": "P.Nacua"
-  },
-  {
-    "game_id": 2023091008,
-    "play_id": 1155,
-    "filename": "qb_plays/play_2023091008_1155.json",
-    "yardline": "GB 8",
-    "possession_team": "CHI",
-    "defensive_team": "GB",
-    "targeted_receiver_name_abbr": "C.Kmet"
-  },
-  {
-    "game_id": 2023091010,
-    "play_id": 1438,
-    "filename": "qb_plays/play_2023091010_1438.json",
-    "yardline": "MIA 1",
-    "possession_team": "LAC",
-    "defensive_team": "MIA",
-    "targeted_receiver_name_abbr": "D.Parham"
-  },
-  {
-    "game_id": 2023091003,
-    "play_id": 3845,
-    "filename": "qb_plays/play_2023091003_3845.json",
-    "yardline": "IND 15",
-    "possession_team": "JAX",
-    "defensive_team": "IND",
-    "targeted_receiver_name_abbr": "Z.Jones"
-  },
-  {
-    "game_id": 2023091009,
-    "play_id": 306,
-    "filename": "qb_plays/play_2023091009_306.json",
-    "yardline": "DEN 3",
-    "possession_team": "LV",
-    "defensive_team": "DEN",
-    "targeted_receiver_name_abbr": "J.Meyers"
-  },
-  {
-    "game_id": 2023091008,
-    "play_id": 496,
-    "filename": "qb_plays/play_2023091008_496.json",
-    "yardline": "CHI 8",
-    "possession_team": "GB",
-    "defensive_team": "CHI",
-    "targeted_receiver_name_abbr": "R.Doubs"
-  },
-  {
-    "game_id": 2023091013,
-    "play_id": 639,
-    "filename": "qb_plays/play_2023091013_639.json",
-    "yardline": "NYG 6",
-    "possession_team": "DAL",
-    "defensive_team": "NYG",
-    "targeted_receiver_name_abbr": "K.Turpin"
-  },
-  {
-    "game_id": 2023091004,
-    "play_id": 2749,
-    "filename": "qb_plays/play_2023091004_2749.json",
-    "yardline": "MIN 19",
-    "possession_team": "TB",
-    "defensive_team": "MIN",
-    "targeted_receiver_name_abbr": "C.Otton"
-  },
-  {
-    "game_id": 2023091000,
-    "play_id": 1429,
-    "filename": "qb_plays/play_2023091000_1429.json",
-    "yardline": "ATL 4",
-    "possession_team": "CAR",
-    "defensive_team": "ATL",
-    "targeted_receiver_name_abbr": "H.Hurst"
-  },
-  {
-    "game_id": 2023091011,
-    "play_id": 1792,
-    "filename": "qb_plays/play_2023091011_1792.json",
-    "yardline": "PHI 20",
-    "possession_team": "NE",
-    "defensive_team": "PHI",
-    "targeted_receiver_name_abbr": "T.Montgomery"
-  },
-  {
-    "game_id": 2023091004,
-    "play_id": 1676,
-    "filename": "qb_plays/play_2023091004_1676.json",
-    "yardline": "TB 19",
-    "possession_team": "MIN",
-    "defensive_team": "TB",
-    "targeted_receiver_name_abbr": "J.Oliver"
-  },
-  {
-    "game_id": 2023091002,
-    "play_id": 3170,
-    "filename": "qb_plays/play_2023091002_3170.json",
-    "yardline": "CIN 20",
-    "possession_team": "CLE",
-    "defensive_team": "CIN",
-    "targeted_receiver_name_abbr": "E.Moore"
-  },
-  {
-    "game_id": 2023091002,
-    "play_id": 3716,
-    "filename": "qb_plays/play_2023091002_3716.json",
-    "yardline": "CIN 3",
-    "possession_team": "CLE",
-    "defensive_team": "CIN",
-    "targeted_receiver_name_abbr": "H.Bryant"
-  },
-  {
-    "game_id": 2023091009,
-    "play_id": 1886,
-    "filename": "qb_plays/play_2023091009_1886.json",
-    "yardline": "LV 20",
-    "possession_team": "DEN",
-    "defensive_team": "LV",
-    "targeted_receiver_name_abbr": "C.Sutton"
-  },
-  {
-    "game_id": 2023091000,
-    "play_id": 1382,
-    "filename": "qb_plays/play_2023091000_1382.json",
-    "yardline": "ATL 20",
-    "possession_team": "CAR",
-    "defensive_team": "ATL",
-    "targeted_receiver_name_abbr": "H.Hurst"
-  },
-  {
-    "game_id": 2023091010,
-    "play_id": 2027,
-    "filename": "qb_plays/play_2023091010_2027.json",
-    "yardline": "LAC 1",
-    "possession_team": "MIA",
-    "defensive_team": "LAC",
-    "targeted_receiver_name_abbr": "R.Cracraft"
-  },
-  {
-    "game_id": 2023091005,
-    "play_id": 4147,
-    "filename": "qb_plays/play_2023091005_4147.json",
-    "yardline": "NO 17",
-    "possession_team": "TEN",
-    "defensive_team": "NO",
-    "targeted_receiver_name_abbr": "D.Hopkins"
-  },
-  {
-    "game_id": 2023091010,
-    "play_id": 2002,
-    "filename": "qb_plays/play_2023091010_2002.json",
-    "yardline": "LAC 9",
-    "possession_team": "MIA",
-    "defensive_team": "LAC",
-    "targeted_receiver_name_abbr": "T.Hill"
-  },
-  {
-    "game_id": 2023091011,
-    "play_id": 2221,
-    "filename": "qb_plays/play_2023091011_2221.json",
-    "yardline": "PHI 19",
-    "possession_team": "NE",
-    "defensive_team": "PHI",
-    "targeted_receiver_name_abbr": "K.Bourne"
-  },
-  {
-    "game_id": 2023091006,
-    "play_id": 2470,
-    "filename": "qb_plays/play_2023091006_2470.json",
-    "yardline": "SF 11",
-    "possession_team": "PIT",
-    "defensive_team": "SF",
-    "targeted_receiver_name_abbr": "G.Pickens"
-  },
-  {
-    "game_id": 2023091012,
-    "play_id": 1212,
-    "filename": "qb_plays/play_2023091012_1212.json",
-    "yardline": "LA 10",
-    "possession_team": "SEA",
-    "defensive_team": "LA",
-    "targeted_receiver_name_abbr": "D.Metcalf"
-  },
-  {
-    "game_id": 2023091004,
-    "play_id": 2850,
-    "filename": "qb_plays/play_2023091004_2850.json",
-    "yardline": "MIN 7",
-    "possession_team": "TB",
-    "defensive_team": "MIN",
-    "targeted_receiver_name_abbr": "T.Palmer"
-  },
-  {
     "game_id": 2023091013,
     "play_id": 3210,
     "filename": "qb_plays/play_2023091013_3210.json",
@@ -252,283 +9,13 @@
     "targeted_receiver_name_abbr": "K.Turpin"
   },
   {
-    "game_id": 2023091006,
-    "play_id": 2529,
-    "filename": "qb_plays/play_2023091006_2529.json",
-    "yardline": "SF 3",
-    "possession_team": "PIT",
-    "defensive_team": "SF",
-    "targeted_receiver_name_abbr": "P.Freiermuth"
-  },
-  {
-    "game_id": 2023091003,
-    "play_id": 1706,
-    "filename": "qb_plays/play_2023091003_1706.json",
-    "yardline": "IND 18",
-    "possession_team": "JAX",
-    "defensive_team": "IND",
-    "targeted_receiver_name_abbr": "Z.Jones"
-  },
-  {
     "game_id": 2023091008,
-    "play_id": 3254,
-    "filename": "qb_plays/play_2023091008_3254.json",
-    "yardline": "CHI 4",
+    "play_id": 496,
+    "filename": "qb_plays/play_2023091008_496.json",
+    "yardline": "CHI 8",
     "possession_team": "GB",
     "defensive_team": "CHI",
     "targeted_receiver_name_abbr": "R.Doubs"
-  },
-  {
-    "game_id": 2023091009,
-    "play_id": 3242,
-    "filename": "qb_plays/play_2023091009_3242.json",
-    "yardline": "LV 8",
-    "possession_team": "DEN",
-    "defensive_team": "LV",
-    "targeted_receiver_name_abbr": "A.Trautman"
-  },
-  {
-    "game_id": 2023091006,
-    "play_id": 3422,
-    "filename": "qb_plays/play_2023091006_3422.json",
-    "yardline": "SF 14",
-    "possession_team": "PIT",
-    "defensive_team": "SF",
-    "targeted_receiver_name_abbr": "A.McFarland"
-  },
-  {
-    "game_id": 2023091006,
-    "play_id": 1143,
-    "filename": "qb_plays/play_2023091006_1143.json",
-    "yardline": "PIT 19",
-    "possession_team": "SF",
-    "defensive_team": "PIT",
-    "targeted_receiver_name_abbr": "B.Aiyuk"
-  },
-  {
-    "game_id": 2023091010,
-    "play_id": 3494,
-    "filename": "qb_plays/play_2023091010_3494.json",
-    "yardline": "MIA 7",
-    "possession_team": "LAC",
-    "defensive_team": "MIA",
-    "targeted_receiver_name_abbr": "D.Parham"
-  },
-  {
-    "game_id": 2023091003,
-    "play_id": 529,
-    "filename": "qb_plays/play_2023091003_529.json",
-    "yardline": "IND 9",
-    "possession_team": "JAX",
-    "defensive_team": "IND",
-    "targeted_receiver_name_abbr": "C.Ridley"
-  },
-  {
-    "game_id": 2023091008,
-    "play_id": 3010,
-    "filename": "qb_plays/play_2023091008_3010.json",
-    "yardline": "GB 20",
-    "possession_team": "CHI",
-    "defensive_team": "GB",
-    "targeted_receiver_name_abbr": "D.Mooney"
-  },
-  {
-    "game_id": 2023091011,
-    "play_id": 849,
-    "filename": "qb_plays/play_2023091011_849.json",
-    "yardline": "NE 5",
-    "possession_team": "PHI",
-    "defensive_team": "NE",
-    "targeted_receiver_name_abbr": "D.Smith"
-  },
-  {
-    "game_id": 2023091012,
-    "play_id": 677,
-    "filename": "qb_plays/play_2023091012_677.json",
-    "yardline": "SEA 19",
-    "possession_team": "LA",
-    "defensive_team": "SEA",
-    "targeted_receiver_name_abbr": "T.Higbee"
-  },
-  {
-    "game_id": 2023091009,
-    "play_id": 1946,
-    "filename": "qb_plays/play_2023091009_1946.json",
-    "yardline": "LV 5",
-    "possession_team": "DEN",
-    "defensive_team": "LV",
-    "targeted_receiver_name_abbr": "C.Sutton"
-  },
-  {
-    "game_id": 2023091008,
-    "play_id": 4083,
-    "filename": "qb_plays/play_2023091008_4083.json",
-    "yardline": "GB 12",
-    "possession_team": "CHI",
-    "defensive_team": "GB",
-    "targeted_receiver_name_abbr": "R.Johnson"
-  },
-  {
-    "game_id": 2023091010,
-    "play_id": 4207,
-    "filename": "qb_plays/play_2023091010_4207.json",
-    "yardline": "MIA 11",
-    "possession_team": "LAC",
-    "defensive_team": "MIA",
-    "targeted_receiver_name_abbr": "A.Ekeler"
-  },
-  {
-    "game_id": 2023090700,
-    "play_id": 1001,
-    "filename": "qb_plays/play_2023090700_1001.json",
-    "yardline": "DET 1",
-    "possession_team": "KC",
-    "defensive_team": "DET",
-    "targeted_receiver_name_abbr": "R.Rice"
-  },
-  {
-    "game_id": 2023091006,
-    "play_id": 3447,
-    "filename": "qb_plays/play_2023091006_3447.json",
-    "yardline": "SF 8",
-    "possession_team": "PIT",
-    "defensive_team": "SF",
-    "targeted_receiver_name_abbr": "J.Warren"
-  },
-  {
-    "game_id": 2023090700,
-    "play_id": 621,
-    "filename": "qb_plays/play_2023090700_621.json",
-    "yardline": "KC 9",
-    "possession_team": "DET",
-    "defensive_team": "KC",
-    "targeted_receiver_name_abbr": "A.St"
-  },
-  {
-    "game_id": 2023091010,
-    "play_id": 4528,
-    "filename": "qb_plays/play_2023091010_4528.json",
-    "yardline": "LAC 9",
-    "possession_team": "MIA",
-    "defensive_team": "LAC",
-    "targeted_receiver_name_abbr": "R.Mostert"
-  },
-  {
-    "game_id": 2023091009,
-    "play_id": 750,
-    "filename": "qb_plays/play_2023091009_750.json",
-    "yardline": "LV 18",
-    "possession_team": "DEN",
-    "defensive_team": "LV",
-    "targeted_receiver_name_abbr": "A.Trautman"
-  },
-  {
-    "game_id": 2023091009,
-    "play_id": 3501,
-    "filename": "qb_plays/play_2023091009_3501.json",
-    "yardline": "DEN 6",
-    "possession_team": "LV",
-    "defensive_team": "DEN",
-    "targeted_receiver_name_abbr": "J.Meyers"
-  },
-  {
-    "game_id": 2023091006,
-    "play_id": 2415,
-    "filename": "qb_plays/play_2023091006_2415.json",
-    "yardline": "SF 16",
-    "possession_team": "PIT",
-    "defensive_team": "SF",
-    "targeted_receiver_name_abbr": "A.McFarland"
-  },
-  {
-    "game_id": 2023091011,
-    "play_id": 1839,
-    "filename": "qb_plays/play_2023091011_1839.json",
-    "yardline": "PHI 9",
-    "possession_team": "NE",
-    "defensive_team": "PHI",
-    "targeted_receiver_name_abbr": "H.Henry"
-  },
-  {
-    "game_id": 2023091003,
-    "play_id": 4416,
-    "filename": "qb_plays/play_2023091003_4416.json",
-    "yardline": "JAX 13",
-    "possession_team": "IND",
-    "defensive_team": "JAX",
-    "targeted_receiver_name_abbr": "M.Pittman"
-  },
-  {
-    "game_id": 2023091006,
-    "play_id": 282,
-    "filename": "qb_plays/play_2023091006_282.json",
-    "yardline": "PIT 8",
-    "possession_team": "SF",
-    "defensive_team": "PIT",
-    "targeted_receiver_name_abbr": "B.Aiyuk"
-  },
-  {
-    "game_id": 2023091005,
-    "play_id": 3208,
-    "filename": "qb_plays/play_2023091005_3208.json",
-    "yardline": "TEN 19",
-    "possession_team": "NO",
-    "defensive_team": "TEN",
-    "targeted_receiver_name_abbr": "R.Shaheed"
-  },
-  {
-    "game_id": 2023091100,
-    "play_id": 3214,
-    "filename": "qb_plays/play_2023091100_3214.json",
-    "yardline": "BUF 3",
-    "possession_team": "NYJ",
-    "defensive_team": "BUF",
-    "targeted_receiver_name_abbr": "G.Wilson"
-  },
-  {
-    "game_id": 2023091005,
-    "play_id": 849,
-    "filename": "qb_plays/play_2023091005_849.json",
-    "yardline": "NO 12",
-    "possession_team": "TEN",
-    "defensive_team": "NO",
-    "targeted_receiver_name_abbr": "N.Westbrook-Ikhine"
-  },
-  {
-    "game_id": 2023091002,
-    "play_id": 2179,
-    "filename": "qb_plays/play_2023091002_2179.json",
-    "yardline": "CIN 19",
-    "possession_team": "CLE",
-    "defensive_team": "CIN",
-    "targeted_receiver_name_abbr": "E.Moore"
-  },
-  {
-    "game_id": 2023091010,
-    "play_id": 1119,
-    "filename": "qb_plays/play_2023091010_1119.json",
-    "yardline": "LAC 20",
-    "possession_team": "MIA",
-    "defensive_team": "LAC",
-    "targeted_receiver_name_abbr": "A.Ingold"
-  },
-  {
-    "game_id": 2023091004,
-    "play_id": 3365,
-    "filename": "qb_plays/play_2023091004_3365.json",
-    "yardline": "TB 4",
-    "possession_team": "MIN",
-    "defensive_team": "TB",
-    "targeted_receiver_name_abbr": "A.Mattison"
-  },
-  {
-    "game_id": 2023091007,
-    "play_id": 699,
-    "filename": "qb_plays/play_2023091007_699.json",
-    "yardline": "ARI 7",
-    "possession_team": "WAS",
-    "defensive_team": "ARI",
-    "targeted_receiver_name_abbr": "B.Robinson"
   },
   {
     "game_id": 2023091011,
@@ -547,5 +34,266 @@
     "possession_team": "DEN",
     "defensive_team": "LV",
     "targeted_receiver_name_abbr": "L.Humphrey"
+  },
+  {
+    "game_id": 2023091005,
+    "play_id": 4147,
+    "filename": "qb_plays/play_2023091005_4147.json",
+    "yardline": "NO 17",
+    "possession_team": "TEN",
+    "defensive_team": "NO",
+    "targeted_receiver_name_abbr": "D.Hopkins"
+  },
+  {
+    "game_id": 2023091006,
+    "play_id": 282,
+    "filename": "qb_plays/play_2023091006_282.json",
+    "yardline": "PIT 8",
+    "possession_team": "SF",
+    "defensive_team": "PIT",
+    "targeted_receiver_name_abbr": "B.Aiyuk"
+  },
+  {
+    "game_id": 2023091009,
+    "play_id": 1886,
+    "filename": "qb_plays/play_2023091009_1886.json",
+    "yardline": "LV 20",
+    "possession_team": "DEN",
+    "defensive_team": "LV",
+    "targeted_receiver_name_abbr": "C.Sutton"
+  },
+  {
+    "game_id": 2023091010,
+    "play_id": 4207,
+    "filename": "qb_plays/play_2023091010_4207.json",
+    "yardline": "MIA 11",
+    "possession_team": "LAC",
+    "defensive_team": "MIA",
+    "targeted_receiver_name_abbr": "A.Ekeler"
+  },
+  {
+    "game_id": 2023091006,
+    "play_id": 2529,
+    "filename": "qb_plays/play_2023091006_2529.json",
+    "yardline": "SF 3",
+    "possession_team": "PIT",
+    "defensive_team": "SF",
+    "targeted_receiver_name_abbr": "P.Freiermuth"
+  },
+  {
+    "game_id": 2023090700,
+    "play_id": 1001,
+    "filename": "qb_plays/play_2023090700_1001.json",
+    "yardline": "DET 1",
+    "possession_team": "KC",
+    "defensive_team": "DET",
+    "targeted_receiver_name_abbr": "R.Rice"
+  },
+  {
+    "game_id": 2023091003,
+    "play_id": 529,
+    "filename": "qb_plays/play_2023091003_529.json",
+    "yardline": "IND 9",
+    "possession_team": "JAX",
+    "defensive_team": "IND",
+    "targeted_receiver_name_abbr": "C.Ridley"
+  },
+  {
+    "game_id": 2023091009,
+    "play_id": 1946,
+    "filename": "qb_plays/play_2023091009_1946.json",
+    "yardline": "LV 5",
+    "possession_team": "DEN",
+    "defensive_team": "LV",
+    "targeted_receiver_name_abbr": "C.Sutton"
+  },
+  {
+    "game_id": 2023091004,
+    "play_id": 2850,
+    "filename": "qb_plays/play_2023091004_2850.json",
+    "yardline": "MIN 7",
+    "possession_team": "TB",
+    "defensive_team": "MIN",
+    "targeted_receiver_name_abbr": "T.Palmer"
+  },
+  {
+    "game_id": 2023091008,
+    "play_id": 3254,
+    "filename": "qb_plays/play_2023091008_3254.json",
+    "yardline": "CHI 4",
+    "possession_team": "GB",
+    "defensive_team": "CHI",
+    "targeted_receiver_name_abbr": "R.Doubs"
+  },
+  {
+    "game_id": 2023091006,
+    "play_id": 2470,
+    "filename": "qb_plays/play_2023091006_2470.json",
+    "yardline": "SF 11",
+    "possession_team": "PIT",
+    "defensive_team": "SF",
+    "targeted_receiver_name_abbr": "G.Pickens"
+  },
+  {
+    "game_id": 2023091010,
+    "play_id": 1438,
+    "filename": "qb_plays/play_2023091010_1438.json",
+    "yardline": "MIA 1",
+    "possession_team": "LAC",
+    "defensive_team": "MIA",
+    "targeted_receiver_name_abbr": "D.Parham"
+  },
+  {
+    "game_id": 2023091002,
+    "play_id": 3716,
+    "filename": "qb_plays/play_2023091002_3716.json",
+    "yardline": "CIN 3",
+    "possession_team": "CLE",
+    "defensive_team": "CIN",
+    "targeted_receiver_name_abbr": "H.Bryant"
+  },
+  {
+    "game_id": 2023091002,
+    "play_id": 3170,
+    "filename": "qb_plays/play_2023091002_3170.json",
+    "yardline": "CIN 20",
+    "possession_team": "CLE",
+    "defensive_team": "CIN",
+    "targeted_receiver_name_abbr": "E.Moore"
+  },
+  {
+    "game_id": 2023091012,
+    "play_id": 677,
+    "filename": "qb_plays/play_2023091012_677.json",
+    "yardline": "SEA 19",
+    "possession_team": "LA",
+    "defensive_team": "SEA",
+    "targeted_receiver_name_abbr": "T.Higbee"
+  },
+  {
+    "game_id": 2023091003,
+    "play_id": 1706,
+    "filename": "qb_plays/play_2023091003_1706.json",
+    "yardline": "IND 18",
+    "possession_team": "JAX",
+    "defensive_team": "IND",
+    "targeted_receiver_name_abbr": "Z.Jones"
+  },
+  {
+    "game_id": 2023091011,
+    "play_id": 2221,
+    "filename": "qb_plays/play_2023091011_2221.json",
+    "yardline": "PHI 19",
+    "possession_team": "NE",
+    "defensive_team": "PHI",
+    "targeted_receiver_name_abbr": "K.Bourne"
+  },
+  {
+    "game_id": 2023091010,
+    "play_id": 2002,
+    "filename": "qb_plays/play_2023091010_2002.json",
+    "yardline": "LAC 9",
+    "possession_team": "MIA",
+    "defensive_team": "LAC",
+    "targeted_receiver_name_abbr": "T.Hill"
+  },
+  {
+    "game_id": 2023091012,
+    "play_id": 1212,
+    "filename": "qb_plays/play_2023091012_1212.json",
+    "yardline": "LA 10",
+    "possession_team": "SEA",
+    "defensive_team": "LA",
+    "targeted_receiver_name_abbr": "D.Metcalf"
+  },
+  {
+    "game_id": 2023091010,
+    "play_id": 4558,
+    "filename": "qb_plays/play_2023091010_4558.json",
+    "yardline": "LAC 4",
+    "possession_team": "MIA",
+    "defensive_team": "LAC",
+    "targeted_receiver_name_abbr": "T.Hill"
+  },
+  {
+    "game_id": 2023091009,
+    "play_id": 306,
+    "filename": "qb_plays/play_2023091009_306.json",
+    "yardline": "DEN 3",
+    "possession_team": "LV",
+    "defensive_team": "DEN",
+    "targeted_receiver_name_abbr": "J.Meyers"
+  },
+  {
+    "game_id": 2023091011,
+    "play_id": 1839,
+    "filename": "qb_plays/play_2023091011_1839.json",
+    "yardline": "PHI 9",
+    "possession_team": "NE",
+    "defensive_team": "PHI",
+    "targeted_receiver_name_abbr": "H.Henry"
+  },
+  {
+    "game_id": 2023091004,
+    "play_id": 2749,
+    "filename": "qb_plays/play_2023091004_2749.json",
+    "yardline": "MIN 19",
+    "possession_team": "TB",
+    "defensive_team": "MIN",
+    "targeted_receiver_name_abbr": "C.Otton"
+  },
+  {
+    "game_id": 2023091010,
+    "play_id": 2027,
+    "filename": "qb_plays/play_2023091010_2027.json",
+    "yardline": "LAC 1",
+    "possession_team": "MIA",
+    "defensive_team": "LAC",
+    "targeted_receiver_name_abbr": "R.Cracraft"
+  },
+  {
+    "game_id": 2023091100,
+    "play_id": 3214,
+    "filename": "qb_plays/play_2023091100_3214.json",
+    "yardline": "BUF 3",
+    "possession_team": "NYJ",
+    "defensive_team": "BUF",
+    "targeted_receiver_name_abbr": "G.Wilson"
+  },
+  {
+    "game_id": 2023091005,
+    "play_id": 3208,
+    "filename": "qb_plays/play_2023091005_3208.json",
+    "yardline": "TEN 19",
+    "possession_team": "NO",
+    "defensive_team": "TEN",
+    "targeted_receiver_name_abbr": "R.Shaheed"
+  },
+  {
+    "game_id": 2023091006,
+    "play_id": 1143,
+    "filename": "qb_plays/play_2023091006_1143.json",
+    "yardline": "PIT 19",
+    "possession_team": "SF",
+    "defensive_team": "PIT",
+    "targeted_receiver_name_abbr": "B.Aiyuk"
+  },
+  {
+    "game_id": 2023091008,
+    "play_id": 3010,
+    "filename": "qb_plays/play_2023091008_3010.json",
+    "yardline": "GB 20",
+    "possession_team": "CHI",
+    "defensive_team": "GB",
+    "targeted_receiver_name_abbr": "D.Mooney"
+  },
+  {
+    "game_id": 2023091011,
+    "play_id": 849,
+    "filename": "qb_plays/play_2023091011_849.json",
+    "yardline": "NE 5",
+    "possession_team": "PHI",
+    "defensive_team": "NE",
+    "targeted_receiver_name_abbr": "D.Smith"
   }
 ]

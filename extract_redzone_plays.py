@@ -33,9 +33,43 @@ rz_completions['can_extract'] = rz_completions.apply(
 extractable_rz = rz_completions[rz_completions['can_extract']]
 print(f"Red zone completions we CAN extract: {len(extractable_rz)}")
 
+# Load optimal decision data to filter for plays where QB made optimal decision
+print("\nLoading optimal decision data...")
+try:
+    with open('qb_optimal_decisions_per_play_2023_w01.json', 'r') as f:
+        optimal_data = json.load(f)
+    
+    # Create a set of (game_id, play_id) tuples where is_optimal == True
+    optimal_plays_set = set(
+        (play['game_id'], play['play_id'])
+        for play in optimal_data['plays']
+        if play['is_optimal']
+    )
+    print(f"  Found {len(optimal_plays_set)} plays with optimal decisions")
+    
+    # Filter extractable_rz to only include optimal decision plays
+    extractable_rz['is_optimal'] = extractable_rz.apply(
+        lambda row: (row['game_id'], row['play_id']) in optimal_plays_set, axis=1
+    )
+    optimal_rz = extractable_rz[extractable_rz['is_optimal']]
+    print(f"Red zone completions with optimal decisions: {len(optimal_rz)}")
+    
+    # Use optimal plays for selection
+    plays_to_select_from = optimal_rz
+    
+except FileNotFoundError:
+    print("  Warning: qb_optimal_decisions_per_play_2023_w01.json not found.")
+    print("  Run analyze_qb_optimal_decisions.py first to generate this file.")
+    print("  Proceeding without optimal decision filter...")
+    plays_to_select_from = extractable_rz
+except Exception as e:
+    print(f"  Error loading optimal decision data: {e}")
+    print("  Proceeding without optimal decision filter...")
+    plays_to_select_from = extractable_rz
+
 # Randomly select 100 (or all if less than 100)
-num_to_extract = min(100, len(extractable_rz))
-selected_plays = extractable_rz.sample(n=num_to_extract, random_state=42).reset_index(drop=True)
+num_to_extract = min(100, len(plays_to_select_from))
+selected_plays = plays_to_select_from.sample(n=num_to_extract, random_state=42).reset_index(drop=True)
 print(f"Selected {num_to_extract} plays to extract")
 
 # Create qb_plays directory
@@ -107,7 +141,7 @@ for idx, supp_row in selected_plays.iterrows():
         frames = []
         num_frames_output = None
         for _, frame_row in player_frames.iterrows():
-            frames.append({
+            frame_data = {
                 'frame_id': int(frame_row['frame_id']),
                 'x': float(frame_row['x']),
                 'y': float(frame_row['y']),
@@ -115,7 +149,19 @@ for idx, supp_row in selected_plays.iterrows():
                 'a': float(frame_row['a']),
                 'dir': float(frame_row['dir']),
                 'o': float(frame_row['o'])
-            })
+            }
+            
+            # Add prediction fields if they exist and are not NaN (for receivers)
+            if 'catch_probability' in frame_row.index and pd.notna(frame_row['catch_probability']):
+                frame_data['catch_probability'] = float(frame_row['catch_probability'])
+            if 'target_probability' in frame_row.index and pd.notna(frame_row['target_probability']):
+                frame_data['target_probability'] = float(frame_row['target_probability'])
+            if 'yards_if_caught' in frame_row.index and pd.notna(frame_row['yards_if_caught']):
+                frame_data['yards_if_caught'] = float(frame_row['yards_if_caught'])
+            if 'expected_yards' in frame_row.index and pd.notna(frame_row['expected_yards']):
+                frame_data['expected_yards'] = float(frame_row['expected_yards'])
+            
+            frames.append(frame_data)
             if num_frames_output is None and pd.notna(frame_row['num_frames_output']):
                 num_frames_output = int(frame_row['num_frames_output'])
         

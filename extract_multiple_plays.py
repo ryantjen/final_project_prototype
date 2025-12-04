@@ -89,7 +89,7 @@ for idx, row in selected_plays.iterrows():
         frames = []
         num_frames_output = None
         for _, frame_row in player_frames.iterrows():
-            frames.append({
+            frame_data = {
                 'frame_id': int(frame_row['frame_id']),
                 'x': float(frame_row['x']),
                 'y': float(frame_row['y']),
@@ -97,7 +97,19 @@ for idx, row in selected_plays.iterrows():
                 'a': float(frame_row['a']),
                 'dir': float(frame_row['dir']),
                 'o': float(frame_row['o'])
-            })
+            }
+            
+            # Add prediction fields if they exist and are not NaN (for receivers)
+            if 'catch_probability' in frame_row.index and pd.notna(frame_row['catch_probability']):
+                frame_data['catch_probability'] = float(frame_row['catch_probability'])
+            if 'target_probability' in frame_row.index and pd.notna(frame_row['target_probability']):
+                frame_data['target_probability'] = float(frame_row['target_probability'])
+            if 'yards_if_caught' in frame_row.index and pd.notna(frame_row['yards_if_caught']):
+                frame_data['yards_if_caught'] = float(frame_row['yards_if_caught'])
+            if 'expected_yards' in frame_row.index and pd.notna(frame_row['expected_yards']):
+                frame_data['expected_yards'] = float(frame_row['expected_yards'])
+            
+            frames.append(frame_data)
             if num_frames_output is None and pd.notna(frame_row['num_frames_output']):
                 num_frames_output = int(frame_row['num_frames_output'])
         

@@ -1,0 +1,231 @@
+{
+  "overall_optimal_percentage": 46.98,
+  "total_plays": 811,
+  "optimal_plays": 381,
+  "quarterbacks": [
+    {
+      "name": "Tua Tagovailoa",
+      "optimal_decisions": 25,
+      "total_attempts": 35,
+      "optimal_percentage": 71.43,
+      "rank": 3
+    },
+    {
+      "name": "Derek Carr",
+      "optimal_decisions": 13,
+      "total_attempts": 20,
+      "optimal_percentage": 65.0,
+      "rank": 4
+    },
+    {
+      "name": "Baker Mayfield",
+      "optimal_decisions": 16,
+      "total_attempts": 25,
+      "optimal_percentage": 64.0,
+      "rank": 5
+    },
+    {
+      "name": "Desmond Ridder",
+      "optimal_decisions": 6,
+      "total_attempts": 10,
+      "optimal_percentage": 60.0,
+      "rank": 6
+    },
+    {
+      "name": "Trevor Lawrence",
+      "optimal_decisions": 15,
+      "total_attempts": 25,
+      "optimal_percentage": 60.0,
+      "rank": 7
+    },
+    {
+      "name": "Sam Howell",
+      "optimal_decisions": 13,
+      "total_attempts": 23,
+      "optimal_percentage": 56.52,
+      "rank": 8
+    },
+    {
+      "name": "Zach Wilson",
+      "optimal_decisions": 7,
+      "total_attempts": 13,
+      "optimal_percentage": 53.85,
+      "rank": 9
+    },
+    {
+      "name": "Kirk Cousins",
+      "optimal_decisions": 19,
+      "total_attempts": 36,
+      "optimal_percentage": 52.78,
+      "rank": 10
+    },
+    {
+      "name": "Brock Purdy",
+      "optimal_decisions": 12,
+      "total_attempts": 23,
+      "optimal_percentage": 52.17,
+      "rank": 11
+    },
+    {
+      "name": "Jordan Love",
+      "optimal_decisions": 12,
+      "total_attempts": 23,
+      "optimal_percentage": 52.17,
+      "rank": 12
+    },
+    {
+      "name": "C.J. Stroud",
+      "optimal_decisions": 16,
+      "total_attempts": 31,
+      "optimal_percentage": 51.61,
+      "rank": 13
+    },
+    {
+      "name": "Geno Smith",
+      "optimal_decisions": 8,
+      "total_attempts": 17,
+      "optimal_percentage": 47.06,
+      "rank": 14
+    },
+    {
+      "name": "Jalen Hurts",
+      "optimal_decisions": 12,
+      "total_attempts": 26,
+      "optimal_percentage": 46.15,
+      "rank": 15
+    },
+    {
+      "name": "Lamar Jackson",
+      "optimal_decisions": 6,
+      "total_attempts": 13,
+      "optimal_percentage": 46.15,
+      "rank": 16
+    },
+    {
+      "name": "Kenny Pickett",
+      "optimal_decisions": 17,
+      "total_attempts": 37,
+      "optimal_percentage": 45.95,
+      "rank": 17
+    },
+    {
+      "name": "Matthew Stafford",
+      "optimal_decisions": 15,
+      "total_attempts": 33,
+      "optimal_percentage": 45.45,
+      "rank": 18
+    },
+    {
+      "name": "Anthony Richardson",
+      "optimal_decisions": 13,
+      "total_attempts": 29,
+      "optimal_percentage": 44.83,
+      "rank": 19
+    },
+    {
+      "name": "Mac Jones",
+      "optimal_decisions": 17,
+      "total_attempts": 38,
+      "optimal_percentage": 44.74,
+      "rank": 20
+    },
+    {
+      "name": "Jared Goff",
+      "optimal_decisions": 11,
+      "total_attempts": 25,
+      "optimal_percentage": 44.0,
+      "rank": 21
+    },
+    {
+      "name": "Josh Allen",
+      "optimal_decisions": 14,
+      "total_attempts": 32,
+      "optimal_percentage": 43.75,
+      "rank": 22
+    },
+    {
+      "name": "Jimmy Garoppolo",
+      "optimal_decisions": 10,
+      "total_attempts": 23,
+      "optimal_percentage": 43.48,
+      "rank": 23
+    },
+    {
+      "name": "Patrick Mahomes",
+      "optimal_decisions": 14,
+      "total_attempts": 33,
+      "optimal_percentage": 42.42,
+      "rank": 24
+    },
+    {
+      "name": "Dak Prescott",
+      "optimal_decisions": 8,
+      "total_attempts": 19,
+      "optimal_percentage": 42.11,
+      "rank": 25
+    },
+    {
+      "name": "Deshaun Watson",
+      "optimal_decisions": 9,
+      "total_attempts": 22,
+      "optimal_percentage": 40.91,
+      "rank": 26
+    },
+    {
+      "name": "Joe Burrow",
+      "optimal_decisions": 9,
+      "total_attempts": 22,
+      "optimal_percentage": 40.91,
+      "rank": 27
+    },
+    {
+      "name": "Joshua Dobbs",
+      "optimal_decisions": 8,
+      "total_attempts": 20,
+      "optimal_percentage": 40.0,
+      "rank": 28
+    },
+    {
+      "name": "Justin Herbert",
+      "optimal_decisions": 9,
+      "total_attempts": 23,
+      "optimal_percentage": 39.13,
+      "rank": 29
+    },
+    {
+      "name": "Russell Wilson",
+      "optimal_decisions": 10,
+      "total_attempts": 26,
+      "optimal_percentage": 38.46,
+      "rank": 30
+    },
+    {
+      "name": "Ryan Tannehill",
+      "optimal_decisions": 10,
+      "total_attempts": 27,
+      "optimal_percentage": 37.04,
+      "rank": 31
+    },
+    {
+      "name": "Daniel Jones",
+      "optimal_decisions": 8,
+      "total_attempts": 22,
+      "optimal_percentage": 36.36,
+      "rank": 32
+    },
+    {
+      "name": "Bryce Young",
+      "optimal_decisions": 9,
+      "total_attempts": 27,
+      "optimal_percentage": 33.33,
+      "rank": 33
+    },
+    {
+      "name": "Justin Fields",
+      "optimal_decisions": 8,
+      "total_attempts": 28,
+      "optimal_percentage": 28.57,
+      "rank": 34
+    }
+  ]
+}

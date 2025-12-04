@@ -167,14 +167,114 @@
         </div>
     </section>
 
+    <!-- Section 5.5: Model in Action -->
+    <section class="story-section tutorial-section" id="tutorial-model-demo">
+        <div class="section-content">
+            <h1 class="section-title">Let's see the model in action</h1>
+            <p class="tutorial-intro">Watch how catch probability, target probability, and expected yards evolve frame-by-frame for each receiver.</p>
+            
+            <div class="tutorial-demo">
+                <div class="model-demo-container">
+                    <div id="model-demo-visualization"></div>
+                    <div class="model-demo-controls">
+                        <button id="model-demo-play-pause-btn">Play</button>
+                        <button id="model-demo-reset-btn">Reset</button>
+                        <input type="range" id="model-demo-frame-slider" min="1" max="26" value="1" step="1">
+                        <div class="frame-display" id="model-demo-frame-display">Frame: 1 / 26</div>
+                    </div>
+                    
+                    <!-- Stat selector -->
+                    <div class="model-demo-stat-selector">
+                        <label>Stat to Display:</label>
+                        <label><input type="radio" name="model-demo-stat" value="catch_probability" checked> Catch Probability</label>
+                        <label><input type="radio" name="model-demo-stat" value="expected_yards"> Expected Yds</label>
+                        <label><input type="radio" name="model-demo-stat" value="target_probability"> Target Probability</label>
+                    </div>
+                </div>
+                
+                <div class="tutorial-explanation" data-animate="fadeInUp">
+                    <h3>Real-Time Predictions</h3>
+                    <p>As receivers run their routes, our model continuously updates predictions for each receiver. Watch how catch probability, target probability, and expected yards change as the play develops. The optimal receiver is the one with the highest expected yards at any given moment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5.6: QB Optimal Decision Analysis -->
+    <section class="story-section tutorial-section" id="qb-optimal-analysis">
+        <div class="section-content">
+            <h1 class="section-title">How Often Do QBs Make the Optimal Decision?</h1>
+            <p class="tutorial-intro">We analyzed every passing play from Week 1 of the 2023 NFL season to see how often quarterbacks chose the receiver with the highest expected yards—the objectively optimal decision according to our model. </p>
+            
+            <div class="qb-analysis-container">
+                <div class="qb-analysis-stats">
+                    <div class="overall-stat">
+                        <div class="stat-number" id="overall-optimal-pct">--</div>
+                        <div class="stat-label">of all throws were optimal</div>
+                    </div>
+                    <div class="stat-breakdown">
+                        <span id="optimal-plays">--</span> optimal decisions out of <span id="total-plays">--</span> total plays
+                    </div>
+                </div>
+                
+                <div class="qb-analysis-viz" id="qb-optimal-viz">
+                    <!-- Visualization will be rendered here -->
+                </div>
+                
+                <div class="qb-analysis-explanation" data-animate="fadeInUp">
+                    <h3>What This Means</h3>
+                    <p>Even the best quarterbacks in the NFL don't always make the optimal decision. Factors like pressure, timing, trust in receivers, and defensive disguises all influence their choices. The top performers highlighted above made the optimal decision more than 60% of the time—showing just how difficult it is to consistently make the "right" read.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5.7: Time to Throw Analysis -->
+    <section class="story-section tutorial-section" id="time-to-throw-analysis">
+        <div class="section-content">
+            <h1 class="section-title">How Fast Do QBs Make Throwing Decisions?</h1>
+            <p class="tutorial-intro">Time to throw measures how quickly a quarterback releases the ball after the snap. <br>Let's look at each QB from 2023 Week 1 and see how fast, on average, they make throwing decisions.</p>
+            
+            <div class="time-to-throw-container">
+                <div class="time-to-throw-comparison">
+                    <div class="time-stat-card overall-time">
+                        <div class="time-stat-label">Overall Average</div>
+                        <div class="time-stat-value" id="overall-time-value">--</div>
+                        <div class="time-stat-subtitle">All Week 1 Plays</div>
+                        <div class="time-stat-count" id="overall-time-count">-- plays</div>
+                    </div>
+                    
+                    <div class="time-stat-card non-optimal-time">
+                        <div class="time-stat-label">Non-Optimal Decisions</div>
+                        <div class="time-stat-value" id="non-optimal-time-value">--</div>
+                        <div class="time-stat-subtitle">When QB Made Suboptimal Choice</div>
+                        <div class="time-stat-count" id="non-optimal-time-count">-- plays</div>
+                    </div>
+                    
+                    <div class="time-stat-card optimal-time">
+                        <div class="time-stat-label">Optimal Decisions</div>
+                        <div class="time-stat-value" id="optimal-time-value">--</div>
+                        <div class="time-stat-subtitle">When QB Made Optimal Choice</div>
+                        <div class="time-stat-count" id="optimal-time-count">-- plays</div>
+                    </div>
+                </div>
+                
+                <div class="time-to-throw-viz" id="time-to-throw-viz">
+                    <!-- Visualization will be rendered here -->
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
     
     <!-- Section 6: Quarterback Challenge -->
     <section class="story-section tutorial-section" id="tutorial-randomize">
         <div class="section-content">
             <div class="qb-container">
                 <div class="qb-header">
-                    <h1>🏈 Quarterback Mode</h1>
-                    <p class="subtitle">Red Zone Challenge: Pick the best receiver before the throw!</p>
+                    <h1>Your Turn! See how you stack up against NFL's best.</h1>
+                    <p class="subtitle">We filtered plays in which the QB made the optimal decision. Try to guess which reciever the QB threw to!</p>
                 </div>
                 
                 <!-- Top section with stats and scoreboard -->
@@ -191,6 +291,10 @@
                         <div class="stat-item">
                             <div class="stat-label">Accuracy</div>
                             <div class="stat-value" id="qb-accuracy-pct">--%</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">AVG TIME</div>
+                            <div class="stat-value" id="qb-avg-time">--</div>
                         </div>
                     </div>
                     
@@ -264,6 +368,7 @@
                                 <button id="qb-play-pause-btn">Play</button>
                                 <button id="qb-reset-btn">Reset</button>
                             </div>
+                            <div class="stopwatch-display" id="qb-stopwatch" style="display: none;">0.0s</div>
                             <div class="slider-container">
                                 <input type="range" id="qb-frame-slider" min="1" max="26" value="1" step="1">
                                 <div class="frame-display" id="qb-frame-display">Frame: 1 / 26</div>
@@ -290,7 +395,6 @@
                             <div class="receiver-buttons" id="qb-receiver-buttons">
                                 <!-- Receiver buttons added dynamically -->
                             </div>
-                            <button id="qb-confirm-throw-btn" disabled>Throw It! 🏈</button>
                         </div>
                         
                         <!-- Result Panel -->
@@ -309,7 +413,7 @@
                     <ol>
                         <li><strong>Press Play</strong> - Watch the receivers run their routes and the defense react.</li>
                         <li><strong>Make Your Read</strong> - When it pauses, pick who you would throw to!</li>
-                        <li><strong>Throw It!</strong> - See if you made the same read as the NFL quarterback.</li>
+                        <li><strong>Click a Receiver</strong> - Your choice is immediately confirmed. See if you made the same read as the NFL quarterback.</li>
                     </ol>
                     <p style="margin-top: 15px;"><strong>Tips:</strong> Watch the coverage, look for separation, and trust your eyes!</p>
                 </div>
@@ -319,91 +423,80 @@
             <div id="qb-time-to-throw" style="display:none;"></div>
         </div>
     </section>
-    
-    
-    <!-- Section 8: Tutorial - Coverage -->
-    <section class="story-section tutorial-section" id="tutorial-coverage">
+
+    <!-- Section 7: NFL Comparison -->
+    <section class="story-section tutorial-section" id="nfl-comparison">
         <div class="section-content">
-            <h1 class="section-title">Understanding Defensive Structure</h1>
-            <p class="tutorial-intro">We annotate the defensive coverage on each play, so users can see how the structure changes where openings occur.</p>
+            <h1 class="section-title">How Did You Stack Up Against NFL Quarterbacks?</h1>
+            <p class="tutorial-intro">After playing Quarterback Mode, see how your accuracy and decision speed compare to NFL Week 1 averages.</p>
             
-            <div class="tutorial-demo">
-                <div class="coverage-demo">
-                    <svg id="coverage-svg" width="800" height="450"></svg>
-                    <div class="coverage-label" id="coverage-label">Cover 3</div>
+            <div class="nfl-comparison-container">
+                <div class="nfl-comparison-stats" id="nfl-comparison-stats">
+                    <div class="comparison-stat-card">
+                        <div class="comparison-stat-header">
+                            <h3>Accuracy</h3>
+                            <p class="stat-description">Optimal Decision Percentage</p>
+                        </div>
+                        <div class="comparison-values-large">
+                            <div class="comparison-value user-comparison">
+                                <div class="value-label">You</div>
+                                <div class="value-number" id="user-accuracy">--%</div>
+                            </div>
+                            <div class="comparison-vs">vs</div>
+                            <div class="comparison-value nfl-comparison">
+                                <div class="value-label">NFL Week 1 Avg</div>
+                                <div class="value-number" id="nfl-accuracy">46.98%</div>
+                            </div>
+                        </div>
+                        <div class="comparison-diff-large" id="accuracy-diff">Make at least one decision to see your comparison</div>
+                    </div>
+                    
+                    <div class="comparison-stat-card">
+                        <div class="comparison-stat-header">
+                            <h3>Speed</h3>
+                            <p class="stat-description">Average Time to Throw</p>
+                        </div>
+                        <div class="comparison-values-large">
+                            <div class="comparison-value user-comparison">
+                                <div class="value-label">You</div>
+                                <div class="value-number" id="user-time">--s</div>
+                            </div>
+                            <div class="comparison-vs">vs</div>
+                            <div class="comparison-value nfl-comparison">
+                                <div class="value-label">NFL Week 1 Avg</div>
+                                <div class="value-number" id="nfl-time">2.66s</div>
+                            </div>
+                        </div>
+                        <div class="comparison-diff-large" id="time-diff">Make at least one decision to see your comparison</div>
+                    </div>
                 </div>
                 
-                <div class="tutorial-explanation" data-animate="fadeInUp">
-                    <h3>How Coverage Shapes Openings</h3>
-                    <p>Different coverages (Cover 2, Cover 3, Man, etc.) create entirely different decision landscapes. 
-                    Understanding the defensive structure helps explain why certain throws are available and how long a quarterback realistically has to throw.</p>
+                <div class="nfl-comparison-message" id="nfl-comparison-message" style="display: none;">
+                    <p>Play Quarterback Mode above to see how you compare!</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Section 9: Tutorial - Interactivity -->
-    <section class="story-section tutorial-section" id="tutorial-interactive">
+    <!-- Section 10.5: Context & Transition to Sandbox -->
+    <section class="story-section" id="context-transition">
         <div class="section-content">
-            <h1 class="section-title">Explore at Your Own Pace</h1>
-            <p class="tutorial-intro">Everything is interactive: users can replay plays, randomize plays, inspect individual players, and study the timing of separation across all receivers.</p>
-            
-            <div class="tutorial-demo">
-                <div class="controls-demo">
-                    <div class="demo-controls-panel">
-                        <button class="demo-control-btn">Randomize Play</button>
-                        <button class="demo-control-btn">Play</button>
-                        <button class="demo-control-btn">Reset</button>
-                        <input type="range" class="demo-slider" min="1" max="26" value="1">
-                        <span class="demo-label">Frame: 1 / 26</span>
-                        <label class="demo-checkbox">
-                            <input type="checkbox" checked> Show Trails
-                        </label>
-                        <label class="demo-checkbox">
-                            <input type="checkbox" checked> Show Names
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="tutorial-explanation" data-animate="fadeInUp">
-                    <h3>User Control</h3>
-                    <p>Take control of the visualization. Replay plays to study specific moments, randomize to explore different scenarios, 
-                    and use the frame slider to analyze critical decision points frame-by-frame.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Section 10: TAKEAWAY -->
-    <section class="story-section takeaway-section" id="takeaway">
-        <div class="section-content">
-            <h1 class="section-title">The Truth About Quarterbacking</h1>
-            
-            <div class="takeaway-content">
-                <div class="takeaway-insights">
-                    <div class="insight-item" data-animate="fadeInLeft" id="insight-1">
-                        <div class="insight-icon">🎯</div>
-                        <h2>Passing windows are tiny</h2>
-                    </div>
-                    
-                    <div class="insight-item" data-animate="fadeInLeft" id="insight-2">
-                        <div class="insight-icon">⚡</div>
-                        <h2>They open and close in fractions of a second</h2>
-                    </div>
-                    
-                    <div class="insight-item" data-animate="fadeInLeft" id="insight-3">
-                        <div class="insight-icon">🔄</div>
-                        <h2>Different coverages create entirely different decision landscapes</h2>
-                    </div>
-                </div>
-                
-                <div class="closing-windows-demo" data-animate="fadeInRight">
-                    <svg id="closing-windows-svg" width="800" height="450"></svg>
-                </div>
-            </div>
-            
-            <div class="core-message" data-animate="fadeInUp">
-                <p class="core-text">The core insight: <strong>Quarterbacking is extraordinarily difficult.</strong></p>
+            <div class="context-wrapper">
+                <h2 class="context-title">But Remember...</h2>
+                <p class="context-text">
+                    These comparisons don't factor in the real-world challenges that NFL quarterbacks face every play:
+                </p>
+                <ul class="context-list">
+                    <li><strong>Defensive pressure:</strong> 300-pound linemen trying to sack you</li>
+                    <li><strong>Stadium noise:</strong> 70,000+ fans screaming in your ears</li>
+                    <li><strong>Game pressure:</strong> The weight of millions watching, playoff implications, career-defining moments</li>
+                    <li><strong>Limited vision:</strong> Helmets, facemasks, and bodies blocking your view</li>
+                    <li><strong>Physical demands:</strong> Running for your life while trying to make split-second decisions</li>
+                    <li><strong>Mental fatigue:</strong> Processing complex defensive schemes while exhausted</li>
+                </ul>
+                <p class="context-conclusion">
+                    What you've experienced is just a glimpse into the quarterback's world—the decision-making, the timing, the precision required. But in reality, these athletes perform under conditions we can barely imagine.
+                </p>
             </div>
         </div>
     </section>

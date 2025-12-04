@@ -201,11 +201,30 @@ def add_predictions_to_dataframe(separation_file='train/input_with_separation.cs
     print(f"  Mean catch probability: {catch_probs.mean():.4f}")
     print(f"  Max catch probability: {catch_probs.max():.4f}")
     
+    # Calculate yards_if_caught for each receiver at each frame
+    print("\n  Calculating yards_if_caught...")
+    # yards_if_caught = horizontal distance from receiver's current position to line of scrimmage
+    # Account for play direction
+    df_receivers['yards_if_caught'] = np.where(
+        df_receivers['play_direction'] == 'right',
+        df_receivers['x'] - df_receivers['absolute_yardline_number'],
+        df_receivers['absolute_yardline_number'] - df_receivers['x']
+    )
+    
+    # Calculate expected_yards = catch_probability * yards_if_caught
+    print("  Calculating expected_yards...")
+    df_receivers['expected_yards'] = df_receivers['catch_probability'] * df_receivers['yards_if_caught']
+    
+    print(f"  Yards if caught calculated for {len(df_receivers):,} receiver rows")
+    print(f"  Mean yards if caught: {df_receivers['yards_if_caught'].mean():.2f}")
+    print(f"  Mean expected yards: {df_receivers['expected_yards'].mean():.2f}")
+    
     # Merge predictions back to original dataframe
     print("\nMerging predictions back to full dataframe...")
     # Create a mapping from (game_id, play_id, nfl_id, frame_id) to predictions
     predictions_df = df_receivers[['game_id', 'play_id', 'nfl_id', 'frame_id', 
-                                    'target_probability', 'catch_probability']].copy()
+                                    'target_probability', 'catch_probability', 
+                                    'yards_if_caught', 'expected_yards']].copy()
     
     # Merge with original dataframe
     df = df.merge(
@@ -217,10 +236,14 @@ def add_predictions_to_dataframe(separation_file='train/input_with_separation.cs
     # Fill NaN for non-receivers
     df['target_probability'] = df['target_probability'].fillna(0.0)
     df['catch_probability'] = df['catch_probability'].fillna(0.0)
+    df['yards_if_caught'] = df['yards_if_caught'].fillna(0.0)
+    df['expected_yards'] = df['expected_yards'].fillna(0.0)
     
     print(f"  Predictions merged. Total rows: {len(df):,}")
     print(f"  Rows with target probability: {(df['target_probability'] > 0).sum():,}")
     print(f"  Rows with catch probability: {(df['catch_probability'] > 0).sum():,}")
+    print(f"  Rows with yards_if_caught: {(df['yards_if_caught'] != 0).sum():,}")
+    print(f"  Rows with expected_yards: {(df['expected_yards'] != 0).sum():,}")
     
     # Save to CSV (overwrite the input file or save to new file)
     print(f"\nSaving dataframe with predictions to {output_file}...")
@@ -250,10 +273,29 @@ def add_predictions_to_dataframe(separation_file='train/input_with_separation.cs
     print(f"  Max: {receivers_with_preds['catch_probability'].max():.4f}")
     print(f"  Std: {receivers_with_preds['catch_probability'].std():.4f}")
     
+    print(f"\nYards If Caught Statistics:")
+    print(f"  Mean: {receivers_with_preds['yards_if_caught'].mean():.2f}")
+    print(f"  Median: {receivers_with_preds['yards_if_caught'].median():.2f}")
+    print(f"  Min: {receivers_with_preds['yards_if_caught'].min():.2f}")
+    print(f"  Max: {receivers_with_preds['yards_if_caught'].max():.2f}")
+    print(f"  Std: {receivers_with_preds['yards_if_caught'].std():.2f}")
+    
+    print(f"\nExpected Yards Statistics:")
+    print(f"  Mean: {receivers_with_preds['expected_yards'].mean():.2f}")
+    print(f"  Median: {receivers_with_preds['expected_yards'].median():.2f}")
+    print(f"  Min: {receivers_with_preds['expected_yards'].min():.2f}")
+    print(f"  Max: {receivers_with_preds['expected_yards'].max():.2f}")
+    print(f"  Std: {receivers_with_preds['expected_yards'].std():.2f}")
+    
     print("\n" + "="*60)
     print(f"Successfully saved dataframe with predictions to {output_file}")
     print("="*60)
 
 if __name__ == '__main__':
-    add_predictions_to_dataframe()
+    # Specify your input CSV file (with separation features) and output file
+    add_predictions_to_dataframe(
+        separation_file='train/input_2023_w01.csv',  # Your input CSV with separation features
+        supplementary_file='supplementary_data.csv',
+        output_file='train/input_2023_w01.csv'  # Can be same file to overwrite, or different to create new file
+    )
 

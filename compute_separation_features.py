@@ -225,7 +225,89 @@ def process_all_plays(input_dir='train', output_file='train/input_with_separatio
     print(f"Successfully saved merged dataframe to {output_file}")
     print("="*60)
 
+def process_single_file(input_file, output_file=None):
+    """
+    Process a single input CSV file and add separation features.
+    
+    Args:
+        input_file: Path to input CSV file
+        output_file: Path to save output (defaults to input_file to overwrite)
+    """
+    if output_file is None:
+        output_file = input_file
+    
+    print("="*60)
+    print("Processing Single CSV File")
+    print("="*60)
+    print(f"Input file: {input_file}")
+    print(f"Output file: {output_file}")
+    print()
+    
+    print(f"Loading {input_file}...")
+    df = pd.read_csv(input_file)
+    
+    # Get unique plays
+    play_keys = df[['game_id', 'play_id']].drop_duplicates()
+    num_plays = len(play_keys)
+    print(f"Found {num_plays} plays in {input_file}")
+    
+    # Group by play for processing
+    grouped = df.groupby(['game_id', 'play_id'])
+    processed_plays = []
+    
+    for play_idx, ((game_id, play_id), play_data) in enumerate(grouped, 1):
+        # Calculate separation features
+        play_data_with_separation = calculate_separation_features_for_play(play_data.copy())
+        processed_plays.append(play_data_with_separation)
+        
+        # Progress update every 100 plays
+        if play_idx % 100 == 0:
+            print(f"  Processed {play_idx}/{num_plays} plays...")
+    
+    # Combine all plays
+    print("\nCombining all plays...")
+    merged_df = pd.concat(processed_plays, ignore_index=True)
+    merged_df = merged_df.sort_values(['game_id', 'play_id', 'frame_id', 'nfl_id']).reset_index(drop=True)
+    
+    # Save to CSV
+    print(f"\nSaving to {output_file}...")
+    merged_df.to_csv(output_file, index=False)
+    
+    # Print summary statistics
+    print("\n" + "="*60)
+    print("Summary Statistics")
+    print("="*60)
+    print(f"Total rows: {len(merged_df):,}")
+    print(f"Total plays: {num_plays:,}")
+    print(f"Total frames: {merged_df[['game_id', 'play_id', 'frame_id']].drop_duplicates().shape[0]:,}")
+    
+    # Receiver statistics
+    receiver_positions = ['WR', 'TE', 'RB']
+    receivers_df = merged_df[
+        (merged_df['player_side'] == 'Offense') & 
+        (merged_df['player_position'].isin(receiver_positions))
+    ]
+    print(f"\nReceiver rows: {len(receivers_df):,}")
+    
+    # Separation feature statistics (only for receivers with valid separation)
+    valid_separation = receivers_df['nearest_defender_distance'].notna()
+    if valid_separation.sum() > 0:
+        print(f"Receiver rows with separation data: {valid_separation.sum():,}")
+        print(f"\nSeparation Distance Statistics (yards):")
+        print(f"  Mean: {receivers_df.loc[valid_separation, 'nearest_defender_distance'].mean():.2f}")
+        print(f"  Median: {receivers_df.loc[valid_separation, 'nearest_defender_distance'].median():.2f}")
+        print(f"  Min: {receivers_df.loc[valid_separation, 'nearest_defender_distance'].min():.2f}")
+        print(f"  Max: {receivers_df.loc[valid_separation, 'nearest_defender_distance'].max():.2f}")
+        print(f"  Std: {receivers_df.loc[valid_separation, 'nearest_defender_distance'].std():.2f}")
+    
+    print("\n" + "="*60)
+    print(f"Successfully processed {num_plays} plays and saved to {output_file}")
+    print("="*60)
+
 if __name__ == '__main__':
-    # Process all plays
-    process_all_plays()
+    # Process a specific CSV file
+    process_single_file(
+        input_file='train/input_2023_w01.csv',
+        output_file='train/input_2023_w01.csv'  # Same file to overwrite, or different to create new
+    )
 

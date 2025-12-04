@@ -10,431 +10,205 @@
   "ball_land_y": 6.11999988555908,
   "max_frame": 15,
   "players": {
-    "54650": {
-      "name": "Christian Benford",
-      "position": "CB",
-      "side": "Defense",
+    "37139": {
+      "name": "Randall Cobb",
+      "position": "WR",
+      "side": "Offense",
       "frames": [
         {
           "frame_id": 1,
-          "x": 12.21,
-          "y": 32.47,
-          "s": 0.02,
-          "a": 0.01,
-          "dir": 99.41,
-          "o": 109.79
-        },
-        {
-          "frame_id": 2,
-          "x": 12.2,
-          "y": 32.46,
-          "s": 0.02,
-          "a": 0.01,
-          "dir": 127.08,
-          "o": 118.57
-        },
-        {
-          "frame_id": 3,
-          "x": 12.19,
-          "y": 32.44,
-          "s": 0.02,
-          "a": 0.02,
-          "dir": 174.71,
-          "o": 127.27
-        },
-        {
-          "frame_id": 4,
-          "x": 12.18,
-          "y": 32.42,
-          "s": 0.03,
-          "a": 0.03,
-          "dir": 183.12,
-          "o": 95.21
-        },
-        {
-          "frame_id": 5,
-          "x": 12.19,
-          "y": 32.38,
-          "s": 0.05,
-          "a": 0.05,
-          "dir": 177.96,
-          "o": 85.19
-        },
-        {
-          "frame_id": 6,
-          "x": 12.19,
-          "y": 32.33,
-          "s": 0.07,
-          "a": 0.07,
-          "dir": 177.2,
-          "o": 85.19
-        },
-        {
-          "frame_id": 7,
-          "x": 12.21,
-          "y": 32.27,
-          "s": 0.09,
-          "a": 0.08,
-          "dir": 173.82,
-          "o": 134.32
-        },
-        {
-          "frame_id": 8,
-          "x": 12.23,
-          "y": 32.19,
-          "s": 0.11,
-          "a": 0.11,
-          "dir": 171.81,
-          "o": 256.05
-        },
-        {
-          "frame_id": 9,
-          "x": 12.23,
-          "y": 32.16,
-          "s": 0.11,
-          "a": 0.11,
-          "dir": 170.82,
-          "o": 256.72
-        },
-        {
-          "frame_id": 10,
-          "x": 12.24,
-          "y": 32.14,
-          "s": 0.1,
-          "a": 0.1,
-          "dir": 170.06,
-          "o": 262.59
-        },
-        {
-          "frame_id": 11,
-          "x": 12.25,
-          "y": 32.11,
-          "s": 0.1,
-          "a": 0.01,
-          "dir": 170.05,
-          "o": 262.59
-        },
-        {
-          "frame_id": 12,
-          "x": 12.24,
-          "y": 32.09,
-          "s": 0.15,
-          "a": 0.59,
-          "dir": 173.55,
-          "o": 223.12
-        },
-        {
-          "frame_id": 13,
-          "x": 12.24,
-          "y": 32.08,
-          "s": 0.21,
-          "a": 0.72,
-          "dir": 176.6,
-          "o": 212.25
-        },
-        {
-          "frame_id": 14,
-          "x": 12.25,
-          "y": 32.05,
-          "s": 0.26,
-          "a": 0.6,
-          "dir": 179.68,
-          "o": 207.6
-        },
-        {
-          "frame_id": 15,
-          "x": 12.25,
-          "y": 32.03,
-          "s": 0.27,
-          "a": 0.33,
-          "dir": 182.91,
-          "o": 202.87
-        }
-      ],
-      "num_frames_output": 11
-    },
-    "40166": {
-      "name": "Jordan Poyer",
-      "position": "SS",
-      "side": "Defense",
-      "frames": [
-        {
-          "frame_id": 1,
-          "x": 9.32,
-          "y": 30.78,
-          "s": 0.02,
-          "a": 0.02,
-          "dir": 144.36,
-          "o": 100.04
-        },
-        {
-          "frame_id": 2,
-          "x": 9.32,
-          "y": 30.77,
-          "s": 0.03,
-          "a": 0.02,
-          "dir": 157.53,
-          "o": 103.39
-        },
-        {
-          "frame_id": 3,
-          "x": 9.32,
-          "y": 30.76,
-          "s": 0.04,
-          "a": 0.0,
-          "dir": 171.63,
-          "o": 118.27
-        },
-        {
-          "frame_id": 4,
-          "x": 9.32,
-          "y": 30.74,
-          "s": 0.08,
-          "a": 0.4,
-          "dir": 181.07,
-          "o": 108.87
-        },
-        {
-          "frame_id": 5,
-          "x": 9.32,
-          "y": 30.73,
+          "x": 14.25,
+          "y": 30.08,
           "s": 0.16,
-          "a": 0.84,
-          "dir": 178.0,
-          "o": 103.86
+          "a": 1.62,
+          "dir": 235.43,
+          "o": 276.36,
+          "catch_probability": 0.4684469,
+          "target_probability": 0.54434234,
+          "yards_if_caught": -1.25,
+          "expected_yards": -0.5855586379766464
         },
         {
-          "frame_id": 6,
-          "x": 9.32,
-          "y": 30.7,
-          "s": 0.29,
-          "a": 1.13,
-          "dir": 181.58,
-          "o": 95.87
+          "frame_id": 2,
+          "x": 14.22,
+          "y": 30.07,
+          "s": 0.43,
+          "a": 2.44,
+          "dir": 247.71,
+          "o": 272.12,
+          "catch_probability": 0.42488638,
+          "target_probability": 0.5344443,
+          "yards_if_caught": -1.2200000000000006,
+          "expected_yards": -0.5183613783121112
         },
         {
-          "frame_id": 7,
-          "x": 9.32,
-          "y": 30.67,
-          "s": 0.41,
-          "a": 1.15,
-          "dir": 182.54,
-          "o": 94.22
-        },
-        {
-          "frame_id": 8,
-          "x": 9.31,
-          "y": 30.62,
-          "s": 0.53,
-          "a": 1.07,
-          "dir": 183.53,
-          "o": 91.92
-        },
-        {
-          "frame_id": 9,
-          "x": 9.31,
-          "y": 30.56,
-          "s": 0.58,
-          "a": 0.65,
-          "dir": 181.42,
-          "o": 87.48
-        },
-        {
-          "frame_id": 10,
-          "x": 9.31,
-          "y": 30.5,
-          "s": 0.63,
-          "a": 0.37,
-          "dir": 183.51,
-          "o": 84.2
-        },
-        {
-          "frame_id": 11,
-          "x": 9.3,
-          "y": 30.4,
-          "s": 0.86,
-          "a": 0.37,
-          "dir": 183.93,
-          "o": 87.38
-        },
-        {
-          "frame_id": 12,
-          "x": 9.29,
-          "y": 30.29,
-          "s": 1.02,
-          "a": 0.66,
-          "dir": 184.25,
-          "o": 90.09
-        },
-        {
-          "frame_id": 13,
-          "x": 9.29,
-          "y": 30.18,
-          "s": 1.16,
-          "a": 1.57,
-          "dir": 183.19,
-          "o": 90.09
-        },
-        {
-          "frame_id": 14,
-          "x": 9.28,
+          "frame_id": 3,
+          "x": 14.15,
           "y": 30.05,
-          "s": 1.42,
-          "a": 1.86,
-          "dir": 183.42,
-          "o": 90.09
-        },
-        {
-          "frame_id": 15,
-          "x": 9.27,
-          "y": 29.89,
-          "s": 1.7,
-          "a": 2.03,
-          "dir": 185.24,
-          "o": 90.09
-        }
-      ],
-      "num_frames_output": 11
-    },
-    "44976": {
-      "name": "Matt Milano",
-      "position": "OLB",
-      "side": "Defense",
-      "frames": [
-        {
-          "frame_id": 1,
-          "x": 10.48,
-          "y": 22.98,
-          "s": 0.03,
-          "a": 0.04,
-          "dir": 75.78,
-          "o": 123.5
-        },
-        {
-          "frame_id": 2,
-          "x": 10.53,
-          "y": 23.0,
-          "s": 0.05,
-          "a": 0.26,
-          "dir": 72.31,
-          "o": 120.04
-        },
-        {
-          "frame_id": 3,
-          "x": 10.57,
-          "y": 23.02,
-          "s": 0.16,
-          "a": 1.3,
-          "dir": 67.91,
-          "o": 114.91
+          "s": 0.81,
+          "a": 2.85,
+          "dir": 249.87,
+          "o": 272.12,
+          "catch_probability": 0.42454824,
+          "target_probability": 0.5467363,
+          "yards_if_caught": -1.1500000000000004,
+          "expected_yards": -0.4882304742932321
         },
         {
           "frame_id": 4,
-          "x": 10.62,
-          "y": 23.04,
-          "s": 0.42,
-          "a": 2.27,
-          "dir": 70.98,
-          "o": 105.42
+          "x": 14.05,
+          "y": 30.02,
+          "s": 1.18,
+          "a": 2.94,
+          "dir": 254.8,
+          "o": 270.95,
+          "catch_probability": 0.4378091,
+          "target_probability": 0.5445043,
+          "yards_if_caught": -1.0500000000000007,
+          "expected_yards": -0.4596995651721957
         },
         {
           "frame_id": 5,
-          "x": 10.67,
-          "y": 23.05,
-          "s": 0.74,
-          "a": 2.8,
-          "dir": 73.21,
-          "o": 98.7
+          "x": 13.91,
+          "y": 29.99,
+          "s": 1.53,
+          "a": 3.01,
+          "dir": 255.87,
+          "o": 268.76,
+          "catch_probability": 0.45000762,
+          "target_probability": 0.5890261,
+          "yards_if_caught": -0.91,
+          "expected_yards": -0.4095069319009781
         },
         {
           "frame_id": 6,
-          "x": 10.77,
-          "y": 23.07,
-          "s": 1.2,
-          "a": 4.17,
-          "dir": 79.81,
-          "o": 97.89
+          "x": 13.74,
+          "y": 29.96,
+          "s": 1.83,
+          "a": 2.62,
+          "dir": 258.1,
+          "o": 264.81,
+          "catch_probability": 0.422561,
+          "target_probability": 0.51533616,
+          "yards_if_caught": -0.7400000000000002,
+          "expected_yards": -0.3126951324939728
         },
         {
           "frame_id": 7,
-          "x": 10.91,
-          "y": 23.09,
-          "s": 1.6,
-          "a": 3.73,
-          "dir": 82.19,
-          "o": 92.3
+          "x": 13.55,
+          "y": 29.92,
+          "s": 2.08,
+          "a": 2.14,
+          "dir": 258.86,
+          "o": 262.93,
+          "catch_probability": 0.37363982,
+          "target_probability": 0.5472177,
+          "yards_if_caught": -0.5500000000000007,
+          "expected_yards": -0.2055019021034243
         },
         {
           "frame_id": 8,
-          "x": 11.09,
-          "y": 23.08,
-          "s": 1.95,
-          "a": 3.25,
-          "dir": 91.81,
-          "o": 89.68
+          "x": 13.35,
+          "y": 29.87,
+          "s": 2.22,
+          "a": 1.53,
+          "dir": 258.54,
+          "o": 262.93,
+          "catch_probability": 0.36031923,
+          "target_probability": 0.49507335,
+          "yards_if_caught": -0.3499999999999996,
+          "expected_yards": -0.1261117294430731
         },
         {
           "frame_id": 9,
-          "x": 11.29,
-          "y": 23.04,
-          "s": 2.23,
-          "a": 2.86,
-          "dir": 99.78,
-          "o": 87.96
+          "x": 13.13,
+          "y": 29.82,
+          "s": 2.28,
+          "a": 0.79,
+          "dir": 257.77,
+          "o": 264.19,
+          "catch_probability": 0.36806107,
+          "target_probability": 0.45087898,
+          "yards_if_caught": -0.1300000000000007,
+          "expected_yards": -0.0478479385375979
         },
         {
           "frame_id": 10,
-          "x": 11.49,
-          "y": 22.95,
-          "s": 2.33,
-          "a": 2.54,
-          "dir": 110.83,
-          "o": 78.04
+          "x": 12.91,
+          "y": 29.77,
+          "s": 2.25,
+          "a": 0.22,
+          "dir": 256.77,
+          "o": 267.29,
+          "catch_probability": 0.3664214,
+          "target_probability": 0.45512345,
+          "yards_if_caught": 0.0899999999999998,
+          "expected_yards": 0.0329779261350631
         },
         {
           "frame_id": 11,
-          "x": 11.7,
-          "y": 22.83,
-          "s": 2.52,
-          "a": 2.54,
-          "dir": 117.94,
-          "o": 76.47
+          "x": 12.7,
+          "y": 29.72,
+          "s": 2.16,
+          "a": 0.6,
+          "dir": 255.75,
+          "o": 271.26,
+          "catch_probability": 0.32916018,
+          "target_probability": 0.45992577,
+          "yards_if_caught": 0.3000000000000007,
+          "expected_yards": 0.0987480551004412
         },
         {
           "frame_id": 12,
-          "x": 11.9,
-          "y": 22.68,
-          "s": 2.62,
-          "a": 2.63,
-          "dir": 126.49,
-          "o": 74.07
+          "x": 12.5,
+          "y": 29.66,
+          "s": 2.05,
+          "a": 0.99,
+          "dir": 254.02,
+          "o": 276.74,
+          "catch_probability": 0.30587503,
+          "target_probability": 0.5013281,
+          "yards_if_caught": 0.5,
+          "expected_yards": 0.1529375165700912
         },
         {
           "frame_id": 13,
-          "x": 12.09,
-          "y": 22.48,
-          "s": 2.77,
-          "a": 3.41,
-          "dir": 136.77,
-          "o": 72.85
+          "x": 12.31,
+          "y": 29.61,
+          "s": 1.97,
+          "a": 1.06,
+          "dir": 253.35,
+          "o": 282.98,
+          "catch_probability": 0.31801543,
+          "target_probability": 0.4837578,
+          "yards_if_caught": 0.6899999999999995,
+          "expected_yards": 0.2194306442141531
         },
         {
           "frame_id": 14,
-          "x": 12.27,
-          "y": 22.26,
-          "s": 2.92,
-          "a": 3.81,
-          "dir": 144.36,
-          "o": 69.17
+          "x": 12.13,
+          "y": 29.55,
+          "s": 1.83,
+          "a": 1.17,
+          "dir": 252.97,
+          "o": 288.39,
+          "catch_probability": 0.31431815,
+          "target_probability": 0.47752047,
+          "yards_if_caught": 0.8699999999999992,
+          "expected_yards": 0.2734567907452581
         },
         {
           "frame_id": 15,
-          "x": 12.42,
-          "y": 22.0,
-          "s": 3.14,
-          "a": 3.76,
-          "dir": 152.41,
-          "o": 72.16
+          "x": 11.95,
+          "y": 29.5,
+          "s": 1.79,
+          "a": 1.0,
+          "dir": 251.42,
+          "o": 294.44,
+          "catch_probability": 0.2418693,
+          "target_probability": 0.46441057,
+          "yards_if_caught": 1.0500000000000007,
+          "expected_yards": 0.25396276563406
         }
       ],
       "num_frames_output": 11
@@ -451,7 +225,11 @@
           "s": 1.31,
           "a": 1.4,
           "dir": 141.05,
-          "o": 50.92
+          "o": 50.92,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 2,
@@ -460,7 +238,11 @@
           "s": 1.47,
           "a": 1.4,
           "dir": 143.94,
-          "o": 55.09
+          "o": 55.09,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 3,
@@ -469,7 +251,11 @@
           "s": 1.59,
           "a": 1.11,
           "dir": 145.34,
-          "o": 55.96
+          "o": 55.96,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 4,
@@ -478,7 +264,11 @@
           "s": 1.77,
           "a": 1.01,
           "dir": 145.34,
-          "o": 59.62
+          "o": 59.62,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 5,
@@ -487,7 +277,11 @@
           "s": 1.88,
           "a": 0.88,
           "dir": 149.01,
-          "o": 63.33
+          "o": 63.33,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 6,
@@ -496,7 +290,11 @@
           "s": 2.0,
           "a": 0.82,
           "dir": 150.55,
-          "o": 66.37
+          "o": 66.37,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 7,
@@ -505,7 +303,11 @@
           "s": 2.15,
           "a": 0.77,
           "dir": 151.33,
-          "o": 65.04
+          "o": 65.04,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 8,
@@ -514,7 +316,11 @@
           "s": 2.33,
           "a": 0.8,
           "dir": 151.03,
-          "o": 70.45
+          "o": 70.45,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 9,
@@ -523,7 +329,11 @@
           "s": 2.71,
           "a": 2.18,
           "dir": 150.88,
-          "o": 68.86
+          "o": 68.86,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 10,
@@ -532,7 +342,11 @@
           "s": 3.0,
           "a": 2.29,
           "dir": 153.16,
-          "o": 68.86
+          "o": 68.86,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 11,
@@ -541,7 +355,11 @@
           "s": 3.4,
           "a": 2.38,
           "dir": 153.52,
-          "o": 64.78
+          "o": 64.78,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 12,
@@ -550,7 +368,11 @@
           "s": 3.7,
           "a": 2.27,
           "dir": 152.85,
-          "o": 62.03
+          "o": 62.03,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 13,
@@ -559,7 +381,11 @@
           "s": 4.0,
           "a": 2.05,
           "dir": 154.41,
-          "o": 63.84
+          "o": 63.84,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 14,
@@ -568,7 +394,11 @@
           "s": 4.07,
           "a": 1.66,
           "dir": 157.25,
-          "o": 64.89
+          "o": 64.89,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 15,
@@ -577,293 +407,214 @@
           "s": 4.2,
           "a": 1.44,
           "dir": 159.29,
-          "o": 69.72
+          "o": 69.72,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         }
       ],
       "num_frames_output": 11
     },
-    "46190": {
-      "name": "Taron Johnson",
-      "position": "CB",
+    "40166": {
+      "name": "Jordan Poyer",
+      "position": "SS",
       "side": "Defense",
       "frames": [
         {
           "frame_id": 1,
-          "x": 12.18,
-          "y": 29.97,
-          "s": 0.06,
-          "a": 0.05,
-          "dir": 46.83,
-          "o": 83.59
-        },
-        {
-          "frame_id": 2,
-          "x": 12.18,
-          "y": 29.99,
-          "s": 0.06,
-          "a": 0.05,
-          "dir": 40.59,
-          "o": 83.59
-        },
-        {
-          "frame_id": 3,
-          "x": 12.17,
-          "y": 29.93,
-          "s": 0.04,
-          "a": 0.04,
-          "dir": 57.01,
-          "o": 79.82
-        },
-        {
-          "frame_id": 4,
-          "x": 12.18,
-          "y": 29.93,
-          "s": 0.03,
-          "a": 0.03,
-          "dir": 57.58,
-          "o": 79.82
-        },
-        {
-          "frame_id": 5,
-          "x": 12.12,
-          "y": 29.98,
-          "s": 0.03,
-          "a": 0.11,
-          "dir": 16.87,
-          "o": 66.13
-        },
-        {
-          "frame_id": 6,
-          "x": 12.11,
-          "y": 29.99,
-          "s": 0.1,
-          "a": 1.14,
-          "dir": 311.15,
-          "o": 59.47
-        },
-        {
-          "frame_id": 7,
-          "x": 12.09,
-          "y": 30.01,
-          "s": 0.27,
-          "a": 1.43,
-          "dir": 300.52,
-          "o": 69.74
-        },
-        {
-          "frame_id": 8,
-          "x": 12.06,
-          "y": 30.02,
-          "s": 0.41,
-          "a": 1.38,
-          "dir": 298.6,
-          "o": 69.14
-        },
-        {
-          "frame_id": 9,
-          "x": 12.01,
-          "y": 30.05,
-          "s": 0.62,
-          "a": 1.42,
-          "dir": 293.32,
-          "o": 64.42
-        },
-        {
-          "frame_id": 10,
-          "x": 11.94,
-          "y": 30.07,
-          "s": 0.81,
-          "a": 1.36,
-          "dir": 288.34,
-          "o": 76.17
-        },
-        {
-          "frame_id": 11,
-          "x": 11.85,
-          "y": 30.09,
-          "s": 0.9,
-          "a": 1.08,
-          "dir": 284.81,
-          "o": 74.65
-        },
-        {
-          "frame_id": 12,
-          "x": 11.78,
-          "y": 30.1,
-          "s": 0.9,
-          "a": 0.72,
-          "dir": 279.04,
-          "o": 80.6
-        },
-        {
-          "frame_id": 13,
-          "x": 11.67,
-          "y": 30.1,
-          "s": 1.07,
-          "a": 0.91,
-          "dir": 271.95,
-          "o": 74.22
-        },
-        {
-          "frame_id": 14,
-          "x": 11.54,
-          "y": 30.09,
-          "s": 1.25,
-          "a": 1.44,
-          "dir": 266.03,
-          "o": 78.76
-        },
-        {
-          "frame_id": 15,
-          "x": 11.41,
-          "y": 30.07,
-          "s": 1.41,
-          "a": 1.46,
-          "dir": 260.53,
-          "o": 68.38
-        }
-      ],
-      "num_frames_output": 11
-    },
-    "54554": {
-      "name": "Terrel Bernard",
-      "position": "MLB",
-      "side": "Defense",
-      "frames": [
-        {
-          "frame_id": 1,
-          "x": 9.47,
-          "y": 26.58,
-          "s": 0.0,
-          "a": 0.0,
-          "dir": 120.58,
-          "o": 62.1
-        },
-        {
-          "frame_id": 2,
-          "x": 9.5,
-          "y": 26.58,
-          "s": 0.01,
-          "a": 0.01,
-          "dir": 106.2,
-          "o": 62.77
-        },
-        {
-          "frame_id": 3,
-          "x": 9.53,
-          "y": 26.58,
+          "x": 9.32,
+          "y": 30.78,
           "s": 0.02,
           "a": 0.02,
-          "dir": 93.97,
-          "o": 62.77
+          "dir": 144.36,
+          "o": 100.04,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 2,
+          "x": 9.32,
+          "y": 30.77,
+          "s": 0.03,
+          "a": 0.02,
+          "dir": 157.53,
+          "o": 103.39,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 3,
+          "x": 9.32,
+          "y": 30.76,
+          "s": 0.04,
+          "a": 0.0,
+          "dir": 171.63,
+          "o": 118.27,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 4,
-          "x": 9.54,
-          "y": 26.59,
-          "s": 0.06,
-          "a": 0.65,
-          "dir": 87.48,
-          "o": 62.77
+          "x": 9.32,
+          "y": 30.74,
+          "s": 0.08,
+          "a": 0.4,
+          "dir": 181.07,
+          "o": 108.87,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 5,
-          "x": 9.56,
-          "y": 26.59,
-          "s": 0.17,
-          "a": 1.14,
-          "dir": 81.79,
-          "o": 62.77
+          "x": 9.32,
+          "y": 30.73,
+          "s": 0.16,
+          "a": 0.84,
+          "dir": 178.0,
+          "o": 103.86,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 6,
-          "x": 9.59,
-          "y": 26.61,
-          "s": 0.37,
-          "a": 1.68,
-          "dir": 67.21,
-          "o": 62.77
+          "x": 9.32,
+          "y": 30.7,
+          "s": 0.29,
+          "a": 1.13,
+          "dir": 181.58,
+          "o": 95.87,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 7,
-          "x": 9.64,
-          "y": 26.63,
-          "s": 0.65,
-          "a": 2.21,
-          "dir": 64.98,
-          "o": 67.7
+          "x": 9.32,
+          "y": 30.67,
+          "s": 0.41,
+          "a": 1.15,
+          "dir": 182.54,
+          "o": 94.22,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 8,
-          "x": 9.71,
-          "y": 26.66,
-          "s": 0.88,
-          "a": 2.16,
-          "dir": 62.84,
-          "o": 67.7
+          "x": 9.31,
+          "y": 30.62,
+          "s": 0.53,
+          "a": 1.07,
+          "dir": 183.53,
+          "o": 91.92,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 9,
-          "x": 9.79,
-          "y": 26.7,
-          "s": 1.0,
-          "a": 1.6,
-          "dir": 63.44,
-          "o": 68.76
+          "x": 9.31,
+          "y": 30.56,
+          "s": 0.58,
+          "a": 0.65,
+          "dir": 181.42,
+          "o": 87.48,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 10,
-          "x": 9.87,
-          "y": 26.73,
-          "s": 1.01,
-          "a": 0.88,
-          "dir": 68.55,
-          "o": 70.91
+          "x": 9.31,
+          "y": 30.5,
+          "s": 0.63,
+          "a": 0.37,
+          "dir": 183.51,
+          "o": 84.2,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 11,
-          "x": 9.96,
-          "y": 26.74,
-          "s": 0.93,
-          "a": 1.07,
-          "dir": 85.23,
-          "o": 73.9
+          "x": 9.3,
+          "y": 30.4,
+          "s": 0.86,
+          "a": 0.37,
+          "dir": 183.93,
+          "o": 87.38,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 12,
-          "x": 10.05,
-          "y": 26.72,
-          "s": 0.9,
-          "a": 2.17,
-          "dir": 105.34,
-          "o": 80.95
+          "x": 9.29,
+          "y": 30.29,
+          "s": 1.02,
+          "a": 0.66,
+          "dir": 184.25,
+          "o": 90.09,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 13,
-          "x": 10.11,
-          "y": 26.66,
-          "s": 0.91,
-          "a": 3.06,
-          "dir": 136.08,
-          "o": 89.32
+          "x": 9.29,
+          "y": 30.18,
+          "s": 1.16,
+          "a": 1.57,
+          "dir": 183.19,
+          "o": 90.09,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 14,
-          "x": 10.16,
-          "y": 26.56,
-          "s": 1.22,
-          "a": 3.82,
-          "dir": 162.04,
-          "o": 103.52
+          "x": 9.28,
+          "y": 30.05,
+          "s": 1.42,
+          "a": 1.86,
+          "dir": 183.42,
+          "o": 90.09,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 15,
-          "x": 10.18,
-          "y": 26.42,
-          "s": 1.67,
-          "a": 4.31,
-          "dir": 175.74,
-          "o": 113.93
+          "x": 9.27,
+          "y": 29.89,
+          "s": 1.7,
+          "a": 2.03,
+          "dir": 185.24,
+          "o": 90.09,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         }
       ],
       "num_frames_output": 11
@@ -880,7 +631,11 @@
           "s": 0.15,
           "a": 1.1,
           "dir": 252.92,
-          "o": 12.74
+          "o": 12.74,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 2,
@@ -889,7 +644,11 @@
           "s": 0.33,
           "a": 1.65,
           "dir": 259.56,
-          "o": 17.21
+          "o": 17.21,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 3,
@@ -898,7 +657,11 @@
           "s": 0.54,
           "a": 1.85,
           "dir": 262.1,
-          "o": 17.21
+          "o": 17.21,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 4,
@@ -907,7 +670,11 @@
           "s": 0.7,
           "a": 1.65,
           "dir": 259.83,
-          "o": 19.01
+          "o": 19.01,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 5,
@@ -916,7 +683,11 @@
           "s": 0.77,
           "a": 1.16,
           "dir": 258.66,
-          "o": 22.57
+          "o": 22.57,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 6,
@@ -925,7 +696,11 @@
           "s": 0.87,
           "a": 0.88,
           "dir": 256.13,
-          "o": 25.0
+          "o": 25.0,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 7,
@@ -934,7 +709,11 @@
           "s": 1.07,
           "a": 1.07,
           "dir": 251.11,
-          "o": 38.06
+          "o": 38.06,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 8,
@@ -943,7 +722,11 @@
           "s": 1.35,
           "a": 1.47,
           "dir": 242.03,
-          "o": 50.79
+          "o": 50.79,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 9,
@@ -952,7 +735,11 @@
           "s": 1.63,
           "a": 1.63,
           "dir": 236.89,
-          "o": 56.62
+          "o": 56.62,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 10,
@@ -961,7 +748,11 @@
           "s": 1.82,
           "a": 1.61,
           "dir": 232.33,
-          "o": 61.23
+          "o": 61.23,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 11,
@@ -970,7 +761,11 @@
           "s": 2.08,
           "a": 1.77,
           "dir": 228.68,
-          "o": 79.24
+          "o": 79.24,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 12,
@@ -979,7 +774,11 @@
           "s": 2.37,
           "a": 1.96,
           "dir": 224.52,
-          "o": 98.19
+          "o": 98.19,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 13,
@@ -988,7 +787,11 @@
           "s": 2.75,
           "a": 2.4,
           "dir": 220.12,
-          "o": 110.47
+          "o": 110.47,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 14,
@@ -997,7 +800,11 @@
           "s": 3.08,
           "a": 2.44,
           "dir": 217.96,
-          "o": 115.29
+          "o": 115.29,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 15,
@@ -1006,150 +813,11 @@
           "s": 3.47,
           "a": 2.52,
           "dir": 215.9,
-          "o": 119.85
-        }
-      ],
-      "num_frames_output": 11
-    },
-    "46705": {
-      "name": "Allen Lazard",
-      "position": "WR",
-      "side": "Offense",
-      "frames": [
-        {
-          "frame_id": 1,
-          "x": 15.07,
-          "y": 31.72,
-          "s": 0.0,
-          "a": 0.0,
-          "dir": 236.96,
-          "o": 288.2
-        },
-        {
-          "frame_id": 2,
-          "x": 15.06,
-          "y": 31.69,
-          "s": 0.04,
-          "a": 0.97,
-          "dir": 219.46,
-          "o": 285.37
-        },
-        {
-          "frame_id": 3,
-          "x": 15.05,
-          "y": 31.68,
-          "s": 0.23,
-          "a": 2.07,
-          "dir": 214.64,
-          "o": 283.45
-        },
-        {
-          "frame_id": 4,
-          "x": 15.02,
-          "y": 31.64,
-          "s": 0.58,
-          "a": 3.35,
-          "dir": 213.67,
-          "o": 281.1
-        },
-        {
-          "frame_id": 5,
-          "x": 14.98,
-          "y": 31.58,
-          "s": 1.15,
-          "a": 6.01,
-          "dir": 214.83,
-          "o": 275.91
-        },
-        {
-          "frame_id": 6,
-          "x": 14.89,
-          "y": 31.44,
-          "s": 1.94,
-          "a": 6.71,
-          "dir": 215.29,
-          "o": 273.41
-        },
-        {
-          "frame_id": 7,
-          "x": 14.75,
-          "y": 31.26,
-          "s": 2.64,
-          "a": 6.12,
-          "dir": 215.79,
-          "o": 266.94
-        },
-        {
-          "frame_id": 8,
-          "x": 14.58,
-          "y": 31.01,
-          "s": 3.25,
-          "a": 5.18,
-          "dir": 215.52,
-          "o": 259.7
-        },
-        {
-          "frame_id": 9,
-          "x": 14.38,
-          "y": 30.71,
-          "s": 3.78,
-          "a": 4.28,
-          "dir": 214.85,
-          "o": 253.77
-        },
-        {
-          "frame_id": 10,
-          "x": 14.15,
-          "y": 30.39,
-          "s": 4.15,
-          "a": 3.31,
-          "dir": 215.17,
-          "o": 245.55
-        },
-        {
-          "frame_id": 11,
-          "x": 13.9,
-          "y": 30.04,
-          "s": 4.38,
-          "a": 2.25,
-          "dir": 215.87,
-          "o": 240.98
-        },
-        {
-          "frame_id": 12,
-          "x": 13.64,
-          "y": 29.68,
-          "s": 4.52,
-          "a": 1.28,
-          "dir": 216.23,
-          "o": 239.82
-        },
-        {
-          "frame_id": 13,
-          "x": 13.37,
-          "y": 29.33,
-          "s": 4.51,
-          "a": 0.55,
-          "dir": 217.49,
-          "o": 239.82
-        },
-        {
-          "frame_id": 14,
-          "x": 13.09,
-          "y": 28.98,
-          "s": 4.39,
-          "a": 1.39,
-          "dir": 220.29,
-          "o": 243.97
-        },
-        {
-          "frame_id": 15,
-          "x": 12.8,
-          "y": 28.66,
-          "s": 4.2,
-          "a": 2.22,
-          "dir": 222.82,
-          "o": 246.46
+          "o": 119.85,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         }
       ],
       "num_frames_output": 11
@@ -1166,7 +834,11 @@
           "s": 0.0,
           "a": 0.0,
           "dir": 335.19,
-          "o": 279.51
+          "o": 279.51,
+          "catch_probability": 0.42776087,
+          "target_probability": 0.2657242,
+          "yards_if_caught": -8.059999999999999,
+          "expected_yards": -3.447752606272697
         },
         {
           "frame_id": 2,
@@ -1175,7 +847,11 @@
           "s": 0.0,
           "a": 0.0,
           "dir": 334.83,
-          "o": 279.51
+          "o": 279.51,
+          "catch_probability": 0.4010412,
+          "target_probability": 0.2596254,
+          "yards_if_caught": -8.059999999999999,
+          "expected_yards": -3.23239215016365
         },
         {
           "frame_id": 3,
@@ -1184,7 +860,11 @@
           "s": 0.06,
           "a": 1.13,
           "dir": 318.5,
-          "o": 279.51
+          "o": 279.51,
+          "catch_probability": 0.39096123,
+          "target_probability": 0.28310135,
+          "yards_if_caught": -8.04,
+          "expected_yards": -3.1433282876014705
         },
         {
           "frame_id": 4,
@@ -1193,7 +873,11 @@
           "s": 0.33,
           "a": 3.04,
           "dir": 313.0,
-          "o": 281.8
+          "o": 281.8,
+          "catch_probability": 0.36616337,
+          "target_probability": 0.29035497,
+          "yards_if_caught": -8.030000000000001,
+          "expected_yards": -2.9402918851375586
         },
         {
           "frame_id": 5,
@@ -1202,7 +886,11 @@
           "s": 0.8,
           "a": 4.24,
           "dir": 310.52,
-          "o": 284.58
+          "o": 284.58,
+          "catch_probability": 0.34805775,
+          "target_probability": 0.279738,
+          "yards_if_caught": -7.98,
+          "expected_yards": -2.7775008201599123
         },
         {
           "frame_id": 6,
@@ -1211,7 +899,11 @@
           "s": 1.35,
           "a": 4.44,
           "dir": 306.03,
-          "o": 282.7
+          "o": 282.7,
+          "catch_probability": 0.28748718,
+          "target_probability": 0.29695508,
+          "yards_if_caught": -7.879999999999999,
+          "expected_yards": -2.265398970842361
         },
         {
           "frame_id": 7,
@@ -1220,7 +912,11 @@
           "s": 1.84,
           "a": 4.49,
           "dir": 302.44,
-          "o": 284.72
+          "o": 284.72,
+          "catch_probability": 0.22913904,
+          "target_probability": 0.26467305,
+          "yards_if_caught": -7.739999999999998,
+          "expected_yards": -1.7735362073779102
         },
         {
           "frame_id": 8,
@@ -1229,7 +925,11 @@
           "s": 2.35,
           "a": 4.39,
           "dir": 299.35,
-          "o": 286.4
+          "o": 286.4,
+          "catch_probability": 0.21561104,
+          "target_probability": 0.28144887,
+          "yards_if_caught": -7.550000000000001,
+          "expected_yards": -1.6278633564710618
         },
         {
           "frame_id": 9,
@@ -1238,7 +938,11 @@
           "s": 2.79,
           "a": 3.72,
           "dir": 297.72,
-          "o": 288.96
+          "o": 288.96,
+          "catch_probability": 0.21737725,
+          "target_probability": 0.28923163,
+          "yards_if_caught": -7.32,
+          "expected_yards": -1.5912014365196228
         },
         {
           "frame_id": 10,
@@ -1247,7 +951,11 @@
           "s": 3.12,
           "a": 2.91,
           "dir": 297.51,
-          "o": 291.79
+          "o": 291.79,
+          "catch_probability": 0.19579984,
+          "target_probability": 0.23078984,
+          "yards_if_caught": -7.050000000000001,
+          "expected_yards": -1.380388889461756
         },
         {
           "frame_id": 11,
@@ -1256,7 +964,11 @@
           "s": 3.26,
           "a": 1.87,
           "dir": 296.3,
-          "o": 291.79
+          "o": 291.79,
+          "catch_probability": 0.16073593,
+          "target_probability": 0.2376925,
+          "yards_if_caught": -6.780000000000001,
+          "expected_yards": -1.0897896391153337
         },
         {
           "frame_id": 12,
@@ -1265,7 +977,11 @@
           "s": 3.31,
           "a": 0.87,
           "dir": 295.72,
-          "o": 286.14
+          "o": 286.14,
+          "catch_probability": 0.16910969,
+          "target_probability": 0.23759083,
+          "yards_if_caught": -6.489999999999998,
+          "expected_yards": -1.097521869987249
         },
         {
           "frame_id": 13,
@@ -1274,7 +990,11 @@
           "s": 3.25,
           "a": 0.27,
           "dir": 295.56,
-          "o": 273.37
+          "o": 273.37,
+          "catch_probability": 0.13505603,
+          "target_probability": 0.25238442,
+          "yards_if_caught": -6.199999999999999,
+          "expected_yards": -0.8373474091291426
         },
         {
           "frame_id": 14,
@@ -1283,7 +1003,11 @@
           "s": 3.15,
           "a": 0.74,
           "dir": 296.3,
-          "o": 267.12
+          "o": 267.12,
+          "catch_probability": 0.108241476,
+          "target_probability": 0.24251714,
+          "yards_if_caught": -5.920000000000002,
+          "expected_yards": -0.6407895386219027
         },
         {
           "frame_id": 15,
@@ -1292,150 +1016,620 @@
           "s": 3.03,
           "a": 1.23,
           "dir": 296.76,
-          "o": 257.6
+          "o": 257.6,
+          "catch_probability": 0.08958911,
+          "target_probability": 0.33662748,
+          "yards_if_caught": -5.640000000000001,
+          "expected_yards": -0.5052825888991357
         }
       ],
       "num_frames_output": 11
     },
-    "37139": {
-      "name": "Randall Cobb",
+    "44976": {
+      "name": "Matt Milano",
+      "position": "OLB",
+      "side": "Defense",
+      "frames": [
+        {
+          "frame_id": 1,
+          "x": 10.48,
+          "y": 22.98,
+          "s": 0.03,
+          "a": 0.04,
+          "dir": 75.78,
+          "o": 123.5,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 2,
+          "x": 10.53,
+          "y": 23.0,
+          "s": 0.05,
+          "a": 0.26,
+          "dir": 72.31,
+          "o": 120.04,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 3,
+          "x": 10.57,
+          "y": 23.02,
+          "s": 0.16,
+          "a": 1.3,
+          "dir": 67.91,
+          "o": 114.91,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 4,
+          "x": 10.62,
+          "y": 23.04,
+          "s": 0.42,
+          "a": 2.27,
+          "dir": 70.98,
+          "o": 105.42,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 5,
+          "x": 10.67,
+          "y": 23.05,
+          "s": 0.74,
+          "a": 2.8,
+          "dir": 73.21,
+          "o": 98.7,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 6,
+          "x": 10.77,
+          "y": 23.07,
+          "s": 1.2,
+          "a": 4.17,
+          "dir": 79.81,
+          "o": 97.89,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 7,
+          "x": 10.91,
+          "y": 23.09,
+          "s": 1.6,
+          "a": 3.73,
+          "dir": 82.19,
+          "o": 92.3,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 8,
+          "x": 11.09,
+          "y": 23.08,
+          "s": 1.95,
+          "a": 3.25,
+          "dir": 91.81,
+          "o": 89.68,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 9,
+          "x": 11.29,
+          "y": 23.04,
+          "s": 2.23,
+          "a": 2.86,
+          "dir": 99.78,
+          "o": 87.96,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 10,
+          "x": 11.49,
+          "y": 22.95,
+          "s": 2.33,
+          "a": 2.54,
+          "dir": 110.83,
+          "o": 78.04,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 11,
+          "x": 11.7,
+          "y": 22.83,
+          "s": 2.52,
+          "a": 2.54,
+          "dir": 117.94,
+          "o": 76.47,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 12,
+          "x": 11.9,
+          "y": 22.68,
+          "s": 2.62,
+          "a": 2.63,
+          "dir": 126.49,
+          "o": 74.07,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 13,
+          "x": 12.09,
+          "y": 22.48,
+          "s": 2.77,
+          "a": 3.41,
+          "dir": 136.77,
+          "o": 72.85,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 14,
+          "x": 12.27,
+          "y": 22.26,
+          "s": 2.92,
+          "a": 3.81,
+          "dir": 144.36,
+          "o": 69.17,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 15,
+          "x": 12.42,
+          "y": 22.0,
+          "s": 3.14,
+          "a": 3.76,
+          "dir": 152.41,
+          "o": 72.16,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        }
+      ],
+      "num_frames_output": 11
+    },
+    "46190": {
+      "name": "Taron Johnson",
+      "position": "CB",
+      "side": "Defense",
+      "frames": [
+        {
+          "frame_id": 1,
+          "x": 12.18,
+          "y": 29.97,
+          "s": 0.06,
+          "a": 0.05,
+          "dir": 46.83,
+          "o": 83.59,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 2,
+          "x": 12.18,
+          "y": 29.99,
+          "s": 0.06,
+          "a": 0.05,
+          "dir": 40.59,
+          "o": 83.59,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 3,
+          "x": 12.17,
+          "y": 29.93,
+          "s": 0.04,
+          "a": 0.04,
+          "dir": 57.01,
+          "o": 79.82,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 4,
+          "x": 12.18,
+          "y": 29.93,
+          "s": 0.03,
+          "a": 0.03,
+          "dir": 57.58,
+          "o": 79.82,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 5,
+          "x": 12.12,
+          "y": 29.98,
+          "s": 0.03,
+          "a": 0.11,
+          "dir": 16.87,
+          "o": 66.13,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 6,
+          "x": 12.11,
+          "y": 29.99,
+          "s": 0.1,
+          "a": 1.14,
+          "dir": 311.15,
+          "o": 59.47,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 7,
+          "x": 12.09,
+          "y": 30.01,
+          "s": 0.27,
+          "a": 1.43,
+          "dir": 300.52,
+          "o": 69.74,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 8,
+          "x": 12.06,
+          "y": 30.02,
+          "s": 0.41,
+          "a": 1.38,
+          "dir": 298.6,
+          "o": 69.14,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 9,
+          "x": 12.01,
+          "y": 30.05,
+          "s": 0.62,
+          "a": 1.42,
+          "dir": 293.32,
+          "o": 64.42,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 10,
+          "x": 11.94,
+          "y": 30.07,
+          "s": 0.81,
+          "a": 1.36,
+          "dir": 288.34,
+          "o": 76.17,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 11,
+          "x": 11.85,
+          "y": 30.09,
+          "s": 0.9,
+          "a": 1.08,
+          "dir": 284.81,
+          "o": 74.65,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 12,
+          "x": 11.78,
+          "y": 30.1,
+          "s": 0.9,
+          "a": 0.72,
+          "dir": 279.04,
+          "o": 80.6,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 13,
+          "x": 11.67,
+          "y": 30.1,
+          "s": 1.07,
+          "a": 0.91,
+          "dir": 271.95,
+          "o": 74.22,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 14,
+          "x": 11.54,
+          "y": 30.09,
+          "s": 1.25,
+          "a": 1.44,
+          "dir": 266.03,
+          "o": 78.76,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 15,
+          "x": 11.41,
+          "y": 30.07,
+          "s": 1.41,
+          "a": 1.46,
+          "dir": 260.53,
+          "o": 68.38,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        }
+      ],
+      "num_frames_output": 11
+    },
+    "46705": {
+      "name": "Allen Lazard",
       "position": "WR",
       "side": "Offense",
       "frames": [
         {
           "frame_id": 1,
-          "x": 14.25,
-          "y": 30.08,
-          "s": 0.16,
-          "a": 1.62,
-          "dir": 235.43,
-          "o": 276.36
+          "x": 15.07,
+          "y": 31.72,
+          "s": 0.0,
+          "a": 0.0,
+          "dir": 236.96,
+          "o": 288.2,
+          "catch_probability": 0.31186768,
+          "target_probability": 0.48518208,
+          "yards_if_caught": -2.0700000000000003,
+          "expected_yards": -0.6455661061406136
         },
         {
           "frame_id": 2,
-          "x": 14.22,
-          "y": 30.07,
-          "s": 0.43,
-          "a": 2.44,
-          "dir": 247.71,
-          "o": 272.12
+          "x": 15.06,
+          "y": 31.69,
+          "s": 0.04,
+          "a": 0.97,
+          "dir": 219.46,
+          "o": 285.37,
+          "catch_probability": 0.3347946,
+          "target_probability": 0.53837174,
+          "yards_if_caught": -2.0600000000000005,
+          "expected_yards": -0.689676898121834
         },
         {
           "frame_id": 3,
-          "x": 14.15,
-          "y": 30.05,
-          "s": 0.81,
-          "a": 2.85,
-          "dir": 249.87,
-          "o": 272.12
+          "x": 15.05,
+          "y": 31.68,
+          "s": 0.23,
+          "a": 2.07,
+          "dir": 214.64,
+          "o": 283.45,
+          "catch_probability": 0.3699824,
+          "target_probability": 0.5223275,
+          "yards_if_caught": -2.0500000000000007,
+          "expected_yards": -0.7584639027714732
         },
         {
           "frame_id": 4,
-          "x": 14.05,
-          "y": 30.02,
-          "s": 1.18,
-          "a": 2.94,
-          "dir": 254.8,
-          "o": 270.95
+          "x": 15.02,
+          "y": 31.64,
+          "s": 0.58,
+          "a": 3.35,
+          "dir": 213.67,
+          "o": 281.1,
+          "catch_probability": 0.51238817,
+          "target_probability": 0.56536573,
+          "yards_if_caught": -2.02,
+          "expected_yards": -1.035024102926254
         },
         {
           "frame_id": 5,
-          "x": 13.91,
-          "y": 29.99,
-          "s": 1.53,
-          "a": 3.01,
-          "dir": 255.87,
-          "o": 268.76
+          "x": 14.98,
+          "y": 31.58,
+          "s": 1.15,
+          "a": 6.01,
+          "dir": 214.83,
+          "o": 275.91,
+          "catch_probability": 0.508014,
+          "target_probability": 0.5341546,
+          "yards_if_caught": -1.9800000000000004,
+          "expected_yards": -1.0058677661418918
         },
         {
           "frame_id": 6,
-          "x": 13.74,
-          "y": 29.96,
-          "s": 1.83,
-          "a": 2.62,
-          "dir": 258.1,
-          "o": 264.81
+          "x": 14.89,
+          "y": 31.44,
+          "s": 1.94,
+          "a": 6.71,
+          "dir": 215.29,
+          "o": 273.41,
+          "catch_probability": 0.5440699,
+          "target_probability": 0.55155927,
+          "yards_if_caught": -1.8900000000000008,
+          "expected_yards": -1.0282920849323276
         },
         {
           "frame_id": 7,
-          "x": 13.55,
-          "y": 29.92,
-          "s": 2.08,
-          "a": 2.14,
-          "dir": 258.86,
-          "o": 262.93
+          "x": 14.75,
+          "y": 31.26,
+          "s": 2.64,
+          "a": 6.12,
+          "dir": 215.79,
+          "o": 266.94,
+          "catch_probability": 0.5788866,
+          "target_probability": 0.5306743,
+          "yards_if_caught": -1.75,
+          "expected_yards": -1.013051599264145
         },
         {
           "frame_id": 8,
-          "x": 13.35,
-          "y": 29.87,
-          "s": 2.22,
-          "a": 1.53,
-          "dir": 258.54,
-          "o": 262.93
+          "x": 14.58,
+          "y": 31.01,
+          "s": 3.25,
+          "a": 5.18,
+          "dir": 215.52,
+          "o": 259.7,
+          "catch_probability": 0.57336956,
+          "target_probability": 0.5517535,
+          "yards_if_caught": -1.58,
+          "expected_yards": -0.9059239089488984
         },
         {
           "frame_id": 9,
-          "x": 13.13,
-          "y": 29.82,
-          "s": 2.28,
-          "a": 0.79,
-          "dir": 257.77,
-          "o": 264.19
+          "x": 14.38,
+          "y": 30.71,
+          "s": 3.78,
+          "a": 4.28,
+          "dir": 214.85,
+          "o": 253.77,
+          "catch_probability": 0.51564646,
+          "target_probability": 0.533082,
+          "yards_if_caught": -1.3800000000000008,
+          "expected_yards": -0.7115921115875248
         },
         {
           "frame_id": 10,
-          "x": 12.91,
-          "y": 29.77,
-          "s": 2.25,
-          "a": 0.22,
-          "dir": 256.77,
-          "o": 267.29
+          "x": 14.15,
+          "y": 30.39,
+          "s": 4.15,
+          "a": 3.31,
+          "dir": 215.17,
+          "o": 245.55,
+          "catch_probability": 0.46775928,
+          "target_probability": 0.5255318,
+          "yards_if_caught": -1.1500000000000004,
+          "expected_yards": -0.5379231736063959
         },
         {
           "frame_id": 11,
-          "x": 12.7,
-          "y": 29.72,
-          "s": 2.16,
-          "a": 0.6,
-          "dir": 255.75,
-          "o": 271.26
+          "x": 13.9,
+          "y": 30.04,
+          "s": 4.38,
+          "a": 2.25,
+          "dir": 215.87,
+          "o": 240.98,
+          "catch_probability": 0.39047796,
+          "target_probability": 0.52438045,
+          "yards_if_caught": -0.9000000000000004,
+          "expected_yards": -0.3514301598072053
         },
         {
           "frame_id": 12,
-          "x": 12.5,
-          "y": 29.66,
-          "s": 2.05,
-          "a": 0.99,
-          "dir": 254.02,
-          "o": 276.74
+          "x": 13.64,
+          "y": 29.68,
+          "s": 4.52,
+          "a": 1.28,
+          "dir": 216.23,
+          "o": 239.82,
+          "catch_probability": 0.37087664,
+          "target_probability": 0.5329259,
+          "yards_if_caught": -0.6400000000000006,
+          "expected_yards": -0.2373610496520998
         },
         {
           "frame_id": 13,
-          "x": 12.31,
-          "y": 29.61,
-          "s": 1.97,
-          "a": 1.06,
-          "dir": 253.35,
-          "o": 282.98
+          "x": 13.37,
+          "y": 29.33,
+          "s": 4.51,
+          "a": 0.55,
+          "dir": 217.49,
+          "o": 239.82,
+          "catch_probability": 0.33538467,
+          "target_probability": 0.5296805,
+          "yards_if_caught": -0.3699999999999992,
+          "expected_yards": -0.1240923267602917
         },
         {
           "frame_id": 14,
-          "x": 12.13,
-          "y": 29.55,
-          "s": 1.83,
-          "a": 1.17,
-          "dir": 252.97,
-          "o": 288.39
+          "x": 13.09,
+          "y": 28.98,
+          "s": 4.39,
+          "a": 1.39,
+          "dir": 220.29,
+          "o": 243.97,
+          "catch_probability": 0.3853335,
+          "target_probability": 0.5288704,
+          "yards_if_caught": -0.0899999999999998,
+          "expected_yards": -0.0346800157427787
         },
         {
           "frame_id": 15,
-          "x": 11.95,
-          "y": 29.5,
-          "s": 1.79,
-          "a": 1.0,
-          "dir": 251.42,
-          "o": 294.44
+          "x": 12.8,
+          "y": 28.66,
+          "s": 4.2,
+          "a": 2.22,
+          "dir": 222.82,
+          "o": 246.46,
+          "catch_probability": 0.3440314,
+          "target_probability": 0.56899416,
+          "yards_if_caught": 0.1999999999999993,
+          "expected_yards": 0.0688062787055966
         }
       ],
       "num_frames_output": 11
@@ -1452,7 +1646,11 @@
           "s": 0.37,
           "a": 0.51,
           "dir": 89.97,
-          "o": 254.84
+          "o": 254.84,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 2,
@@ -1461,7 +1659,11 @@
           "s": 0.6,
           "a": 1.17,
           "dir": 93.23,
-          "o": 260.4
+          "o": 260.4,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 3,
@@ -1470,7 +1672,11 @@
           "s": 0.81,
           "a": 1.57,
           "dir": 96.85,
-          "o": 263.93
+          "o": 263.93,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 4,
@@ -1479,7 +1685,11 @@
           "s": 1.04,
           "a": 1.78,
           "dir": 99.26,
-          "o": 267.34
+          "o": 267.34,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 5,
@@ -1488,7 +1698,11 @@
           "s": 1.3,
           "a": 1.98,
           "dir": 99.37,
-          "o": 269.72
+          "o": 269.72,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 6,
@@ -1497,7 +1711,11 @@
           "s": 1.59,
           "a": 2.15,
           "dir": 99.93,
-          "o": 268.68
+          "o": 268.68,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 7,
@@ -1506,7 +1724,11 @@
           "s": 1.81,
           "a": 2.03,
           "dir": 100.94,
-          "o": 269.91
+          "o": 269.91,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 8,
@@ -1515,7 +1737,11 @@
           "s": 2.02,
           "a": 1.83,
           "dir": 103.14,
-          "o": 271.19
+          "o": 271.19,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 9,
@@ -1524,7 +1750,11 @@
           "s": 2.22,
           "a": 1.61,
           "dir": 104.94,
-          "o": 272.81
+          "o": 272.81,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 10,
@@ -1533,7 +1763,11 @@
           "s": 2.33,
           "a": 1.21,
           "dir": 107.16,
-          "o": 272.81
+          "o": 272.81,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 11,
@@ -1542,7 +1776,11 @@
           "s": 2.28,
           "a": 0.58,
           "dir": 108.69,
-          "o": 264.46
+          "o": 264.46,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 12,
@@ -1551,7 +1789,11 @@
           "s": 2.26,
           "a": 0.55,
           "dir": 109.65,
-          "o": 257.26
+          "o": 257.26,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 13,
@@ -1560,7 +1802,11 @@
           "s": 2.14,
           "a": 1.0,
           "dir": 110.92,
-          "o": 247.48
+          "o": 247.48,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 14,
@@ -1569,7 +1815,11 @@
           "s": 2.0,
           "a": 1.28,
           "dir": 110.19,
-          "o": 237.36
+          "o": 237.36,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         },
         {
           "frame_id": 15,
@@ -1578,7 +1828,11 @@
           "s": 1.86,
           "a": 1.47,
           "dir": 108.37,
-          "o": 225.83
+          "o": 225.83,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         }
       ],
       "num_frames_output": 11
@@ -1595,7 +1849,11 @@
           "s": 0.37,
           "a": 2.14,
           "dir": 304.58,
-          "o": 238.99
+          "o": 238.99,
+          "catch_probability": 0.52868056,
+          "target_probability": 0.64426464,
+          "yards_if_caught": -1.42,
+          "expected_yards": -0.7507263994216918
         },
         {
           "frame_id": 2,
@@ -1604,7 +1862,11 @@
           "s": 0.61,
           "a": 2.18,
           "dir": 300.13,
-          "o": 238.99
+          "o": 238.99,
+          "catch_probability": 0.5663109,
+          "target_probability": 0.6372062,
+          "yards_if_caught": -1.3800000000000008,
+          "expected_yards": -0.7815090179443364
         },
         {
           "frame_id": 3,
@@ -1613,7 +1875,11 @@
           "s": 0.8,
           "a": 2.23,
           "dir": 290.64,
-          "o": 242.51
+          "o": 242.51,
+          "catch_probability": 0.55923307,
+          "target_probability": 0.5959198,
+          "yards_if_caught": -1.3200000000000005,
+          "expected_yards": -0.7381876516342165
         },
         {
           "frame_id": 4,
@@ -1622,7 +1888,11 @@
           "s": 0.99,
           "a": 1.99,
           "dir": 279.05,
-          "o": 247.67
+          "o": 247.67,
+          "catch_probability": 0.5300263,
+          "target_probability": 0.6005767,
+          "yards_if_caught": -1.2300000000000004,
+          "expected_yards": -0.6519323694705965
         },
         {
           "frame_id": 5,
@@ -1631,7 +1901,11 @@
           "s": 1.22,
           "a": 1.9,
           "dir": 272.86,
-          "o": 256.89
+          "o": 256.89,
+          "catch_probability": 0.52209324,
+          "target_probability": 0.5879552,
+          "yards_if_caught": -1.1199999999999992,
+          "expected_yards": -0.5847444248199459
         },
         {
           "frame_id": 6,
@@ -1640,7 +1914,11 @@
           "s": 1.43,
           "a": 1.88,
           "dir": 263.42,
-          "o": 260.97
+          "o": 260.97,
+          "catch_probability": 0.5255096,
+          "target_probability": 0.61573786,
+          "yards_if_caught": -0.9800000000000004,
+          "expected_yards": -0.5149994039535525
         },
         {
           "frame_id": 7,
@@ -1649,7 +1927,11 @@
           "s": 1.64,
           "a": 2.07,
           "dir": 251.34,
-          "o": 259.59
+          "o": 259.59,
+          "catch_probability": 0.5528225,
+          "target_probability": 0.59651417,
+          "yards_if_caught": -0.8300000000000001,
+          "expected_yards": -0.4588426506519318
         },
         {
           "frame_id": 8,
@@ -1658,7 +1940,11 @@
           "s": 1.88,
           "a": 2.29,
           "dir": 244.31,
-          "o": 261.2
+          "o": 261.2,
+          "catch_probability": 0.5614599,
+          "target_probability": 0.5727045,
+          "yards_if_caught": -0.6699999999999999,
+          "expected_yards": -0.3761781322956085
         },
         {
           "frame_id": 9,
@@ -1667,7 +1953,11 @@
           "s": 2.12,
           "a": 2.42,
           "dir": 238.46,
-          "o": 262.37
+          "o": 262.37,
+          "catch_probability": 0.57643884,
+          "target_probability": 0.5699831,
+          "yards_if_caught": -0.4900000000000002,
+          "expected_yards": -0.2824550336599351
         },
         {
           "frame_id": 10,
@@ -1676,7 +1966,11 @@
           "s": 2.3,
           "a": 2.15,
           "dir": 234.68,
-          "o": 263.61
+          "o": 263.61,
+          "catch_probability": 0.5937436,
+          "target_probability": 0.55445516,
+          "yards_if_caught": -0.3100000000000005,
+          "expected_yards": -0.1840605229139331
         },
         {
           "frame_id": 11,
@@ -1685,7 +1979,11 @@
           "s": 2.86,
           "a": 3.17,
           "dir": 229.06,
-          "o": 263.61
+          "o": 263.61,
+          "catch_probability": 0.6234281,
+          "target_probability": 0.5701416,
+          "yards_if_caught": -0.0899999999999998,
+          "expected_yards": -0.0561085295677184
         },
         {
           "frame_id": 12,
@@ -1694,7 +1992,11 @@
           "s": 3.37,
           "a": 3.67,
           "dir": 225.44,
-          "o": 267.29
+          "o": 267.29,
+          "catch_probability": 0.5998216,
+          "target_probability": 0.5356843,
+          "yards_if_caught": 0.1500000000000003,
+          "expected_yards": 0.0899732440710069
         },
         {
           "frame_id": 13,
@@ -1703,7 +2005,11 @@
           "s": 3.71,
           "a": 3.11,
           "dir": 223.33,
-          "o": 265.9
+          "o": 265.9,
+          "catch_probability": 0.58905613,
+          "target_probability": 0.5234025,
+          "yards_if_caught": 0.4000000000000003,
+          "expected_yards": 0.2356224536895754
         },
         {
           "frame_id": 14,
@@ -1712,7 +2018,11 @@
           "s": 4.0,
           "a": 2.47,
           "dir": 222.03,
-          "o": 264.66
+          "o": 264.66,
+          "catch_probability": 0.53593636,
+          "target_probability": 0.50403994,
+          "yards_if_caught": 0.6600000000000001,
+          "expected_yards": 0.3537179946899415
         },
         {
           "frame_id": 15,
@@ -1721,7 +2031,417 @@
           "s": 4.34,
           "a": 2.16,
           "dir": 222.3,
-          "o": 274.41
+          "o": 274.41,
+          "catch_probability": 0.5054985,
+          "target_probability": 0.50929826,
+          "yards_if_caught": 0.9600000000000009,
+          "expected_yards": 0.485278587341309
+        }
+      ],
+      "num_frames_output": 11
+    },
+    "54554": {
+      "name": "Terrel Bernard",
+      "position": "MLB",
+      "side": "Defense",
+      "frames": [
+        {
+          "frame_id": 1,
+          "x": 9.47,
+          "y": 26.58,
+          "s": 0.0,
+          "a": 0.0,
+          "dir": 120.58,
+          "o": 62.1,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 2,
+          "x": 9.5,
+          "y": 26.58,
+          "s": 0.01,
+          "a": 0.01,
+          "dir": 106.2,
+          "o": 62.77,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 3,
+          "x": 9.53,
+          "y": 26.58,
+          "s": 0.02,
+          "a": 0.02,
+          "dir": 93.97,
+          "o": 62.77,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 4,
+          "x": 9.54,
+          "y": 26.59,
+          "s": 0.06,
+          "a": 0.65,
+          "dir": 87.48,
+          "o": 62.77,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 5,
+          "x": 9.56,
+          "y": 26.59,
+          "s": 0.17,
+          "a": 1.14,
+          "dir": 81.79,
+          "o": 62.77,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 6,
+          "x": 9.59,
+          "y": 26.61,
+          "s": 0.37,
+          "a": 1.68,
+          "dir": 67.21,
+          "o": 62.77,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 7,
+          "x": 9.64,
+          "y": 26.63,
+          "s": 0.65,
+          "a": 2.21,
+          "dir": 64.98,
+          "o": 67.7,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 8,
+          "x": 9.71,
+          "y": 26.66,
+          "s": 0.88,
+          "a": 2.16,
+          "dir": 62.84,
+          "o": 67.7,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 9,
+          "x": 9.79,
+          "y": 26.7,
+          "s": 1.0,
+          "a": 1.6,
+          "dir": 63.44,
+          "o": 68.76,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 10,
+          "x": 9.87,
+          "y": 26.73,
+          "s": 1.01,
+          "a": 0.88,
+          "dir": 68.55,
+          "o": 70.91,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 11,
+          "x": 9.96,
+          "y": 26.74,
+          "s": 0.93,
+          "a": 1.07,
+          "dir": 85.23,
+          "o": 73.9,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 12,
+          "x": 10.05,
+          "y": 26.72,
+          "s": 0.9,
+          "a": 2.17,
+          "dir": 105.34,
+          "o": 80.95,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 13,
+          "x": 10.11,
+          "y": 26.66,
+          "s": 0.91,
+          "a": 3.06,
+          "dir": 136.08,
+          "o": 89.32,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 14,
+          "x": 10.16,
+          "y": 26.56,
+          "s": 1.22,
+          "a": 3.82,
+          "dir": 162.04,
+          "o": 103.52,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 15,
+          "x": 10.18,
+          "y": 26.42,
+          "s": 1.67,
+          "a": 4.31,
+          "dir": 175.74,
+          "o": 113.93,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        }
+      ],
+      "num_frames_output": 11
+    },
+    "54650": {
+      "name": "Christian Benford",
+      "position": "CB",
+      "side": "Defense",
+      "frames": [
+        {
+          "frame_id": 1,
+          "x": 12.21,
+          "y": 32.47,
+          "s": 0.02,
+          "a": 0.01,
+          "dir": 99.41,
+          "o": 109.79,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 2,
+          "x": 12.2,
+          "y": 32.46,
+          "s": 0.02,
+          "a": 0.01,
+          "dir": 127.08,
+          "o": 118.57,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 3,
+          "x": 12.19,
+          "y": 32.44,
+          "s": 0.02,
+          "a": 0.02,
+          "dir": 174.71,
+          "o": 127.27,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 4,
+          "x": 12.18,
+          "y": 32.42,
+          "s": 0.03,
+          "a": 0.03,
+          "dir": 183.12,
+          "o": 95.21,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 5,
+          "x": 12.19,
+          "y": 32.38,
+          "s": 0.05,
+          "a": 0.05,
+          "dir": 177.96,
+          "o": 85.19,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 6,
+          "x": 12.19,
+          "y": 32.33,
+          "s": 0.07,
+          "a": 0.07,
+          "dir": 177.2,
+          "o": 85.19,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 7,
+          "x": 12.21,
+          "y": 32.27,
+          "s": 0.09,
+          "a": 0.08,
+          "dir": 173.82,
+          "o": 134.32,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 8,
+          "x": 12.23,
+          "y": 32.19,
+          "s": 0.11,
+          "a": 0.11,
+          "dir": 171.81,
+          "o": 256.05,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 9,
+          "x": 12.23,
+          "y": 32.16,
+          "s": 0.11,
+          "a": 0.11,
+          "dir": 170.82,
+          "o": 256.72,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 10,
+          "x": 12.24,
+          "y": 32.14,
+          "s": 0.1,
+          "a": 0.1,
+          "dir": 170.06,
+          "o": 262.59,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 11,
+          "x": 12.25,
+          "y": 32.11,
+          "s": 0.1,
+          "a": 0.01,
+          "dir": 170.05,
+          "o": 262.59,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 12,
+          "x": 12.24,
+          "y": 32.09,
+          "s": 0.15,
+          "a": 0.59,
+          "dir": 173.55,
+          "o": 223.12,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 13,
+          "x": 12.24,
+          "y": 32.08,
+          "s": 0.21,
+          "a": 0.72,
+          "dir": 176.6,
+          "o": 212.25,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 14,
+          "x": 12.25,
+          "y": 32.05,
+          "s": 0.26,
+          "a": 0.6,
+          "dir": 179.68,
+          "o": 207.6,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
+        },
+        {
+          "frame_id": 15,
+          "x": 12.25,
+          "y": 32.03,
+          "s": 0.27,
+          "a": 0.33,
+          "dir": 182.91,
+          "o": 202.87,
+          "catch_probability": 0.0,
+          "target_probability": 0.0,
+          "yards_if_caught": 0.0,
+          "expected_yards": 0.0
         }
       ],
       "num_frames_output": 11
