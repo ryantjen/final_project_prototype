@@ -785,8 +785,14 @@ function vizDrawFieldAnnotations() {
 function vizPopulateScoreboard() {
     if (!vizPlayData.supplementary) return;
     
+    const section11 = document.getElementById('interactive');
+    if (!section11) return;
+    
+    const scoreboardEl = section11.querySelector('#scoreboard');
+    if (!scoreboardEl) return;
+    
     const supp = vizPlayData.supplementary;
-    const scoreboard = d3.select('#scoreboard');
+    const scoreboard = d3.select(scoreboardEl);
     
     scoreboard.html(''); // Clear existing content
     
@@ -842,8 +848,14 @@ function vizPopulateScoreboard() {
 function vizPopulateSupplementaryPanel() {
     if (!vizPlayData.supplementary) return;
     
+    const section11 = document.getElementById('interactive');
+    if (!section11) return;
+    
+    const panelEl = section11.querySelector('#supplementary-panel');
+    if (!panelEl) return;
+    
     const supp = vizPlayData.supplementary;
-    const panel = d3.select('#supplementary-panel');
+    const panel = d3.select(panelEl);
     
     panel.html(''); // Clear existing content
     
@@ -935,7 +947,13 @@ function vizPopulateSupplementaryPanel() {
 function vizUpdatePlayDescription() {
     if (!vizPlayData.supplementary || !vizPlayData.supplementary.play_description) return;
     
-    const descDiv = d3.select('#play-description');
+    const section11 = document.getElementById('interactive');
+    if (!section11) return;
+    
+    const descEl = section11.querySelector('#play-description');
+    if (!descEl) return;
+    
+    const descDiv = d3.select(descEl);
     descDiv.html(`<strong>Play Description:</strong> ${vizPlayData.supplementary.play_description}`);
 }
 
@@ -991,6 +1009,12 @@ function vizCalculateBallPosition(frame) {
 function vizUpdateTimeToThrow() {
     if (!vizPlayData) return;
     
+    const section11 = document.getElementById('interactive');
+    if (!section11) return;
+    
+    const timeEl = section11.querySelector('#time-to-throw');
+    if (!timeEl) return;
+    
     // Calculate time to throw (assuming 10 frames per second, so each frame is 0.1 seconds)
     const framesPerSecond = 10;
     const timePerFrame = 1 / framesPerSecond;
@@ -999,7 +1023,7 @@ function vizUpdateTimeToThrow() {
     const effectiveFrame = Math.min(vizCurrentFrame, vizPlayData.throw_frame);
     const timeToThrow = (effectiveFrame - 1) * timePerFrame; // -1 because frame starts at 1
     
-    const timeDisplay = d3.select('#time-to-throw');
+    const timeDisplay = d3.select(timeEl);
     timeDisplay.text(`Time to Throw: ${timeToThrow.toFixed(1)}s`);
 }
 

@@ -41,62 +41,56 @@ const teamColors = {
 
 // Function to find the targeted receiver from play data
 function findTargetedReceiver(data) {
-    // The ball lands at ball_land_x, ball_land_y
-    // We need to find the receiver closest to that position in the output frames
-    const landX = data.ball_land_x;
-    const landY = data.ball_land_y;
-    
-    let closestPlayer = null;
-    let closestDistance = Infinity;
-    
-    // Check output_players for the target
-    if (data.output_players) {
-        Object.entries(data.output_players).forEach(([nflId, outputPlayer]) => {
-            // Get the last output frame position
-            if (outputPlayer.frames && outputPlayer.frames.length > 0) {
-                const lastFrame = outputPlayer.frames[outputPlayer.frames.length - 1];
-                const distance = Math.sqrt(
-                    Math.pow(lastFrame.x - landX, 2) + 
-                    Math.pow(lastFrame.y - landY, 2)
-                );
+    // Use targeted_receiver_name_abbr to find the correct receiver
+    if (data.targeted_receiver_name_abbr) {
+        const targetAbbr = data.targeted_receiver_name_abbr;
+        
+        // Find player with matching abbreviated name (e.g., "J.Smith")
+        for (const [nflId, player] of Object.entries(data.players)) {
+            if (player.side === 'Offense') {
+                // Create abbreviated name from full name (e.g., "John Smith" -> "J.Smith")
+                const nameParts = player.name.split(' ');
+                const lastName = nameParts[nameParts.length - 1];
+                const firstInitial = nameParts[0][0];
+                const abbreviatedName = `${firstInitial}.${lastName}`;
                 
-                if (distance < closestDistance) {
-                    closestDistance = distance;
-                    closestPlayer = {
+                if (abbreviatedName === targetAbbr || player.name === targetAbbr) {
+                    return {
                         nflId: nflId,
-                        name: data.players[nflId]?.name || `Player ${nflId}`,
-                        position: data.players[nflId]?.position || 'Unknown'
+                        name: player.name,
+                        position: player.position
                     };
                 }
             }
-        });
+        }
     }
     
-    // If no output player found, try to parse from play description
-    if (!closestPlayer && data.supplementary && data.supplementary.play_description) {
+    // Fallback: try to parse from play description
+    if (data.supplementary && data.supplementary.play_description) {
         const desc = data.supplementary.play_description;
         // Look for "pass ... to [Name]" pattern
         const passMatch = desc.match(/pass.*?to\s+([A-Z]\.[A-Za-z]+)/);
         if (passMatch) {
             const targetName = passMatch[1];
             // Find player with matching name
-            Object.entries(data.players).forEach(([nflId, player]) => {
+            for (const [nflId, player] of Object.entries(data.players)) {
                 if (player.side === 'Offense') {
-                    const initials = player.name.split(' ').map(n => n[0]).join('.');
-                    const lastName = player.name.split(' ').pop();
-                    if (targetName.includes(lastName) || targetName === `${initials[0]}.${lastName}`) {
-                        closestPlayer = {
+                    const nameParts = player.name.split(' ');
+                    const lastName = nameParts[nameParts.length - 1];
+                    const firstInitial = nameParts[0][0];
+                    if (targetName.includes(lastName) || targetName === `${firstInitial}.${lastName}`) {
+                        return {
                             nflId: nflId,
                             name: player.name,
                             position: player.position
                         };
                     }
                 }
-            });
+            }
         }
     }
     
-    return closestPlayer;
+    return null;
 }
 
 // Function to get eligible receivers (offensive players except QB)
@@ -681,20 +675,39 @@ function drawCoverageAnnotation() {
         'COVER_2_ZONE': 'Two deep safeties with zone coverage underneath. Target the holes between zones, especially the middle.',
         'COVER_3': 'Three deep defenders (usually 2 corners + safety). Vulnerable to flat routes and intermediate crossers.',
         'COVER_3_ZONE': 'Three deep zone with four underneath. Look for soft spots in the short-to-intermediate zones.',
+        'COVER_3_MAN': 'Three deep with man coverage underneath. Look for receivers who can beat their man on intermediate routes.',
         'COVER_4': 'Four deep defenders in quarters coverage. Good against deep passes, vulnerable underneath.',
         'COVER_6': 'Hybrid - Cover 4 on one side, Cover 2 on the other. Attack the Cover 2 side with deep routes.',
         'MAN_COVERAGE': 'Defenders assigned to specific receivers. Find the receiver with the best matchup.',
         'ZONE_COVERAGE': 'Defenders cover areas of the field. Find the soft spots between zone defenders.',
+        'MAN': 'Man Coverage: Each defender guards a specific receiver. Look for receivers who can win their individual matchups.',
+        'ZONE': 'Zone Coverage: Defenders protect areas, not players. Find the gaps between zone responsibilities.',
         'PREVENT': 'Deep coverage to prevent big plays. Short passes will be open.',
-        'RED_ZONE': 'Compressed field coverage. Space is limited - look for quick throws to open receivers.'
+        'RED_ZONE': 'Compressed field coverage. Space is limited - look for quick throws to open receivers.',
+        '2_MAN': 'Two deep safeties with man coverage underneath. Look for receivers winning their routes.',
+        '3_ZONE': 'Three deep zone with four underneath. Look for soft spots in the short-to-intermediate zones.'
     };
     
-    // Get explanation
-    let explanation = coverageExplanations[coverageType] || 
-                     coverageExplanations[supp.team_coverage_man_zone] ||
-                     `${formattedCoverage}: Watch how the defenders move to identify openings in the coverage.`;
+    // Get explanation - try the exact coverage type first, then check for man/zone keywords
+    let explanation = coverageExplanations[coverageType];
     
-    const explEl = document.getElementById('coverage-explanation');
+    if (!explanation && supp.team_coverage_man_zone) {
+        explanation = coverageExplanations[supp.team_coverage_man_zone];
+    }
+    
+    // If still no match, provide man vs zone general explanation
+    if (!explanation) {
+        const coverageUpper = (coverageType || '').toUpperCase();
+        if (coverageUpper.includes('MAN')) {
+            explanation = 'Man Coverage: Each defender is assigned to cover a specific receiver. Look for receivers who can create separation from their defender through sharp route running.';
+        } else if (coverageUpper.includes('ZONE')) {
+            explanation = 'Zone Coverage: Defenders cover areas of the field rather than specific players. Look for the soft spots between zone defenders where receivers can sit down and become open.';
+        } else {
+            explanation = `${formattedCoverage}: Watch how the defenders move to identify openings in the coverage.`;
+        }
+    }
+    
+    const explEl = document.getElementById('qb-coverage-explanation');
     if (explEl) {
         explEl.textContent = explanation;
     }
